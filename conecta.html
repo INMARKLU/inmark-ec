@@ -1,0 +1,953 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Contacto · Auditoría Digital Gratuita en Ecuador | Inmark</title>
+<meta name="description" content="¿Tu empresa está perdiendo dinero en digital? Agenda tu auditoría gratuita. Trabajamos con empresas en Guayaquil, Quito y Cuenca." />
+<meta name="keywords" content="agencia de marketing digital quito, agencia marketing digital quito, agencia de marketing digital cuenca, auditoria digital gratuita ecuador" />
+<meta name="author" content="Inmark Ecuador" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<link rel="canonical" href="https://inmark.ec/conecta.html" />
+<link rel="alternate" hreflang="es-EC" href="https://inmark.ec/conecta.html" />
+<link rel="alternate" hreflang="es" href="https://inmark.ec/conecta.html" />
+<link rel="alternate" hreflang="x-default" href="https://inmark.ec/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_EC" />
+<meta property="og:title" content="Contacto · Auditoría Digital Gratuita en Ecuador | Inmark" />
+<meta property="og:description" content="¿Tu empresa está perdiendo dinero en digital? Agenda tu auditoría gratuita. Trabajamos con empresas en Guayaquil, Quito y Cuenca." />
+<meta property="og:url" content="https://inmark.ec/conecta.html" />
+<meta property="og:image" content="https://inmark.ec/img/og-inmark-ec.jpg" />
+<meta property="og:site_name" content="Inmark Ecuador" />
+
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@200,300,400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+  /* ═══════════ DESIGN TOKENS ═══════════ */
+  :root{
+    --bg:#FFFDFA; --bg-soft:#F8F7FA; --bg-lilac:#F6F3FF; --bg-lime:#ECF3B3;
+    --ink:#1C1C1C; --muted:#666666; --muted-2:#9B9B9C;
+    --border:#E5E5E5; --primary:#7240DE; --primary-hi:#834AFF;
+    --primary-100:#D4D4F5; --primary-200:#C0C1FF;
+    --sans:'Switzer',-apple-system,BlinkMacSystemFont,sans-serif;
+    --serif:'Instrument Serif',Georgia,serif;
+    --radius-sm:12px; --radius:20px; --radius-lg:28px; --radius-pill:999px;
+    --container:1280px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+    --ease-bounce:cubic-bezier(.34,1.56,.64,1);
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  ::selection{background:var(--primary);color:#fff}
+
+  .ins{font-family:var(--serif);font-style:italic;font-weight:400}
+  .container{max-width:var(--container);margin:0 auto;padding:0 32px}
+
+  /* ═══════════ CURSOR ═══════════ */
+  .cursor-blob{
+    position:fixed;width:24px;height:24px;border-radius:50%;
+    background:var(--primary);pointer-events:none;z-index:9999;
+    mix-blend-mode:difference;
+    transition:transform .15s ease-out,width .3s var(--ease),height .3s var(--ease),opacity .3s;
+    transform:translate(-50%,-50%);opacity:0;
+  }
+  .cursor-blob.active{opacity:.85}
+  .cursor-blob.hover{width:64px;height:64px;background:var(--bg-lime)}
+
+  /* ═══════════ NAV ═══════════ */
+  header.nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(255,253,250,.78);
+    backdrop-filter:saturate(140%) blur(14px);
+    -webkit-backdrop-filter:saturate(140%) blur(14px);
+    border-bottom:1px solid rgba(28,28,28,.06);
+    transition:background .3s var(--ease);
+  }
+  header.nav.scrolled{background:rgba(255,253,250,.95);box-shadow:0 1px 30px rgba(28,28,28,.04)}
+  header.nav .container{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:20px;letter-spacing:-.02em;transition:transform .3s var(--ease)}
+  .brand:hover{transform:scale(1.03)}
+  .brand-dot{
+    width:32px;height:32px;border-radius:50%;background:var(--ink);
+    position:relative;flex:0 0 32px;
+    display:inline-flex;align-items:center;justify-content:center;
+    transition:transform .4s var(--ease-bounce);
+  }
+  .brand:hover .brand-dot{transform:rotate(360deg)}
+  .brand-dot::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--primary)}
+  .brand i{font-style:italic;font-family:var(--serif);font-weight:400;color:var(--primary);font-size:22px;margin-left:-2px}
+  nav.primary{display:flex;gap:4px}
+  nav.primary a{
+    position:relative;padding:9px 16px;border-radius:var(--radius-pill);
+    font-size:14.5px;color:var(--ink);font-weight:500;
+    transition:color .25s,background .25s;overflow:hidden;
+  }
+  nav.primary a::before{
+    content:"";position:absolute;inset:0;background:var(--ink);
+    border-radius:var(--radius-pill);
+    transform:scale(0);transition:transform .35s var(--ease);z-index:-1;
+  }
+  nav.primary a.active::before,nav.primary a:hover::before{transform:scale(1)}
+  nav.primary a.active,nav.primary a:hover{color:#fff}
+
+  /* ═══ NAV DROPDOWN ═══ */
+  .nav-dropdown{position:relative;display:flex;align-items:center}
+  .nav-dropdown-toggle{display:flex!important;align-items:center;gap:5px}
+  .nav-arr{font-size:9px;opacity:.6;transition:transform .25s var(--ease)}
+  .nav-dropdown:hover .nav-arr{transform:rotate(180deg)}
+  .nav-dropdown-menu{
+    position:absolute;top:calc(100% + 8px);left:50%;
+    transform:translateX(-50%) translateY(6px);
+    min-width:230px;background:var(--bg);border:1px solid var(--border);
+    border-radius:var(--radius);padding:6px;
+    box-shadow:0 8px 32px rgba(28,28,28,.10);
+    opacity:0;pointer-events:none;z-index:200;
+    transition:opacity .2s var(--ease),transform .2s var(--ease);
+  }
+  .nav-dropdown:hover .nav-dropdown-menu{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+  .nav-dropdown-menu a{
+    display:block;padding:10px 14px;border-radius:var(--radius-sm);
+    font-size:14px;font-weight:500;color:var(--ink);overflow:visible;
+  }
+  .nav-dropdown-menu a::before{display:none!important}
+  .nav-dropdown-menu a:hover{background:var(--bg-soft)!important;color:var(--primary)!important}
+  .nav-actions{display:flex;align-items:center;gap:10px}
+  .lang{font-size:13px;font-weight:500;color:var(--muted);display:flex;gap:6px;align-items:center;padding:6px 10px}
+  .lang b{color:var(--ink);font-weight:600}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:13px 22px;border-radius:var(--radius-pill);
+    font-size:14.5px;font-weight:500;cursor:pointer;
+    border:1px solid transparent;position:relative;overflow:hidden;
+    transition:transform .25s var(--ease),color .3s,border-color .3s;
+    isolation:isolate;
+  }
+  .btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--ink);transition:transform .5s var(--ease)}
+  .btn::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--primary);transform:translateY(100%);transition:transform .5s var(--ease)}
+  .btn:hover::after{transform:translateY(0)}
+  .btn:active{transform:scale(.97)}
+  .btn .arr{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.18);transition:transform .35s var(--ease)}
+  .btn:hover .arr{transform:translateX(3px) rotate(-45deg)}
+  .btn-primary{color:#fff}
+  .btn-ghost{color:var(--ink);border-color:var(--border)}
+  .btn-ghost::before{background:transparent}
+  .btn-ghost::after{background:var(--ink)}
+  .btn-ghost:hover{color:#fff;border-color:var(--ink)}
+  .btn-ghost .arr{background:rgba(28,28,28,.08)}
+  .btn-ghost:hover .arr{background:rgba(255,255,255,.18)}
+
+  /* ═══════════ HERO CONECTA ═══════════ */
+  section.connect-hero{
+    padding:80px 0 0;position:relative;overflow:hidden;
+    border-bottom:1px solid var(--border);
+  }
+  .ch-blob{
+    position:absolute;border-radius:50%;filter:blur(100px);opacity:.25;pointer-events:none;z-index:0;
+  }
+  .ch-blob.one{width:500px;height:500px;background:var(--primary-100);top:-160px;right:-80px;animation:chb1 18s ease-in-out infinite}
+  .ch-blob.two{width:350px;height:350px;background:var(--bg-lime);bottom:-80px;left:5%;opacity:.35;animation:chb2 22s ease-in-out infinite}
+  @keyframes chb1{0%,100%{transform:scale(1)}50%{transform:scale(1.1) translate(-20px,30px)}}
+  @keyframes chb2{0%,100%{transform:scale(1)}50%{transform:scale(1.08) translate(30px,-20px)}}
+
+  .connect-hero .container{position:relative;z-index:1}
+
+  .ch-top{
+    display:grid;grid-template-columns:1fr 1fr;gap:48px;
+    align-items:end;padding-bottom:60px;
+  }
+
+  .ch-eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:6px 14px 6px 8px;background:#fff;border:1px solid var(--border);
+    border-radius:var(--radius-pill);font-size:13px;font-weight:500;
+    margin-bottom:32px;animation:fadeUp .8s var(--ease) both;
+  }
+  .ch-eyebrow .pulse{width:8px;height:8px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 4px rgba(114,64,222,.18);animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(114,64,222,.18)}50%{box-shadow:0 0 0 10px rgba(114,64,222,.04)}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+  h1.connect-title{
+    margin:0;
+    font-size:clamp(64px,10vw,140px);
+    line-height:.88;letter-spacing:-.05em;font-weight:500;
+  }
+  h1.connect-title .line{display:block;overflow:hidden}
+  h1.connect-title .line > span{display:inline-block;transform:translateY(110%);animation:lineUp 1.1s var(--ease) forwards}
+  h1.connect-title .line:nth-child(1) > span{animation-delay:.1s}
+  h1.connect-title .line:nth-child(2) > span{animation-delay:.22s}
+  @keyframes lineUp{to{transform:translateY(0)}}
+  h1.connect-title .ins{color:var(--primary)}
+
+  .ch-right{
+    display:flex;flex-direction:column;gap:24px;padding-bottom:16px;
+    animation:fadeUp 1s var(--ease) .5s both;
+  }
+  .ch-desc{font-size:19px;line-height:1.6;color:var(--muted);max-width:40ch}
+  .ch-desc em{color:var(--ink);font-style:normal;font-weight:500}
+
+  /* availability badge */
+  .ch-avail{
+    display:inline-flex;align-items:center;gap:12px;
+    padding:12px 20px;border-radius:var(--radius);
+    background:#fff;border:1px solid var(--border);
+    font-size:14px;max-width:fit-content;
+  }
+  .ch-avail .av-dot{width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.15);flex-shrink:0}
+  .ch-avail span{color:var(--muted)}
+  .ch-avail strong{color:var(--ink);font-weight:500}
+
+  /* bottom strip */
+  .ch-strip{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+    border-top:1px solid var(--border);
+    animation:fadeUp 1s var(--ease) .7s both;
+  }
+  .ch-strip > div{
+    padding:20px 28px;border-right:1px solid var(--border);
+    display:flex;align-items:center;gap:12px;
+  }
+  .ch-strip > div:last-child{border-right:none}
+  .ch-strip .cs-icon{
+    width:36px;height:36px;border-radius:10px;background:var(--bg-lilac);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--primary);font-size:16px;flex-shrink:0;
+  }
+  .ch-strip .cs-text{font-size:13.5px;line-height:1.3}
+  .ch-strip .cs-text strong{color:var(--ink);font-weight:500;display:block}
+  .ch-strip .cs-text span{color:var(--muted)}
+
+  /* ═══════════ MAIN CONTENT — FORM + SIDEBAR ═══════════ */
+  section.connect-body{padding:80px 0 120px}
+  .connect-layout{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:80px;align-items:start;
+  }
+
+  /* ─── FORMULARIO ─── */
+  .connect-form-wrap{}
+
+  .form-title{
+    font-size:13px;font-weight:500;color:var(--primary);
+    text-transform:uppercase;letter-spacing:.1em;
+    display:inline-flex;align-items:center;gap:8px;
+    margin-bottom:36px;
+  }
+  .form-title::before{content:"";width:24px;height:1px;background:var(--primary)}
+
+  form.contact-form{display:flex;flex-direction:column;gap:0}
+
+  /* step labels */
+  .form-step{
+    display:flex;flex-direction:column;gap:8px;
+    padding:28px 0;border-top:1px solid var(--border);
+  }
+  .form-step:first-child{border-top:none;padding-top:0}
+  .form-step-label{
+    font-size:12px;font-weight:500;color:var(--muted-2);
+    text-transform:uppercase;letter-spacing:.1em;margin-bottom:4px;
+  }
+  .form-step-title{
+    font-size:19px;font-weight:500;letter-spacing:-.015em;color:var(--ink);
+    margin-bottom:16px;
+  }
+  .form-step-title .ins{color:var(--primary)}
+
+  /* row of inputs */
+  .input-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+  .field{display:flex;flex-direction:column;gap:8px}
+  .field label{font-size:13px;font-weight:500;color:var(--muted)}
+  .field input,.field textarea,.field select{
+    width:100%;padding:14px 18px;
+    border:1px solid var(--border);border-radius:var(--radius-sm);
+    font-family:var(--sans);font-size:15px;color:var(--ink);
+    background:#fff;
+    transition:border-color .25s var(--ease), box-shadow .25s var(--ease);
+    outline:none;appearance:none;-webkit-appearance:none;
+    resize:none;
+  }
+  .field input:focus,.field textarea:focus,.field select:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(114,64,222,.1);
+  }
+  .field input::placeholder,.field textarea::placeholder{color:var(--muted-2)}
+  .field textarea{min-height:140px;line-height:1.55}
+
+  /* selector de presupuesto */
+  .budget-options{display:flex;gap:10px;flex-wrap:wrap}
+  .budget-opt{
+    flex:1;min-width:120px;
+    padding:14px 16px;border-radius:var(--radius-sm);
+    border:1px solid var(--border);cursor:pointer;
+    display:flex;flex-direction:column;gap:4px;
+    transition:all .25s var(--ease);
+    background:#fff;position:relative;overflow:hidden;
+  }
+  .budget-opt::before{
+    content:"";position:absolute;inset:0;background:var(--ink);
+    transform:scaleY(0);transform-origin:bottom;
+    transition:transform .3s var(--ease);z-index:0;
+  }
+  .budget-opt:hover::before,.budget-opt.selected::before{transform:scaleY(1)}
+  .budget-opt .bo-range{
+    font-size:16px;font-weight:500;letter-spacing:-.01em;
+    position:relative;z-index:1;transition:color .25s;
+  }
+  .budget-opt .bo-desc{
+    font-size:12px;color:var(--muted);
+    position:relative;z-index:1;transition:color .25s;
+  }
+  .budget-opt:hover .bo-range,.budget-opt.selected .bo-range{color:#fff}
+  .budget-opt:hover .bo-desc,.budget-opt.selected .bo-desc{color:rgba(255,255,255,.65)}
+  .budget-opt:hover{border-color:var(--ink)}
+  .budget-opt.selected{border-color:var(--ink)}
+
+  /* selector de servicio */
+  .service-options{display:flex;gap:8px;flex-wrap:wrap}
+  .svc-opt{
+    padding:9px 16px;border-radius:var(--radius-pill);
+    border:1px solid var(--border);cursor:pointer;
+    font-size:13.5px;font-weight:500;color:var(--muted);
+    transition:all .25s var(--ease);background:#fff;
+    position:relative;overflow:hidden;
+  }
+  .svc-opt::before{
+    content:"";position:absolute;inset:0;background:var(--primary);
+    border-radius:var(--radius-pill);
+    transform:scale(0);transition:transform .3s var(--ease);z-index:0;
+  }
+  .svc-opt span{position:relative;z-index:1}
+  .svc-opt:hover,.svc-opt.selected{color:#fff;border-color:var(--primary)}
+  .svc-opt:hover::before,.svc-opt.selected::before{transform:scale(1)}
+
+  /* submit */
+  .form-submit{
+    margin-top:32px;display:flex;align-items:center;gap:16px;
+  }
+  .btn-submit{
+    display:inline-flex;align-items:center;gap:12px;
+    padding:16px 32px;border-radius:var(--radius-pill);
+    font-size:15.5px;font-weight:500;cursor:pointer;
+    border:none;color:#fff;
+    background:var(--ink);
+    position:relative;overflow:hidden;
+    transition:transform .25s var(--ease);
+    isolation:isolate;
+  }
+  .btn-submit::after{
+    content:"";position:absolute;inset:0;
+    background:var(--primary);transform:translateY(100%);
+    transition:transform .5s var(--ease);z-index:-1;
+  }
+  .btn-submit:hover::after{transform:translateY(0)}
+  .btn-submit:active{transform:scale(.97)}
+  .btn-submit .sarr{
+    width:26px;height:26px;border-radius:50%;
+    background:rgba(255,255,255,.18);
+    display:inline-flex;align-items:center;justify-content:center;
+    transition:transform .35s var(--ease);
+  }
+  .btn-submit:hover .sarr{transform:translateX(3px) rotate(-45deg)}
+  .form-note{font-size:13px;color:var(--muted);line-height:1.45;max-width:28ch}
+
+  /* success state */
+  .form-success{
+    display:none;text-align:center;
+    padding:64px 32px;
+    background:var(--bg-soft);border-radius:var(--radius-lg);
+    border:1px solid var(--border);
+  }
+  .form-success.show{display:flex;flex-direction:column;align-items:center;gap:16px}
+  .form-success .ok-circle{
+    width:72px;height:72px;border-radius:50%;
+    background:var(--bg-lime);
+    display:flex;align-items:center;justify-content:center;
+    font-size:32px;margin-bottom:8px;
+  }
+  .form-success h3{margin:0;font-size:28px;font-weight:500;letter-spacing:-.02em}
+  .form-success h3 .ins{color:var(--primary)}
+  .form-success p{margin:0;font-size:16px;color:var(--muted);line-height:1.55;max-width:36ch}
+
+  /* ─── SIDEBAR ─── */
+  .connect-sidebar{
+    position:sticky;top:112px;
+    display:flex;flex-direction:column;gap:32px;
+  }
+
+  /* email grande */
+  .sidebar-email-block{
+    padding:36px;border-radius:var(--radius-lg);
+    background:var(--ink);color:#fff;
+    position:relative;overflow:hidden;
+  }
+  .sidebar-email-block::before{
+    content:"";position:absolute;right:-80px;bottom:-80px;
+    width:240px;height:240px;border-radius:50%;
+    background:radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    opacity:.45;
+  }
+  .sidebar-email-block::after{
+    content:"";position:absolute;left:-60px;top:-60px;
+    width:180px;height:180px;border-radius:50%;
+    background:radial-gradient(circle, var(--bg-lime) 0%, transparent 70%);
+    opacity:.2;
+  }
+  .seb-inner{position:relative;z-index:1}
+  .seb-label{
+    font-size:11.5px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;
+    color:rgba(255,255,255,.45);margin-bottom:14px;
+    display:flex;align-items:center;gap:6px;
+  }
+  .seb-label::before{content:"";width:16px;height:1px;background:var(--primary)}
+  .seb-email{
+    display:block;font-size:clamp(18px,2.2vw,26px);font-weight:500;
+    color:#fff;letter-spacing:-.015em;
+    text-decoration:underline;text-decoration-color:rgba(114,64,222,.4);
+    text-underline-offset:5px;
+    transition:text-decoration-color .3s;margin-bottom:24px;
+  }
+  .seb-email:hover{text-decoration-color:var(--primary)}
+  .seb-phone{
+    display:flex;align-items:center;gap:10px;
+    font-size:16px;color:rgba(255,255,255,.75);
+    margin-bottom:6px;
+  }
+  .seb-phone a{color:rgba(255,255,255,.75);transition:color .25s}
+  .seb-phone a:hover{color:#fff}
+
+  /* info cards */
+  .sidebar-card{
+    padding:28px;border-radius:var(--radius-lg);
+    border:1px solid var(--border);background:#fff;
+    display:flex;flex-direction:column;gap:16px;
+  }
+  .sc-label{
+    font-size:11.5px;font-weight:500;text-transform:uppercase;letter-spacing:.1em;
+    color:var(--muted-2);display:flex;align-items:center;gap:6px;
+  }
+  .sc-label::before{content:"";width:16px;height:1px;background:var(--primary)}
+  .sc-address{font-size:15px;line-height:1.55;color:var(--muted)}
+  .sc-address strong{color:var(--ink);font-weight:500;display:block;margin-bottom:2px}
+
+  /* social icons */
+  .sidebar-socials{
+    display:flex;gap:10px;
+  }
+  .ss-link{
+    flex:1;padding:14px;border-radius:var(--radius-sm);
+    border:1px solid var(--border);
+    display:flex;flex-direction:column;align-items:center;gap:6px;
+    font-size:11px;font-weight:500;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;
+    transition:all .3s var(--ease);position:relative;overflow:hidden;
+  }
+  .ss-link::before{
+    content:"";position:absolute;inset:0;background:var(--ink);
+    transform:translateY(100%);transition:transform .35s var(--ease);
+  }
+  .ss-link:hover::before{transform:translateY(0)}
+  .ss-link:hover{color:#fff;border-color:var(--ink)}
+  .ss-icon{font-size:18px;font-weight:600;position:relative;z-index:1;transition:transform .3s var(--ease-bounce)}
+  .ss-link:hover .ss-icon{transform:translateY(-3px)}
+  .ss-name{position:relative;z-index:1}
+
+  /* respuesta rápida */
+  .sidebar-response{
+    padding:20px 24px;border-radius:var(--radius-sm);
+    background:var(--bg-lime);
+    display:flex;align-items:center;gap:14px;
+  }
+  .sr-icon{font-size:24px;flex-shrink:0}
+  .sr-text{font-size:13.5px;line-height:1.45}
+  .sr-text strong{display:block;font-weight:500;color:var(--ink);margin-bottom:2px}
+  .sr-text span{color:var(--muted)}
+
+  /* ═══════════ MARQUEE ═══════════ */
+  .marquee-wrap{
+    overflow:hidden;
+    border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+    background:var(--bg);margin-bottom:0;
+  }
+  .marquee{
+    display:flex;gap:64px;white-space:nowrap;
+    animation:marquee 40s linear infinite;padding:18px 0;
+  }
+  .marquee:hover{animation-play-state:paused}
+  .marquee > span{display:inline-flex;align-items:center;gap:64px;font-family:var(--serif);font-style:italic;font-size:28px;color:var(--ink)}
+  .marquee .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--primary)}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ═══════════ FOOTER ═══════════ */
+  footer.foot{
+    background:var(--ink);color:#fff;padding:80px 0 32px;
+    border-top-left-radius:var(--radius-lg);border-top-right-radius:var(--radius-lg);
+    position:relative;overflow:hidden;
+  }
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .foot-brand{display:flex;flex-direction:column;gap:20px;max-width:380px}
+  .foot-brand .brand{color:#fff;font-size:24px}
+  .foot-brand .brand-dot{background:#fff}
+  .foot-brand .brand-dot::after{background:var(--primary)}
+  .foot-brand p{margin:0;color:rgba(255,255,255,.6);font-size:15px;line-height:1.55}
+  .foot h5{margin:0 0 18px;font-size:13px;font-weight:500;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em}
+  .foot ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+  .foot ul a{color:rgba(255,255,255,.85);font-size:15px;transition:color .25s,transform .25s;display:inline-block}
+  .foot ul a:hover{color:var(--primary-200);transform:translateX(4px)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;font-size:13px;color:rgba(255,255,255,.5)}
+  .foot-socials{display:flex;gap:8px}
+  .foot-socials a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease);color:#fff}
+  .foot-socials a:hover{background:var(--primary);transform:translateY(-3px)}
+  .foot-wordmark{
+    font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:clamp(120px,22vw,320px);line-height:.85;letter-spacing:-.04em;
+    color:rgba(255,255,255,.06);margin:48px 0 -32px;text-align:center;
+    user-select:none;pointer-events:none;
+    background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(114,64,222,.04));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+
+  /* ═══════════ REVEAL ═══════════ */
+  .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ═══════════ HAMBURGUESA ═══════════ */
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border-radius:8px;transition:background .25s;z-index:200;background:none;border:none}
+  .hamburger:hover{background:rgba(28,28,28,.06)}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .35s var(--ease),opacity .25s,width .3s}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0;width:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-nav{position:fixed;inset:0;background:rgba(255,253,250,.98);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:150;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .35s var(--ease),transform .35s var(--ease);transform:translateY(-12px)}
+  .mobile-nav.open{opacity:1;pointer-events:all;transform:none}
+  .mobile-nav a{font-size:clamp(28px,7vw,42px);font-weight:500;letter-spacing:-.025em;color:var(--ink);padding:8px 24px;border-radius:var(--radius-pill);transition:color .2s,background .2s;text-align:center}
+  .mobile-nav a:hover,.mobile-nav a.active{color:var(--primary)}
+  .mobile-nav .mobile-cta{margin-top:24px;padding:16px 32px;font-size:18px;border-radius:var(--radius-pill);background:var(--ink);color:#fff;font-weight:500;transition:background .25s,transform .25s}
+  .mobile-nav .mobile-cta:hover{background:var(--primary);transform:scale(1.03)}
+  .mobile-nav-footer{margin-top:32px;font-size:14px;color:var(--muted);text-align:center}
+
+  /* ═══════════ RESPONSIVE ═══════════ */
+  @media(max-width:900px){
+    .hamburger{display:flex}
+    nav.primary{display:none}
+    .nav-actions .btn{display:none}
+    .container{padding:0 18px}
+    .ch-top{grid-template-columns:1fr;gap:28px}
+    h1.connect-title{font-size:72px}
+    .ch-strip{grid-template-columns:1fr}
+    .ch-strip > div{border-right:none;border-bottom:1px solid var(--border)}
+    .ch-strip > div:last-child{border-bottom:none}
+    .connect-layout{grid-template-columns:1fr;gap:48px}
+    .connect-sidebar{position:static}
+    .input-row{grid-template-columns:1fr}
+    .budget-options{flex-direction:column}
+    .foot-top{grid-template-columns:1fr;gap:32px}
+    .cursor-blob{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor-blob" id="cursorBlob"></div>
+
+<!-- ═══════════ NAV ═══════════ -->
+<header class="nav" id="nav">
+  <div class="container">
+    <a class="brand" href="index.html" aria-label="Inmark Agency — Inicio">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span><b>inmark</b><i>.</i></span>
+    </a>
+    <nav class="primary" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <div class="nav-dropdown">
+        <a href="servicios.html" class="nav-dropdown-toggle">Servicios <span class="nav-arr">▾</span></a>
+        <div class="nav-dropdown-menu">
+          <a href="servicios-seo-ecuador.html">SEO & Posicionamiento</a>
+          <a href="servicios-automatizacion-ia-ecuador.html">Automatización con IA</a>
+          <a href="servicios-google-ads-ecuador.html">Google Ads & Performance</a>
+          <a href="servicios-desarrollo-web-ecuador.html">Desarrollo Web</a>
+        </div>
+      </div>
+      <a href="work.html">Proyectos</a>
+      <a href="blog.html">Blog</a>
+      <a href="nosotros.html">Quiénes somos</a>
+      <a href="conecta.html" class="active">Contacto</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#formulario" class="btn btn-primary" data-cursor="hover">Auditoría gratuita <span class="arr">→</span></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- MENÚ MÓVIL -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="blog.html">Blog</a>
+  <a href="work.html">Proyectos</a>
+  <a href="nosotros.html">Quiénes somos</a>
+  <a href="conecta.html" class="active">Contacto</a>
+  <a href="conecta.html" class="mobile-cta">Auditoría gratuita →</a>
+  <div class="mobile-nav-footer">hola@inmark.ec · +593 95 863 6022</div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="connect-hero">
+  <div class="ch-blob one" aria-hidden="true"></div>
+  <div class="ch-blob two" aria-hidden="true"></div>
+  <div class="container">
+    <div class="ch-top">
+      <div>
+        <div class="ch-eyebrow">
+          <span class="pulse"></span>
+          <span style="font-weight:500">Disponibles para nuevos proyectos</span>
+        </div>
+        <h1 class="connect-title">
+          <span class="line"><span>Auditoría</span></span>
+          <span class="line"><span>digital <span class="ins">gratuita.</span></span></span>
+        </h1>
+      </div>
+      <div class="ch-right">
+        <p class="ch-desc">
+          Analizamos tu situación digital real — SEO, estructura web y oportunidades de crecimiento. <em>Te entregamos un plan claro para los próximos 90 días.</em> Sin compromiso.
+        </p>
+        <div class="ch-avail">
+          <span class="av-dot"></span>
+          <span><strong>Agenda abierta</strong> · Auditoría gratuita disponible ahora</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ch-strip">
+      <div>
+        <div class="cs-icon">◎</div>
+        <div class="cs-text">
+          <strong>Respuesta en 48h</strong>
+          <span>Todos los mensajes, respondidos</span>
+        </div>
+      </div>
+      <div>
+        <div class="cs-icon">◈</div>
+        <div class="cs-text">
+          <strong>Sin compromiso</strong>
+          <span>La auditoría inicial es siempre gratuita</span>
+        </div>
+      </div>
+      <div>
+        <div class="cs-icon">◉</div>
+        <div class="cs-text">
+          <strong>Ecuador</strong>
+          <span>Guayaquil · Quito · Cuenca</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ BODY — FORM + SIDEBAR ═══════════ -->
+<section class="connect-body" id="formulario">
+  <div class="container">
+    <div class="connect-layout">
+
+      <!-- FORMULARIO -->
+      <div class="connect-form-wrap reveal">
+        <p class="form-title">Cuéntanos tu proyecto</p>
+
+        <form class="contact-form" id="contactForm" novalidate>
+
+          <!-- Paso 1: Quién eres -->
+          <div class="form-step">
+            <span class="form-step-label">Paso 01</span>
+            <p class="form-step-title">¿Con quién <span class="ins">hablamos?</span></p>
+            <div class="input-row">
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="given-name">
+              </div>
+              <div class="field">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa">
+              </div>
+            </div>
+            <div class="input-row" style="margin-top:14px">
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="hola@tuempresa.com" required autocomplete="email">
+              </div>
+              <div class="field">
+                <label for="telefono">Teléfono <span style="color:var(--muted-2);font-weight:400">(opcional)</span></label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+593 …" autocomplete="tel">
+              </div>
+            </div>
+          </div>
+
+          <!-- Paso 2: Servicio -->
+          <div class="form-step">
+            <span class="form-step-label">Paso 02</span>
+            <p class="form-step-title">¿Qué necesitas <span class="ins">exactamente?</span></p>
+            <div class="service-options" role="group" aria-label="Selección de servicio">
+              <button type="button" class="svc-opt selected" data-svc="seo"><span>SEO & Arquitectura digital</span></button>
+              <button type="button" class="svc-opt" data-svc="ia"><span>Automatización con IA</span></button>
+              <button type="button" class="svc-opt" data-svc="ads"><span>Google Ads</span></button>
+              <button type="button" class="svc-opt" data-svc="web"><span>Desarrollo web</span></button>
+              <button type="button" class="svc-opt" data-svc="estrategia"><span>Estrategia completa</span></button>
+            </div>
+            <input type="hidden" id="servicio" name="servicio" value="web">
+          </div>
+
+          <!-- Paso 3: Presupuesto -->
+          <div class="form-step">
+            <span class="form-step-label">Paso 03</span>
+            <p class="form-step-title">¿Con qué <span class="ins">presupuesto</span> cuentas?</p>
+            <div class="budget-options" role="group" aria-label="Selección de presupuesto">
+              <button type="button" class="budget-opt" data-budget="menos2k">
+                <span class="bo-range">- $2.000</span>
+                <span class="bo-desc">Proyecto puntual o inicial</span>
+              </button>
+              <button type="button" class="budget-opt selected" data-budget="2k-5k">
+                <span class="bo-range">$2K – $5K</span>
+                <span class="bo-desc">Proyecto completo estándar</span>
+              </button>
+              <button type="button" class="budget-opt" data-budget="5k-15k">
+                <span class="bo-range">$5K – $15K</span>
+                <span class="bo-desc">Proyecto avanzado o estrategia</span>
+              </button>
+              <button type="button" class="budget-opt" data-budget="mas15k">
+                <span class="bo-range">+ $15.000</span>
+                <span class="bo-desc">Retainer mensual o proyecto global</span>
+              </button>
+            </div>
+            <input type="hidden" id="presupuesto" name="presupuesto" value="5k-15k">
+          </div>
+
+          <!-- Paso 4: Mensaje -->
+          <div class="form-step">
+            <span class="form-step-label">Paso 04</span>
+            <p class="form-step-title">Cuéntanos <span class="ins">más.</span></p>
+            <div class="field">
+              <label for="mensaje">Tu proyecto, reto o pregunta</label>
+              <textarea id="mensaje" name="mensaje" placeholder="¿Qué quieres conseguir? ¿Tienes un deadline? ¿Hay algo que hayan hecho mal agencias anteriores? Cuéntanos sin filtros." required></textarea>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn-submit" data-cursor="hover">
+              Enviar mensaje
+              <span class="sarr" aria-hidden="true">→</span>
+            </button>
+            <p class="form-note">Sin spam. Solo nos ponemos en contacto contigo con información relevante a tu proyecto.</p>
+          </div>
+
+        </form>
+
+        <!-- estado success -->
+        <div class="form-success" id="formSuccess">
+          <div class="ok-circle" aria-hidden="true">✓</div>
+          <h3>Mensaje <span class="ins">recibido</span></h3>
+          <p>Te respondemos en menos de 48 horas. Mientras tanto, echa un vistazo a nuestros proyectos.</p>
+          <a href="work.html" class="btn btn-ghost" style="margin-top:8px" data-cursor="hover">Ver proyectos <span class="arr">→</span></a>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="connect-sidebar reveal">
+
+        <!-- Email grande -->
+        <div class="sidebar-email-block">
+          <div class="seb-inner">
+            <p class="seb-label">Escríbenos directamente</p>
+            <a href="mailto:hola@inmark.ec" class="seb-email">hola@inmark.ec</a>
+            <div class="seb-phone">
+              <span>☎</span>
+              <a href="tel:+593958636022">+593 95 863 6022</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dirección -->
+        <div class="sidebar-card">
+          <span class="sc-label">Nuestra sede</span>
+          <p class="sc-address">
+            <strong>Inmark Ecuador</strong>
+            Guayaquil, Ecuador<br>
+            <span style="font-size:13px;margin-top:6px;display:inline-block">
+              Lun – Vie · 09:00 – 18:00
+            </span>
+          </p>
+        </div>
+
+        <!-- Redes -->
+        <div class="sidebar-card">
+          <span class="sc-label">Síguenos</span>
+          <div class="sidebar-socials">
+            <a class="ss-link" href="https://www.linkedin.com/company/inmarkecuador" target="_blank" rel="noopener" aria-label="LinkedIn" data-cursor="hover">
+              <span class="ss-icon">in</span>
+              <span class="ss-name">LinkedIn</span>
+            </a>
+            <a class="ss-link" href="https://www.instagram.com/inmarkecuador/" target="_blank" rel="noopener" aria-label="Instagram" data-cursor="hover">
+              <span class="ss-icon">ig</span>
+              <span class="ss-name">Instagram</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Respuesta rápida -->
+        <div class="sidebar-response">
+          <span class="sr-icon">⚡</span>
+          <div class="sr-text">
+            <strong>Respuesta garantizada en 48h</strong>
+            <span>Respondemos todos los mensajes. Sin excepciones.</span>
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ MARQUEE ═══════════ -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee">
+    <span>hola@inmark.ec <span class="dot"></span> +593 95 863 6022 <span class="dot"></span> Guayaquil · Ecuador <span class="dot"></span> Disponibles ahora <span class="dot"></span> Auditoría gratuita <span class="dot"></span> Sin compromiso <span class="dot"></span> Respuesta en 48h <span class="dot"></span></span>
+    <span>hola@inmark.ec <span class="dot"></span> +593 95 863 6022 <span class="dot"></span> Guayaquil · Ecuador <span class="dot"></span> Disponibles ahora <span class="dot"></span> Auditoría gratuita <span class="dot"></span> Sin compromiso <span class="dot"></span> Respuesta en 48h <span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="foot">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="index.html" aria-label="Inicio">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span><b>inmark</b><i>.</i></span>
+        </a>
+        <p>Consultora de crecimiento digital en Ecuador. Diagnosticamos cuellos de botella y construimos sistemas — SEO, IA, Ads y webs que convierten.</p>
+        <a href="mailto:hola@inmark.ec" class="btn btn-ghost" style="border-color:rgba(255,255,255,.2);color:#fff;align-self:flex-start" data-cursor="hover">hola@inmark.ec <span class="arr">→</span></a>
+      </div>
+      <div>
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="servicios.html">SEO & Arquitectura digital</a></li>
+          <li><a href="servicios.html">Automatización con IA</a></li>
+          <li><a href="servicios.html">Google Ads & Performance</a></li>
+          <li><a href="servicios.html">Desarrollo web</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Inmark</h5>
+        <ul>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="work.html">Proyectos</a></li>
+          <li><a href="conecta.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <ul>
+          <li style="color:rgba(255,255,255,.6)">Guayaquil, Ecuador</li>
+          <li><a href="tel:+593958636022">+593 95 863 6022</a></li>
+          <li><a href="mailto:hola@inmark.ec">hola@inmark.ec</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-wordmark" aria-hidden="true">inmark<i>.</i></div>
+    <div class="foot-bottom">
+      <span>© 2026 Inmark · Ecuador</span>
+      <div class="foot-socials">
+        <a href="https://www.linkedin.com/company/inmarkecuador" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+        <a href="https://www.instagram.com/inmarkecuador/" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+      </div>
+      <span>Guayaquil · Ecuador</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburguesa
+  (function(){
+    const btn=document.getElementById('hamburger');
+    const nav=document.getElementById('mobileNav');
+    const links=nav.querySelectorAll('a');
+    if(!btn||!nav)return;
+    function toggle(open){btn.classList.toggle('open',open);nav.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';}
+    btn.addEventListener('click',()=>toggle(!nav.classList.contains('open')));
+    links.forEach(l=>l.addEventListener('click',()=>toggle(false)));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')toggle(false)});
+  })();
+
+  // 1) Cursor
+  (function(){
+    const blob=document.getElementById('cursorBlob');
+    if(!blob||matchMedia('(pointer:coarse)').matches) return;
+    let x=0,y=0,tx=0,ty=0;
+    document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY;blob.classList.add('active')});
+    function loop(){x+=(tx-x)*.18;y+=(ty-y)*.18;blob.style.transform=`translate(${x}px,${y}px) translate(-50%,-50%)`;requestAnimationFrame(loop)}
+    loop();
+    document.querySelectorAll('[data-cursor="hover"]').forEach(el=>{
+      el.addEventListener('mouseenter',()=>blob.classList.add('hover'));
+      el.addEventListener('mouseleave',()=>blob.classList.remove('hover'));
+    });
+  })();
+
+  // 2) Nav scroll
+  (function(){
+    const nav=document.getElementById('nav');
+    addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>24));
+  })();
+
+  // 3) Reveal
+  (function(){
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+    },{threshold:.1,rootMargin:'0px 0px -40px'});
+    document.querySelectorAll('.reveal').forEach((n,i)=>{n.style.transitionDelay=`${(i%3)*80}ms`;io.observe(n)});
+  })();
+
+  // 4) Servicio selector
+  document.querySelectorAll('.svc-opt').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.svc-opt').forEach(b=>b.classList.remove('selected'));
+      btn.classList.add('selected');
+      document.getElementById('servicio').value=btn.dataset.svc;
+    });
+  });
+
+  // 5) Budget selector
+  document.querySelectorAll('.budget-opt').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.budget-opt').forEach(b=>b.classList.remove('selected'));
+      btn.classList.add('selected');
+      document.getElementById('presupuesto').value=btn.dataset.budget;
+    });
+  });
+
+  // 6) Form submit (simulado — conectar al backend real)
+  document.getElementById('contactForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    const form=this;
+    const btn=form.querySelector('.btn-submit');
+    btn.textContent='Enviando…';
+    btn.disabled=true;
+    // Aquí conectar con tu servicio de email (Formspree, EmailJS, etc.)
+    setTimeout(()=>{
+      form.style.display='none';
+      document.getElementById('formSuccess').classList.add('show');
+    },1200);
+  });
+</script>
+</body>
+</html>

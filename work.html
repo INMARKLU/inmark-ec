@@ -1,0 +1,1030 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Proyectos · Casos de éxito en Ecuador y Guayaquil | Inmark</title>
+<meta name="description" content="Casos reales de SEO, automatización con IA y desarrollo web en Ecuador. Sistemas digitales que generan resultados medibles para empresas ecuatorianas." />
+<meta name="keywords" content="marketing digital guayaquil, agencia de marketing digital guayaquil, estrategias de marketing digital ecuador, casos de exito seo ecuador" />
+<meta name="author" content="Inmark Ecuador" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<link rel="canonical" href="https://inmark.ec/work.html" />
+<link rel="alternate" hreflang="es-EC" href="https://inmark.ec/work.html" />
+<link rel="alternate" hreflang="es" href="https://inmark.ec/work.html" />
+<link rel="alternate" hreflang="x-default" href="https://inmark.ec/" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_EC" />
+<meta property="og:title" content="Proyectos · Casos de éxito en Ecuador y Guayaquil | Inmark" />
+<meta property="og:description" content="Casos reales de SEO, automatización con IA y desarrollo web en Ecuador. Sistemas digitales que generan resultados medibles." />
+<meta property="og:url" content="https://inmark.ec/work.html" />
+<meta property="og:image" content="https://inmark.ec/img/og-inmark-ec.jpg" />
+<meta property="og:site_name" content="Inmark Ecuador" />
+
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@200,300,400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+  /* ═══════════ DESIGN TOKENS (idénticos al home) ═══════════ */
+  :root{
+    --bg:#FFFDFA; --bg-soft:#F8F7FA; --bg-lilac:#F6F3FF; --bg-lime:#ECF3B3;
+    --ink:#1C1C1C; --ink-soft:#232323; --muted:#666666; --muted-2:#9B9B9C;
+    --border:#E5E5E5; --primary:#7240DE; --primary-hi:#834AFF; --primary-lo:#5D3FD3;
+    --primary-100:#D4D4F5; --primary-200:#C0C1FF;
+    --sans:'Switzer',-apple-system,BlinkMacSystemFont,sans-serif;
+    --serif:'Instrument Serif',Georgia,serif;
+    --radius-sm:12px; --radius:20px; --radius-lg:28px; --radius-pill:999px;
+    --container:1280px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+    --ease-bounce:cubic-bezier(.34,1.56,.64,1);
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  ::selection{background:var(--primary);color:#fff}
+
+  .ins{font-family:var(--serif);font-style:italic;font-weight:400}
+  .container{max-width:var(--container);margin:0 auto;padding:0 32px}
+
+  /* ═══════════ CURSOR FOLLOWER ═══════════ */
+  .cursor-blob{
+    position:fixed;width:24px;height:24px;border-radius:50%;
+    background:var(--primary);pointer-events:none;z-index:9999;
+    mix-blend-mode:difference;
+    transition:transform .15s ease-out, width .3s var(--ease), height .3s var(--ease), opacity .3s;
+    transform:translate(-50%,-50%);opacity:0;
+  }
+  .cursor-blob.active{opacity:.85}
+  .cursor-blob.hover{width:64px;height:64px;background:var(--bg-lime)}
+
+  /* ═══════════ NAV ═══════════ */
+  header.nav{
+    position:sticky;top:0;z-index:100;
+    background:rgba(255,253,250,.78);
+    backdrop-filter:saturate(140%) blur(14px);
+    -webkit-backdrop-filter:saturate(140%) blur(14px);
+    border-bottom:1px solid rgba(28,28,28,.06);
+    transition:background .3s var(--ease);
+  }
+  header.nav.scrolled{background:rgba(255,253,250,.95);box-shadow:0 1px 30px rgba(28,28,28,.04)}
+  header.nav .container{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:20px;letter-spacing:-.02em;transition:transform .3s var(--ease)}
+  .brand:hover{transform:scale(1.03)}
+  .brand-dot{
+    width:32px;height:32px;border-radius:50%;background:var(--ink);
+    position:relative;flex:0 0 32px;
+    display:inline-flex;align-items:center;justify-content:center;
+    transition:transform .4s var(--ease-bounce);
+  }
+  .brand:hover .brand-dot{transform:rotate(360deg)}
+  .brand-dot::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--primary)}
+  .brand i{font-style:italic;font-family:var(--serif);font-weight:400;color:var(--primary);font-size:22px;margin-left:-2px}
+
+  nav.primary{display:flex;gap:4px}
+  nav.primary a{
+    position:relative;padding:9px 16px;border-radius:var(--radius-pill);
+    font-size:14.5px;color:var(--ink);font-weight:500;
+    transition:color .25s, background .25s;
+    overflow:hidden;
+  }
+  nav.primary a::before{
+    content:"";position:absolute;inset:0;background:var(--ink);
+    border-radius:var(--radius-pill);
+    transform:scale(0);transition:transform .35s var(--ease);z-index:-1;
+  }
+  nav.primary a.active::before,nav.primary a:hover::before{transform:scale(1)}
+  nav.primary a.active,nav.primary a:hover{color:#fff}
+
+  /* ═══ NAV DROPDOWN ═══ */
+  .nav-dropdown{position:relative;display:flex;align-items:center}
+  .nav-dropdown-toggle{display:flex!important;align-items:center;gap:5px}
+  .nav-arr{font-size:9px;opacity:.6;transition:transform .25s var(--ease)}
+  .nav-dropdown:hover .nav-arr{transform:rotate(180deg)}
+  .nav-dropdown-menu{
+    position:absolute;top:calc(100% + 8px);left:50%;
+    transform:translateX(-50%) translateY(6px);
+    min-width:230px;background:var(--bg);border:1px solid var(--border);
+    border-radius:var(--radius);padding:6px;
+    box-shadow:0 8px 32px rgba(28,28,28,.10);
+    opacity:0;pointer-events:none;z-index:200;
+    transition:opacity .2s var(--ease),transform .2s var(--ease);
+  }
+  .nav-dropdown:hover .nav-dropdown-menu{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+  .nav-dropdown-menu a{
+    display:block;padding:10px 14px;border-radius:var(--radius-sm);
+    font-size:14px;font-weight:500;color:var(--ink);overflow:visible;
+  }
+  .nav-dropdown-menu a::before{display:none!important}
+  .nav-dropdown-menu a:hover{background:var(--bg-soft)!important;color:var(--primary)!important}
+
+  .nav-actions{display:flex;align-items:center;gap:10px}
+  .lang{font-size:13px;font-weight:500;color:var(--muted);display:flex;gap:6px;align-items:center;padding:6px 10px}
+  .lang b{color:var(--ink);font-weight:600}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:13px 22px;border-radius:var(--radius-pill);
+    font-size:14.5px;font-weight:500;cursor:pointer;
+    border:1px solid transparent;position:relative;overflow:hidden;
+    transition:transform .25s var(--ease), color .3s, border-color .3s;
+    isolation:isolate;
+  }
+  .btn::before{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:var(--ink);transition:transform .5s var(--ease);
+  }
+  .btn::after{
+    content:"";position:absolute;inset:0;z-index:-1;
+    background:var(--primary);
+    transform:translateY(100%);transition:transform .5s var(--ease);
+  }
+  .btn:hover::after{transform:translateY(0)}
+  .btn:active{transform:scale(.97)}
+  .btn .arr{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.18);transition:transform .35s var(--ease)}
+  .btn:hover .arr{transform:translateX(3px) rotate(-45deg)}
+  .btn-primary{color:#fff}
+  .btn-ghost{color:var(--ink);border-color:var(--border)}
+  .btn-ghost::before{background:transparent}
+  .btn-ghost::after{background:var(--ink)}
+  .btn-ghost:hover{color:#fff;border-color:var(--ink)}
+  .btn-ghost .arr{background:rgba(28,28,28,.08)}
+  .btn-ghost:hover .arr{background:rgba(255,255,255,.18)}
+
+  /* ═══════════ SECTION UTILITIES ═══════════ */
+  .sect-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;font-weight:500;color:var(--primary);
+    text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px;
+  }
+  .sect-eyebrow::before{content:"";width:24px;height:1px;background:var(--primary)}
+  h2.section-title{margin:0;font-size:clamp(40px,5.2vw,72px);line-height:1.02;letter-spacing:-.035em;font-weight:500}
+  h2.section-title .ins{color:var(--primary);font-weight:400}
+
+  /* ═══════════ WORK HERO ═══════════ */
+  section.work-hero{
+    padding:80px 0 64px;
+    position:relative;overflow:hidden;
+    border-bottom:1px solid var(--border);
+  }
+  .work-hero-bg{
+    position:absolute;border-radius:50%;filter:blur(100px);opacity:.3;z-index:0;pointer-events:none;
+    width:600px;height:600px;background:var(--primary-100);
+    top:-200px;right:-150px;
+    animation:heroblob 20s ease-in-out infinite;
+  }
+  @keyframes heroblob{
+    0%,100%{transform:scale(1) translate(0,0)}
+    50%{transform:scale(1.1) translate(-30px,40px)}
+  }
+  .work-hero .container{position:relative;z-index:1}
+  .work-hero-grid{
+    display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:end;
+    padding-bottom:56px;
+  }
+  .work-hero-count{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:6px 14px 6px 8px;background:#fff;border:1px solid var(--border);
+    border-radius:var(--radius-pill);font-size:13px;font-weight:500;color:var(--ink);
+    margin-bottom:28px;
+  }
+  .work-hero-count .pulse{
+    width:8px;height:8px;border-radius:50%;background:var(--primary);
+    box-shadow:0 0 0 4px rgba(114,64,222,.18);
+    animation:pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse{
+    0%,100%{box-shadow:0 0 0 4px rgba(114,64,222,.18)}
+    50%{box-shadow:0 0 0 10px rgba(114,64,222,.04)}
+  }
+  h1.work-title{
+    margin:0;
+    font-size:clamp(56px,8vw,120px);
+    line-height:.93;letter-spacing:-.04em;font-weight:500;
+  }
+  h1.work-title .line{display:block;overflow:hidden}
+  h1.work-title .line > span{
+    display:inline-block;transform:translateY(110%);
+    animation:lineUp 1.1s var(--ease) forwards;
+  }
+  h1.work-title .line:nth-child(1) > span{animation-delay:.1s}
+  h1.work-title .line:nth-child(2) > span{animation-delay:.22s}
+  @keyframes lineUp{to{transform:translateY(0)}}
+  h1.work-title .ins{color:var(--primary);font-size:1.05em}
+
+  .work-hero-right{
+    display:flex;flex-direction:column;gap:24px;padding-bottom:12px;
+    animation:fadeUp 1s var(--ease) .5s both;
+  }
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+  .work-hero-desc{font-size:18px;line-height:1.6;color:var(--muted);max-width:40ch}
+  .work-hero-desc em{color:var(--ink);font-style:normal;font-weight:500}
+
+  /* stats row below hero */
+  .work-stats{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+    border-top:1px solid var(--border);
+    animation:fadeUp 1s var(--ease) .7s both;
+  }
+  .work-stats > div{
+    padding:22px 28px;border-right:1px solid var(--border);
+    display:flex;align-items:center;gap:16px;
+  }
+  .work-stats > div:last-child{border-right:none}
+  .work-stats .ws-n{font-size:28px;font-weight:500;letter-spacing:-.025em;color:var(--ink)}
+  .work-stats .ws-n .ins{color:var(--primary);font-size:1.1em}
+  .work-stats .ws-l{font-size:13px;color:var(--muted);line-height:1.35}
+
+  /* ═══════════ FILTER BAR ═══════════ */
+  .filter-bar{
+    padding:32px 0;
+    border-bottom:1px solid var(--border);
+    position:sticky;top:73px;z-index:90;
+    background:rgba(255,253,250,.92);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+  }
+  .filter-bar .container{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .filter-pill{
+    display:inline-flex;align-items:center;gap:7px;
+    padding:8px 18px;border-radius:var(--radius-pill);
+    font-size:13.5px;font-weight:500;cursor:pointer;
+    border:1px solid var(--border);color:var(--muted);
+    background:transparent;
+    transition:all .25s var(--ease);
+    position:relative;overflow:hidden;
+  }
+  .filter-pill::before{
+    content:"";position:absolute;inset:0;background:var(--ink);
+    border-radius:var(--radius-pill);
+    transform:scale(0);transition:transform .3s var(--ease);z-index:-1;
+  }
+  .filter-pill:hover{color:var(--ink);border-color:var(--ink)}
+  .filter-pill.active{color:#fff;border-color:var(--ink)}
+  .filter-pill.active::before{transform:scale(1)}
+  .filter-pill .count{
+    font-size:11px;font-weight:600;letter-spacing:.03em;
+    background:rgba(28,28,28,.08);
+    padding:2px 7px;border-radius:var(--radius-pill);
+    transition:background .25s;
+  }
+  .filter-pill.active .count{background:rgba(255,255,255,.2);color:#fff}
+
+  /* ═══════════ PROJECTS — EDITORIAL LAYOUT ═══════════ */
+  section.work-grid{padding:80px 0 120px}
+
+  /* === ROW: 2 columns === */
+  .work-row{
+    display:grid;gap:24px;margin-bottom:24px;
+  }
+  .work-row.cols-2{grid-template-columns:1fr 1fr}
+  .work-row.cols-3-1{grid-template-columns:1.72fr 1fr}
+  .work-row.cols-1-3{grid-template-columns:1fr 1.72fr}
+  .work-row.cols-1{grid-template-columns:1fr}
+  .work-row.cols-3{grid-template-columns:1fr 1fr 1fr}
+
+  /* === SINGLE PROJECT CARD === */
+  .wcard{
+    position:relative;overflow:hidden;border-radius:var(--radius-lg);
+    cursor:pointer;display:block;
+    transition:transform .55s var(--ease);
+  }
+  .wcard:hover{transform:translateY(-6px)}
+
+  /* image container */
+  .wcard-img{
+    position:relative;overflow:hidden;
+    background:var(--bg-soft);
+  }
+  .wcard.tall .wcard-img{aspect-ratio:3/4}
+  .wcard.wide .wcard-img{aspect-ratio:16/9}
+  .wcard.square .wcard-img{aspect-ratio:1}
+  .wcard.cinema .wcard-img{aspect-ratio:21/9}
+
+  .wcard-img svg,.wcard-img img{
+    width:100%;height:100%;object-fit:cover;
+    transition:transform .8s var(--ease);
+  }
+  .wcard:hover .wcard-img svg,
+  .wcard:hover .wcard-img img{transform:scale(1.05)}
+
+  /* gradient overlay */
+  .wcard-img::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(to bottom, transparent 40%, rgba(28,28,28,.55) 100%);
+    opacity:0;transition:opacity .4s;
+  }
+  .wcard:hover .wcard-img::after{opacity:1}
+
+  /* overlay arrow */
+  .wcard-arrow{
+    position:absolute;bottom:20px;right:20px;z-index:2;
+    width:52px;height:52px;border-radius:50%;
+    background:#fff;display:flex;align-items:center;justify-content:center;
+    transform:translate(70px,70px) rotate(-45deg);opacity:0;
+    transition:all .5s var(--ease);font-size:22px;color:var(--ink);
+  }
+  .wcard:hover .wcard-arrow{transform:translate(0,0) rotate(0);opacity:1;background:var(--primary);color:#fff}
+
+  /* badge */
+  .wcard-badge{
+    position:absolute;top:18px;left:18px;z-index:2;
+    background:rgba(255,253,250,.92);backdrop-filter:blur(8px);
+    padding:5px 12px;border-radius:var(--radius-pill);
+    font-size:12px;font-weight:500;color:var(--ink);
+    transition:transform .4s var(--ease);
+  }
+  .wcard:hover .wcard-badge{transform:translateY(-2px)}
+
+  /* meta below image */
+  .wcard-meta{
+    padding:20px 4px 8px;
+    display:flex;align-items:flex-start;justify-content:space-between;gap:16px;
+  }
+  .wcard-info{display:flex;flex-direction:column;gap:6px}
+  .wcard h3{
+    margin:0;font-size:22px;font-weight:500;letter-spacing:-.015em;line-height:1.2;
+  }
+  .wcard h3 .ins{color:var(--primary);font-weight:400}
+  .wcard-tags{display:flex;gap:6px;flex-wrap:wrap}
+  .wcard-tag{
+    font-size:11.5px;font-weight:500;color:var(--muted);
+    border:1px solid var(--border);border-radius:var(--radius-pill);
+    padding:3px 10px;
+  }
+  .wcard-year{font-size:13px;color:var(--muted-2);white-space:nowrap;padding-top:5px}
+
+  /* card dark variant */
+  .wcard.dark .wcard-img{background:var(--ink)}
+  .wcard.lime .wcard-img{background:var(--bg-lime)}
+  .wcard.lilac .wcard-img{background:var(--bg-lilac)}
+
+  /* ═══════════ FEATURED ROW (full-width, horizontal) ═══════════ */
+  .wcard-featured{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:0;
+    border:1px solid var(--border);border-radius:var(--radius-lg);
+    overflow:hidden;margin-bottom:24px;
+    cursor:pointer;transition:transform .55s var(--ease), border-color .3s;
+    position:relative;
+  }
+  .wcard-featured:hover{transform:translateY(-4px);border-color:var(--ink)}
+  .wcard-featured .wcard-img{aspect-ratio:auto;min-height:440px;height:100%}
+  .wcard-featured .wcard-img svg{height:100%;width:100%;object-fit:cover;transition:transform .8s var(--ease)}
+  .wcard-featured:hover .wcard-img svg{transform:scale(1.04)}
+
+  .wcard-featured-info{
+    padding:52px 48px;display:flex;flex-direction:column;justify-content:space-between;
+    background:#fff;border-left:1px solid var(--border);
+    transition:background .3s;
+  }
+  .wcard-featured:hover .wcard-featured-info{background:var(--bg-soft)}
+  .wcard-featured-top{}
+  .wcard-featured-num{
+    font-family:var(--serif);font-style:italic;font-size:80px;
+    color:var(--border);line-height:1;letter-spacing:-.03em;margin-bottom:24px;
+    transition:color .3s;
+  }
+  .wcard-featured:hover .wcard-featured-num{color:var(--primary-100)}
+  .wcard-featured h3{
+    margin:0 0 16px;font-size:clamp(28px,3vw,44px);font-weight:500;
+    letter-spacing:-.025em;line-height:1.1;
+  }
+  .wcard-featured h3 .ins{color:var(--primary);font-weight:400}
+  .wcard-featured p{
+    margin:0 0 28px;font-size:16px;line-height:1.6;color:var(--muted);max-width:38ch;
+  }
+  .wcard-featured-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
+  .wcard-featured-tag{
+    font-size:12px;font-weight:500;color:var(--ink);
+    border:1px solid var(--border);border-radius:var(--radius-pill);
+    padding:4px 12px;transition:border-color .25s, color .25s;
+  }
+  .wcard-featured:hover .wcard-featured-tag{border-color:rgba(114,64,222,.3);color:var(--primary)}
+  .wcard-featured-foot{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:28px;border-top:1px solid var(--border);
+  }
+  .wcard-featured-client{font-size:14px;color:var(--muted)}
+  .wcard-featured-client strong{color:var(--ink);font-weight:500;display:block;font-size:16px}
+  .wcard-featured-btn{
+    width:52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:22px;
+    transition:background .25s, transform .45s var(--ease);flex-shrink:0;
+  }
+  .wcard-featured:hover .wcard-featured-btn{background:var(--primary);transform:rotate(-45deg) scale(1.1)}
+
+  /* ═══════════ LOAD MORE / COUNT ═══════════ */
+  .work-bottom{
+    margin-top:64px;display:flex;align-items:center;justify-content:space-between;
+    padding-top:40px;border-top:1px solid var(--border);
+  }
+  .work-showing{font-size:14px;color:var(--muted)}
+  .work-showing strong{color:var(--ink);font-weight:500}
+
+  /* ═══════════ CTA STRIP ═══════════ */
+  section.cta-strip{
+    margin:0 auto 100px;background:var(--ink);color:#fff;
+    border-radius:var(--radius-lg);padding:80px 64px;
+    position:relative;overflow:hidden;
+  }
+  .cta-strip::before{
+    content:"";position:absolute;right:-160px;top:50%;transform:translateY(-50%);
+    width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    opacity:.55;animation:glow 8s ease-in-out infinite;
+  }
+  .cta-strip::after{
+    content:"";position:absolute;left:-100px;bottom:-100px;
+    width:300px;height:300px;border-radius:50%;
+    background:radial-gradient(circle, var(--bg-lime) 0%, transparent 70%);
+    opacity:.25;animation:glow 10s ease-in-out infinite reverse;
+  }
+  @keyframes glow{
+    0%,100%{transform:translateY(-50%) scale(1)}
+    50%{transform:translateY(-50%) scale(1.15)}
+  }
+  .cta-strip-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+  .cta-strip h2{margin:0;font-size:clamp(36px,4.5vw,64px);line-height:1.02;letter-spacing:-.03em;font-weight:500}
+  .cta-strip h2 .ins{color:#C0C1FF;font-weight:400}
+  .cta-strip .right{display:flex;flex-direction:column;gap:20px}
+  .cta-strip p{margin:0;font-size:16px;line-height:1.55;color:rgba(255,255,255,.7)}
+  .cta-strip .btn-primary{color:var(--ink)}
+  .cta-strip .btn-primary::before{background:#fff}
+  .cta-strip .btn-primary::after{background:var(--primary)}
+  .cta-strip .btn-primary:hover{color:#fff}
+  .cta-strip .btn-primary .arr{background:rgba(28,28,28,.1)}
+  .cta-strip .btn-primary:hover .arr{background:rgba(255,255,255,.2)}
+
+  /* ═══════════ FOOTER ═══════════ */
+  footer.foot{
+    background:var(--ink);color:#fff;padding:80px 0 32px;
+    border-top-left-radius:var(--radius-lg);border-top-right-radius:var(--radius-lg);
+    position:relative;overflow:hidden;
+  }
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .foot-brand{display:flex;flex-direction:column;gap:20px;max-width:380px}
+  .foot-brand .brand{color:#fff;font-size:24px}
+  .foot-brand .brand-dot{background:#fff}
+  .foot-brand .brand-dot::after{background:var(--primary)}
+  .foot-brand p{margin:0;color:rgba(255,255,255,.6);font-size:15px;line-height:1.55}
+  .foot h5{margin:0 0 18px;font-size:13px;font-weight:500;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em}
+  .foot ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+  .foot ul a{color:rgba(255,255,255,.85);font-size:15px;transition:color .25s, transform .25s;display:inline-block}
+  .foot ul a:hover{color:var(--primary-200);transform:translateX(4px)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;font-size:13px;color:rgba(255,255,255,.5)}
+  .foot-socials{display:flex;gap:8px}
+  .foot-socials a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease);color:#fff}
+  .foot-socials a:hover{background:var(--primary);transform:translateY(-3px)}
+  .foot-wordmark{
+    font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:clamp(120px,22vw,320px);line-height:.85;letter-spacing:-.04em;
+    color:rgba(255,255,255,.06);margin:48px 0 -32px;text-align:center;
+    user-select:none;pointer-events:none;
+    background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(114,64,222,.04));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+
+  /* ═══════════ SCROLL REVEAL ═══════════ */
+  .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s var(--ease), transform 1s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ═══════════ MARQUEE ═══════════ */
+  .marquee-wrap{
+    overflow:hidden;
+    border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+    background:var(--bg);
+  }
+  .marquee{
+    display:flex;gap:64px;white-space:nowrap;
+    animation:marquee 38s linear infinite;
+    padding:18px 0;
+  }
+  .marquee:hover{animation-play-state:paused}
+  .marquee > span{
+    display:inline-flex;align-items:center;gap:64px;
+    font-family:var(--serif);font-style:italic;font-size:28px;color:var(--ink);
+  }
+  .marquee .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--primary)}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ═══════════ HAMBURGUESA ═══════════ */
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border-radius:8px;transition:background .25s;z-index:200;background:none;border:none}
+  .hamburger:hover{background:rgba(28,28,28,.06)}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .35s var(--ease),opacity .25s,width .3s}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0;width:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-nav{position:fixed;inset:0;background:rgba(255,253,250,.98);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:150;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .35s var(--ease),transform .35s var(--ease);transform:translateY(-12px)}
+  .mobile-nav.open{opacity:1;pointer-events:all;transform:none}
+  .mobile-nav a{font-size:clamp(28px,7vw,42px);font-weight:500;letter-spacing:-.025em;color:var(--ink);padding:8px 24px;border-radius:var(--radius-pill);transition:color .2s,background .2s;text-align:center}
+  .mobile-nav a:hover,.mobile-nav a.active{color:var(--primary)}
+  .mobile-nav .mobile-cta{margin-top:24px;padding:16px 32px;font-size:18px;border-radius:var(--radius-pill);background:var(--ink);color:#fff;font-weight:500;transition:background .25s,transform .25s}
+  .mobile-nav .mobile-cta:hover{background:var(--primary);transform:scale(1.03)}
+  .mobile-nav-footer{margin-top:32px;font-size:14px;color:var(--muted);text-align:center}
+
+  /* ═══════════ RESPONSIVE ═══════════ */
+  @media (max-width:900px){
+    .hamburger{display:flex}
+    nav.primary{display:none}
+    .nav-actions .btn{display:none}
+    .container{padding:0 18px}
+    .work-hero-grid{grid-template-columns:1fr;gap:24px}
+    h1.work-title{font-size:56px}
+    .work-stats{grid-template-columns:1fr 1fr}
+    .work-stats > div:nth-child(3){border-right:none}
+    .filter-bar{position:static;padding:20px 0}
+    .work-row.cols-2,
+    .work-row.cols-3-1,
+    .work-row.cols-1-3,
+    .work-row.cols-3{grid-template-columns:1fr}
+    .wcard.tall .wcard-img,.wcard.wide .wcard-img{aspect-ratio:4/3}
+    .wcard-featured{grid-template-columns:1fr}
+    .wcard-featured .wcard-img{min-height:300px}
+    .wcard-featured-info{padding:36px 28px}
+    .cta-strip{padding:48px 24px}
+    .cta-strip-grid{grid-template-columns:1fr;gap:24px}
+    .foot-top{grid-template-columns:1fr;gap:32px}
+    .cursor-blob{display:none}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  }
+</style>
+</head>
+<body>
+
+<div class="cursor-blob" id="cursorBlob"></div>
+
+<!-- ═══════════ NAV ═══════════ -->
+<header class="nav" id="nav">
+  <div class="container">
+    <a class="brand" href="index.html" aria-label="Inmark Agency — Inicio">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span><b>inmark</b><i>.</i></span>
+    </a>
+    <nav class="primary" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <div class="nav-dropdown">
+        <a href="servicios.html" class="nav-dropdown-toggle">Servicios <span class="nav-arr">▾</span></a>
+        <div class="nav-dropdown-menu">
+          <a href="servicios-seo-ecuador.html">SEO & Posicionamiento</a>
+          <a href="servicios-automatizacion-ia-ecuador.html">Automatización con IA</a>
+          <a href="servicios-google-ads-ecuador.html">Google Ads & Performance</a>
+          <a href="servicios-desarrollo-web-ecuador.html">Desarrollo Web</a>
+        </div>
+      </div>
+      <a href="work.html" class="active">Proyectos</a>
+      <a href="blog.html">Blog</a>
+      <a href="nosotros.html">Quiénes somos</a>
+      <a href="conecta.html">Contacto</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="conecta.html" class="btn btn-primary" data-cursor="hover">Auditoría gratuita <span class="arr">→</span></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- MENÚ MÓVIL -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="blog.html">Blog</a>
+  <a href="work.html" class="active">Proyectos</a>
+  <a href="nosotros.html">Quiénes somos</a>
+  <a href="conecta.html">Contacto</a>
+  <a href="conecta.html" class="mobile-cta">Auditoría gratuita →</a>
+  <div class="mobile-nav-footer">hola@inmark.ec · +593 95 863 6022</div>
+</nav>
+
+<!-- ═══════════ WORK HERO ═══════════ -->
+<section class="work-hero">
+  <div class="work-hero-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="work-hero-grid">
+      <div>
+        <div class="work-hero-count">
+          <span class="pulse"></span>
+          <span style="font-weight:500">Proyectos reales · Ecuador y Europa</span>
+        </div>
+        <h1 class="work-title">
+          <span class="line"><span>Marketing digital</span></span>
+          <span class="line"><span><span class="ins">Guayaquil.</span></span></span>
+        </h1>
+      </div>
+      <div class="work-hero-right">
+        <p class="work-hero-desc">
+          Casos reales de SEO, automatización con IA y desarrollo web. <em>Sistemas digitales</em> que generan resultados medibles para empresas en Ecuador y Europa.
+        </p>
+        <div>
+          <a href="conecta.html" class="btn btn-ghost" data-cursor="hover">Iniciar un proyecto <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="work-stats">
+      <div>
+        <div class="ws-n"><span class="ins">Ecuador</span></div>
+        <div class="ws-l">Guayaquil · Quito · Cuenca</div>
+      </div>
+      <div>
+        <div class="ws-n">SEO <span class="ins">+ IA</span></div>
+        <div class="ws-l">Posicionamiento + automatización conectados</div>
+      </div>
+      <div>
+        <div class="ws-n">+<span class="ins">210%</span></div>
+        <div class="ws-l">Tráfico orgánico conseguido en proyectos reales</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ MARQUEE ═══════════ -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee">
+    <span>SEO & Arquitectura Digital <span class="dot"></span> Automatización empresarial con IA <span class="dot"></span> Google Ads & Performance <span class="dot"></span> Desarrollo web orientado a conversión <span class="dot"></span> Agentes virtuales Ecuador <span class="dot"></span> SEO local Ecuador <span class="dot"></span></span>
+    <span>SEO & Arquitectura Digital <span class="dot"></span> Automatización empresarial con IA <span class="dot"></span> Google Ads & Performance <span class="dot"></span> Desarrollo web orientado a conversión <span class="dot"></span> Agentes virtuales Ecuador <span class="dot"></span> SEO local Ecuador <span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- ═══════════ FILTER BAR ═══════════ -->
+<div class="filter-bar" id="filterBar">
+  <div class="container">
+    <button class="filter-pill active" data-filter="all">Todos <span class="count">5</span></button>
+    <button class="filter-pill" data-filter="seo">SEO <span class="count">3</span></button>
+    <button class="filter-pill" data-filter="web">Desarrollo web <span class="count">2</span></button>
+    <button class="filter-pill" data-filter="ia">Automatización IA <span class="count">2</span></button>
+    <button class="filter-pill" data-filter="ads">Google Ads <span class="count">1</span></button>
+  </div>
+</div>
+
+<!-- ═══════════ PROJECTS GRID ═══════════ -->
+<section class="work-grid">
+  <div class="container">
+
+    <!-- PROYECTO DESTACADO 1: terraeventos.ec -->
+    <a class="wcard-featured reveal" href="conecta.html" data-cursor="hover" data-categories="web ia" aria-label="Caso de estudio: terraeventos.ec">
+      <div class="wcard-img">
+        <svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+          <rect width="800" height="500" fill="#1C1C1C"/>
+          <rect x="0" y="0" width="800" height="500" fill="url(#gt1)"/>
+          <defs>
+            <linearGradient id="gt1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1C1C1C"/>
+              <stop offset="100%" stop-color="#2a1a4e"/>
+            </linearGradient>
+          </defs>
+          <circle cx="680" cy="100" r="200" fill="#7240DE" opacity="0.2"/>
+          <circle cx="100" cy="420" r="140" fill="#ECF3B3" opacity="0.08"/>
+          <text x="60" y="100" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.4)" letter-spacing="3">TERRAEVENTOS.EC · GUAYAQUIL · ECUADOR</text>
+          <text x="60" y="200" font-family="Instrument Serif" font-style="italic" font-size="80" fill="#FFFDFA">Terra</text>
+          <text x="60" y="280" font-family="Switzer" font-weight="500" font-size="76" fill="#FFFDFA" letter-spacing="-2">Eventos</text>
+          <line x1="60" y1="310" x2="300" y2="310" stroke="#7240DE" stroke-width="2"/>
+          <text x="60" y="346" font-family="Switzer" font-size="13" fill="rgba(255,255,255,0.5)" letter-spacing="1">WEB · AUTOMATIZACIÓN IA · WHATSAPP</text>
+          <text x="60" y="430" font-family="Switzer" font-weight="500" font-size="52" fill="#ECF3B3" letter-spacing="-2">+210%</text>
+          <text x="60" y="458" font-family="Switzer" font-size="12" fill="rgba(255,255,255,0.5)" letter-spacing="1">TRÁFICO ORGÁNICO · 5 MESES</text>
+        </svg>
+      </div>
+      <div class="wcard-featured-info">
+        <div class="wcard-featured-top">
+          <div class="wcard-featured-num">01</div>
+          <h3>Web &amp; IA <span class="ins">terraeventos.ec</span></h3>
+          <p>Rediseño web orientado a conversión + automatización de WhatsApp con IA para cotizaciones de eventos. El tráfico orgánico creció un 210% en 5 meses.</p>
+          <div class="wcard-featured-tags">
+            <span class="wcard-featured-tag">Desarrollo web</span>
+            <span class="wcard-featured-tag">Automatización IA</span>
+            <span class="wcard-featured-tag">WhatsApp</span>
+            <span class="wcard-featured-tag">SEO</span>
+          </div>
+        </div>
+        <div class="wcard-featured-foot">
+          <div class="wcard-featured-client">
+            <span>Cliente</span>
+            <strong>terraeventos.ec · Guayaquil, Ecuador</strong>
+          </div>
+          <div class="wcard-featured-btn" aria-hidden="true">↗</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- FILA 2: dos columnas -->
+    <div class="work-row cols-2">
+
+      <a class="wcard wide lime reveal" href="conecta.html" data-cursor="hover" data-categories="web ia" aria-label="Caso de estudio: tucalculadora.ec">
+        <div class="wcard-img">
+          <svg viewBox="0 0 700 400" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+            <rect width="700" height="400" fill="#ECF3B3"/>
+            <rect x="60" y="40" width="580" height="60" rx="8" fill="#1C1C1C"/>
+            <text x="90" y="82" font-family="Switzer" font-weight="500" font-size="30" fill="#FFFDFA" letter-spacing="-1">tucalculadora.ec</text>
+            <rect x="60" y="120" width="270" height="100" rx="8" fill="#7240DE"/>
+            <text x="195" y="168" font-family="Instrument Serif" font-style="italic" font-size="24" fill="#FFFDFA" text-anchor="middle">Automatización</text>
+            <text x="195" y="195" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle" letter-spacing="1">CON IA · 24/7</text>
+            <rect x="350" y="120" width="290" height="100" rx="8" fill="#1C1C1C"/>
+            <text x="495" y="178" font-family="Switzer" font-weight="500" font-size="48" fill="#ECF3B3" text-anchor="middle" letter-spacing="-2">×3</text>
+            <text x="495" y="204" font-family="Switzer" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle" letter-spacing="1">LEADS CALIFICADOS</text>
+            <text x="60" y="285" font-family="Switzer" font-size="12" fill="#666" letter-spacing="1">TECNOLOGÍA</text>
+            <text x="60" y="330" font-family="Switzer" font-weight="500" font-size="38" fill="#1C1C1C" letter-spacing="-1.5">Web + IA</text>
+            <text x="60" y="370" font-family="Instrument Serif" font-style="italic" font-size="36" fill="#7240DE">conectados.</text>
+          </svg>
+          <span class="wcard-badge">Fintech · Ecuador</span>
+          <span class="wcard-arrow" aria-hidden="true">↗</span>
+        </div>
+        <div class="wcard-meta">
+          <div class="wcard-info">
+            <h3>SEO &amp; web <span class="ins">tucalculadora.ec</span></h3>
+            <div class="wcard-tags">
+              <span class="wcard-tag">Desarrollo web</span>
+              <span class="wcard-tag">Automatización IA</span>
+            </div>
+          </div>
+          <span class="wcard-year">2025</span>
+        </div>
+      </a>
+
+      <a class="wcard wide dark reveal" href="conecta.html" data-cursor="hover" data-categories="seo ads" aria-label="Caso de estudio: assuranceseverad.lu">
+        <div class="wcard-img">
+          <svg viewBox="0 0 700 400" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+            <rect width="700" height="400" fill="#0f0f1a"/>
+            <rect x="50" y="50" width="600" height="300" fill="none" stroke="rgba(114,64,222,0.4)" stroke-width="1.5" rx="12"/>
+            <text x="80" y="110" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.35)" letter-spacing="2">ASSURANCESEVERAD.LU · LUXEMBURGO</text>
+            <text x="80" y="200" font-family="Switzer" font-weight="500" font-size="80" fill="#FFFDFA" letter-spacing="-3">+340%</text>
+            <text x="80" y="234" font-family="Switzer" font-size="11" fill="#9B9B9C" letter-spacing="2">LEADS ORGÁNICOS · 6 MESES</text>
+            <line x1="80" y1="280" x2="620" y2="280" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <text x="80" y="320" font-family="Switzer" font-size="12" fill="rgba(255,255,255,0.4)" letter-spacing="1">SEO · ARQUITECTURA WEB · GOOGLE ADS</text>
+          </svg>
+          <span class="wcard-badge">Seguros · Luxemburgo</span>
+          <span class="wcard-arrow" aria-hidden="true">↗</span>
+        </div>
+        <div class="wcard-meta">
+          <div class="wcard-info">
+            <h3>SEO &amp; web <span class="ins">assuranceseverad.lu</span></h3>
+            <div class="wcard-tags">
+              <span class="wcard-tag">SEO</span>
+              <span class="wcard-tag">Google Ads</span>
+            </div>
+          </div>
+          <span class="wcard-year">2024</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- FILA 3: tres columnas -->
+    <div class="work-row cols-3">
+
+      <a class="wcard square reveal" href="conecta.html" data-cursor="hover" data-categories="seo" aria-label="Caso de estudio: cacaoarriba.com">
+        <div class="wcard-img">
+          <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+            <rect width="500" height="500" fill="#2d1a0e"/>
+            <circle cx="250" cy="250" r="200" fill="#5c2d0a" opacity="0.5"/>
+            <circle cx="250" cy="250" r="110" fill="#8b4513" opacity="0.35"/>
+            <text x="250" y="210" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.4)" letter-spacing="3" text-anchor="middle">CACAOARRIBA.COM · ECUADOR</text>
+            <text x="250" y="278" font-family="Instrument Serif" font-style="italic" font-size="58" fill="#ECF3B3" text-anchor="middle">Cacao</text>
+            <text x="250" y="328" font-family="Switzer" font-weight="500" font-size="34" fill="#FFFDFA" letter-spacing="-1" text-anchor="middle">Arriba</text>
+            <line x1="150" y1="355" x2="350" y2="355" stroke="rgba(236,243,179,0.25)" stroke-width="1"/>
+            <text x="250" y="385" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.4)" letter-spacing="2" text-anchor="middle">SEO · POSICIONAMIENTO ORGÁNICO</text>
+          </svg>
+          <span class="wcard-badge">Alimentación · Ecuador</span>
+          <span class="wcard-arrow" aria-hidden="true">↗</span>
+        </div>
+        <div class="wcard-meta">
+          <div class="wcard-info">
+            <h3>SEO <span class="ins">cacaoarriba.com</span></h3>
+            <div class="wcard-tags">
+              <span class="wcard-tag">SEO</span>
+              <span class="wcard-tag">Posicionamiento</span>
+            </div>
+          </div>
+          <span class="wcard-year">2025</span>
+        </div>
+      </a>
+
+      <a class="wcard square lilac reveal" href="conecta.html" data-cursor="hover" data-categories="seo web" aria-label="Caso de estudio: lapepitedor.lu">
+        <div class="wcard-img">
+          <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+            <rect width="500" height="500" fill="#F6F3FF"/>
+            <rect x="40" y="40" width="420" height="80" rx="8" fill="#7240DE"/>
+            <text x="250" y="92" font-family="Instrument Serif" font-style="italic" font-size="36" fill="#FFFDFA" text-anchor="middle">La Pepite d'Or</text>
+            <rect x="40" y="150" width="420" height="200" rx="8" fill="#fff" stroke="#E5E5E5" stroke-width="1"/>
+            <text x="250" y="230" font-family="Switzer" font-size="11" fill="#9B9B9C" text-anchor="middle" letter-spacing="2">POSICIONES GOOGLE</text>
+            <polyline points="80,310 160,280 240,250 320,220 400,195 430,188" fill="none" stroke="#7240DE" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="430" cy="188" r="6" fill="#7240DE"/>
+            <text x="250" y="410" font-family="Switzer" font-size="11" fill="#7240DE" text-anchor="middle" letter-spacing="2">SEO · LUXEMBURGO</text>
+            <text x="250" y="438" font-family="Instrument Serif" font-style="italic" font-size="28" fill="#1C1C1C" text-anchor="middle">Top 5 en 3 meses</text>
+          </svg>
+          <span class="wcard-badge">Gastronomía · Luxemburgo</span>
+          <span class="wcard-arrow" aria-hidden="true">↗</span>
+        </div>
+        <div class="wcard-meta">
+          <div class="wcard-info">
+            <h3>SEO <span class="ins">lapepitedor.lu</span></h3>
+            <div class="wcard-tags">
+              <span class="wcard-tag">SEO</span>
+              <span class="wcard-tag">Desarrollo web</span>
+            </div>
+          </div>
+          <span class="wcard-year">2024</span>
+        </div>
+      </a>
+
+      <a class="wcard square dark reveal" href="conecta.html" data-cursor="hover" data-categories="ia" aria-label="Automatización WhatsApp terraeventos.ec">
+        <div class="wcard-img">
+          <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+            <rect width="500" height="500" fill="#1C1C1C"/>
+            <circle cx="250" cy="200" r="120" fill="none" stroke="#7240DE" stroke-width="1.5" opacity="0.5"/>
+            <circle cx="250" cy="200" r="70" fill="#7240DE" opacity="0.8"/>
+            <text x="250" y="210" font-family="Switzer" font-weight="500" font-size="22" fill="#FFFDFA" text-anchor="middle">WhatsApp</text>
+            <text x="250" y="235" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.6)" text-anchor="middle">IA 24/7</text>
+            <text x="250" y="370" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.35)" text-anchor="middle" letter-spacing="2">COTIZACIONES AUTOMÁTICAS</text>
+            <text x="250" y="410" font-family="Switzer" font-weight="500" font-size="38" fill="#ECF3B3" text-anchor="middle" letter-spacing="-1.5">×4 leads</text>
+            <text x="250" y="440" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.4)" text-anchor="middle">calificados por mes</text>
+          </svg>
+          <span class="wcard-badge">Eventos · Ecuador</span>
+          <span class="wcard-arrow" aria-hidden="true">↗</span>
+        </div>
+        <div class="wcard-meta">
+          <div class="wcard-info">
+            <h3>Agente IA <span class="ins">terraeventos.ec</span></h3>
+            <div class="wcard-tags">
+              <span class="wcard-tag">Automatización IA</span>
+              <span class="wcard-tag">WhatsApp</span>
+            </div>
+          </div>
+          <span class="wcard-year">2025</span>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- TRABAJO INFERIOR -->
+    <div class="work-bottom reveal">
+      <p class="work-showing">Mostrando <strong>5 proyectos</strong> — Ecuador y Europa</p>
+      <a href="conecta.html" class="btn btn-ghost" data-cursor="hover">¿Empezamos el tuyo? <span class="arr">→</span></a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════ CTA ═══════════ -->
+<div class="container">
+  <section class="cta-strip reveal" id="contacto">
+    <div class="cta-strip-grid">
+      <h2>¿Tu empresa quiere ser el <span class="ins">próximo caso</span> de éxito?</h2>
+      <div class="right">
+        <p>Analizamos tu situación digital en Ecuador y te decimos exactamente qué hacer. <strong style="color:#fff;font-weight:500">Auditoría gratuita, sin compromiso.</strong></p>
+        <div>
+          <a href="conecta.html" class="btn btn-primary" data-cursor="hover">Solicita tu auditoría gratuita <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="foot">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="index.html" aria-label="Inicio">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span><b>inmark</b><i>.</i></span>
+        </a>
+        <p>Consultora de crecimiento digital en Ecuador. Diagnosticamos cuellos de botella y construimos sistemas — SEO, IA, Ads y webs que convierten.</p>
+        <a href="mailto:hola@inmark.ec" class="btn btn-ghost" style="border-color:rgba(255,255,255,.2);color:#fff;align-self:flex-start" data-cursor="hover">hola@inmark.ec <span class="arr">→</span></a>
+      </div>
+      <div>
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="servicios.html">SEO & Arquitectura digital</a></li>
+          <li><a href="servicios.html">Automatización con IA</a></li>
+          <li><a href="servicios.html">Google Ads & Performance</a></li>
+          <li><a href="servicios.html">Desarrollo web</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Inmark</h5>
+        <ul>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="work.html">Proyectos</a></li>
+          <li><a href="conecta.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <ul>
+          <li style="color:rgba(255,255,255,.6)">Guayaquil, Ecuador</li>
+          <li><a href="tel:+593958636022">+593 95 863 6022</a></li>
+          <li><a href="mailto:hola@inmark.ec">hola@inmark.ec</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-wordmark" aria-hidden="true">inmark<i>.</i></div>
+
+    <div class="foot-bottom">
+      <span>© 2026 Inmark · Ecuador</span>
+      <div class="foot-socials">
+        <a href="https://www.linkedin.com/company/inmarkecuador" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+        <a href="https://www.instagram.com/inmarkecuador/" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+      </div>
+      <span>Guayaquil · Ecuador</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburguesa
+  (function(){
+    const btn=document.getElementById('hamburger');
+    const nav=document.getElementById('mobileNav');
+    const links=nav.querySelectorAll('a');
+    if(!btn||!nav)return;
+    function toggle(open){btn.classList.toggle('open',open);nav.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';}
+    btn.addEventListener('click',()=>toggle(!nav.classList.contains('open')));
+    links.forEach(l=>l.addEventListener('click',()=>toggle(false)));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')toggle(false)});
+  })();
+
+  // 1) Cursor blob
+  (function(){
+    const blob = document.getElementById('cursorBlob');
+    if(!blob || matchMedia('(pointer:coarse)').matches) return;
+    let x=0,y=0,tx=0,ty=0;
+    document.addEventListener('mousemove', e=>{
+      tx=e.clientX; ty=e.clientY;
+      blob.classList.add('active');
+    });
+    function loop(){
+      x+=(tx-x)*.18; y+=(ty-y)*.18;
+      blob.style.transform=`translate(${x}px,${y}px) translate(-50%,-50%)`;
+      requestAnimationFrame(loop);
+    }
+    loop();
+    document.querySelectorAll('[data-cursor="hover"]').forEach(el=>{
+      el.addEventListener('mouseenter',()=>blob.classList.add('hover'));
+      el.addEventListener('mouseleave',()=>blob.classList.remove('hover'));
+    });
+  })();
+
+  // 2) Nav scrolled
+  (function(){
+    const nav=document.getElementById('nav');
+    addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>24));
+  })();
+
+  // 3) Scroll reveal
+  (function(){
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}
+      });
+    },{threshold:.1,rootMargin:'0px 0px -40px'});
+    document.querySelectorAll('.reveal').forEach((n,i)=>{
+      n.style.transitionDelay=`${(i%4)*60}ms`;
+      io.observe(n);
+    });
+  })();
+
+  // 4) Filter system
+  (function(){
+    const pills = document.querySelectorAll('.filter-pill');
+    const cards = document.querySelectorAll('[data-categories], .wcard-featured[data-categories]');
+
+    pills.forEach(pill=>{
+      pill.addEventListener('click',()=>{
+        pills.forEach(p=>p.classList.remove('active'));
+        pill.classList.add('active');
+        const filter = pill.dataset.filter;
+
+        document.querySelectorAll('.work-row, .wcard-featured').forEach(row=>{
+          // For featured cards directly
+          if(row.dataset.categories){
+            const cats = row.dataset.categories.split(' ');
+            const show = filter==='all' || cats.includes(filter);
+            row.style.display = show ? '' : 'none';
+            return;
+          }
+          // For rows containing cards
+          const rowCards = row.querySelectorAll('[data-categories]');
+          if(rowCards.length===0) return;
+          let anyVisible=false;
+          rowCards.forEach(card=>{
+            const cats=card.dataset.categories.split(' ');
+            const show=filter==='all'||cats.includes(filter);
+            card.style.display=show?'':'none';
+            if(show) anyVisible=true;
+          });
+          row.style.display=anyVisible?'':'none';
+        });
+      });
+    });
+  })();
+</script>
+</body>
+</html>

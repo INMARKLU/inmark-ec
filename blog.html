@@ -1,0 +1,734 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<!-- ═══════════ SEO ═══════════ -->
+<title>Blog · SEO, Automatización IA y Google Ads en Ecuador | Inmark</title>
+<meta name="description" content="Artículos sobre SEO para empresas en Ecuador, automatización con inteligencia artificial y Google Ads. Aprende a hacer crecer tu empresa en digital." />
+<meta name="keywords" content="blog seo ecuador, automatización ia ecuador, google ads ecuador, marketing digital ecuador, blog marketing digital" />
+<meta name="author" content="Inmark Ecuador" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<link rel="canonical" href="https://inmark.ec/blog.html" />
+
+<!-- hreflang -->
+<link rel="alternate" hreflang="es-EC" href="https://inmark.ec/blog.html" />
+<link rel="alternate" hreflang="es" href="https://inmark.ec/blog.html" />
+<link rel="alternate" hreflang="x-default" href="https://inmark.ec/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_EC" />
+<meta property="og:title" content="Blog · SEO, Automatización IA y Google Ads en Ecuador | Inmark" />
+<meta property="og:description" content="Artículos sobre SEO, automatización con IA y Google Ads para empresas en Ecuador. Aprende a hacer crecer tu empresa en digital." />
+<meta property="og:url" content="https://inmark.ec/blog.html" />
+<meta property="og:image" content="https://inmark.ec/img/og-inmark-ec.jpg" />
+<meta property="og:site_name" content="Inmark Ecuador" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Blog · Inmark Ecuador" />
+<meta name="twitter:description" content="SEO, automatización con IA y Google Ads para empresas en Ecuador. Aprende con Inmark." />
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "@id": "https://inmark.ec/blog.html",
+  "name": "Blog Inmark Ecuador",
+  "description": "Artículos sobre SEO, automatización con IA y Google Ads para empresas en Ecuador.",
+  "url": "https://inmark.ec/blog.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Inmark Ecuador",
+    "url": "https://inmark.ec/",
+    "logo": "https://inmark.ec/img/logo.svg"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Inicio","item":"https://inmark.ec/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://inmark.ec/blog.html"}
+    ]
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@200,300,400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#FFFDFA; --bg-soft:#F8F7FA; --bg-lilac:#F6F3FF; --bg-lime:#ECF3B3;
+    --ink:#1C1C1C; --muted:#666666; --muted-2:#9B9B9C;
+    --border:#E5E5E5; --primary:#7240DE; --primary-hi:#834AFF;
+    --primary-100:#D4D4F5; --primary-200:#C0C1FF;
+    --sans:'Switzer',-apple-system,BlinkMacSystemFont,sans-serif;
+    --serif:'Instrument Serif',Georgia,serif;
+    --radius-sm:12px; --radius:20px; --radius-lg:28px; --radius-pill:999px;
+    --container:1280px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+    --ease-bounce:cubic-bezier(.34,1.56,.64,1);
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  ::selection{background:var(--primary);color:#fff}
+  .ins{font-family:var(--serif);font-style:italic;font-weight:400}
+  .container{max-width:var(--container);margin:0 auto;padding:0 32px}
+
+  /* CURSOR */
+  .cursor-blob{position:fixed;width:24px;height:24px;border-radius:50%;background:var(--primary);pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform .15s ease-out,width .3s var(--ease),height .3s var(--ease),opacity .3s;transform:translate(-50%,-50%);opacity:0}
+  .cursor-blob.active{opacity:.85}
+  .cursor-blob.hover{width:64px;height:64px;background:var(--bg-lime)}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:100;background:rgba(255,253,250,.78);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid rgba(28,28,28,.06);transition:background .3s var(--ease)}
+  header.nav.scrolled{background:rgba(255,253,250,.95);box-shadow:0 1px 30px rgba(28,28,28,.04)}
+  header.nav .container{display:flex;align-items:center;justify-content:space-between;padding-top:18px;padding-bottom:18px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:600;font-size:20px;letter-spacing:-.02em;transition:transform .3s var(--ease)}
+  .brand:hover{transform:scale(1.03)}
+  .brand-dot{width:32px;height:32px;border-radius:50%;background:var(--ink);position:relative;flex:0 0 32px;display:inline-flex;align-items:center;justify-content:center;transition:transform .4s var(--ease-bounce)}
+  .brand:hover .brand-dot{transform:rotate(360deg)}
+  .brand-dot::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--primary)}
+  .brand i{font-style:italic;font-family:var(--serif);font-weight:400;color:var(--primary);font-size:22px;margin-left:-2px}
+  nav.primary{display:flex;gap:4px}
+  nav.primary a{position:relative;padding:9px 16px;border-radius:var(--radius-pill);font-size:14.5px;color:var(--ink);font-weight:500;transition:color .25s,background .25s;overflow:hidden}
+  nav.primary a::before{content:"";position:absolute;inset:0;background:var(--ink);border-radius:var(--radius-pill);transform:scale(0);transition:transform .35s var(--ease);z-index:-1}
+  nav.primary a.active::before,nav.primary a:hover::before{transform:scale(1)}
+  nav.primary a.active,nav.primary a:hover{color:#fff}
+
+  /* ═══ NAV DROPDOWN ═══ */
+  .nav-dropdown{position:relative;display:flex;align-items:center}
+  .nav-dropdown-toggle{display:flex!important;align-items:center;gap:5px}
+  .nav-arr{font-size:9px;opacity:.6;transition:transform .25s var(--ease)}
+  .nav-dropdown:hover .nav-arr{transform:rotate(180deg)}
+  .nav-dropdown-menu{
+    position:absolute;top:calc(100% + 8px);left:50%;
+    transform:translateX(-50%) translateY(6px);
+    min-width:230px;background:var(--bg);border:1px solid var(--border);
+    border-radius:var(--radius);padding:6px;
+    box-shadow:0 8px 32px rgba(28,28,28,.10);
+    opacity:0;pointer-events:none;z-index:200;
+    transition:opacity .2s var(--ease),transform .2s var(--ease);
+  }
+  .nav-dropdown:hover .nav-dropdown-menu{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+  .nav-dropdown-menu a{
+    display:block;padding:10px 14px;border-radius:var(--radius-sm);
+    font-size:14px;font-weight:500;color:var(--ink);overflow:visible;
+  }
+  .nav-dropdown-menu a::before{display:none!important}
+  .nav-dropdown-menu a:hover{background:var(--bg-soft)!important;color:var(--primary)!important}
+  .nav-actions{display:flex;align-items:center;gap:10px}
+
+  /* BTN */
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:var(--radius-pill);font-size:14.5px;font-weight:500;cursor:pointer;border:1px solid transparent;position:relative;overflow:hidden;transition:transform .25s var(--ease),color .3s,border-color .3s;isolation:isolate}
+  .btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--ink);transition:transform .5s var(--ease)}
+  .btn::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--primary);transform:translateY(100%);transition:transform .5s var(--ease)}
+  .btn:hover::after{transform:translateY(0)}
+  .btn:active{transform:scale(.97)}
+  .btn .arr{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.18);transition:transform .35s var(--ease)}
+  .btn:hover .arr{transform:translateX(3px) rotate(-45deg)}
+  .btn-primary{color:#fff}
+  .btn-ghost{color:var(--ink);border-color:var(--border)}
+  .btn-ghost::before{background:transparent}
+  .btn-ghost::after{background:var(--ink)}
+  .btn-ghost:hover{color:#fff;border-color:var(--ink)}
+  .btn-ghost .arr{background:rgba(28,28,28,.08)}
+  .btn-ghost:hover .arr{background:rgba(255,255,255,.18)}
+
+  /* HERO */
+  section.blog-hero{padding:100px 0 72px;position:relative;overflow:hidden}
+  .hero-blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.4;z-index:0;pointer-events:none}
+  .hero-blob.one{width:500px;height:500px;background:var(--primary-100);top:-120px;right:-80px;animation:blob1 18s ease-in-out infinite}
+  .hero-blob.two{width:380px;height:380px;background:var(--bg-lime);bottom:-40px;left:10%;opacity:.5;animation:blob2 22s ease-in-out infinite}
+  @keyframes blob1{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-30px,20px) scale(1.08)}}
+  @keyframes blob2{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-30px) scale(1.12)}}
+  .blog-hero .container{position:relative;z-index:1}
+  .blog-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:end}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 8px;background:#fff;border:1px solid var(--border);border-radius:var(--radius-pill);font-size:13px;font-weight:500;margin-bottom:24px;animation:fadeUp .8s var(--ease) both}
+  .eyebrow .pulse{width:8px;height:8px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 4px rgba(114,64,222,.18);animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(114,64,222,.18)}50%{box-shadow:0 0 0 10px rgba(114,64,222,.04)}}
+  .eyebrow .sep{width:1px;height:14px;background:var(--border)}
+  h1.blog-title{margin:0 0 24px;font-size:clamp(48px,6vw,88px);line-height:.96;letter-spacing:-.04em;font-weight:500;animation:fadeUp 1s var(--ease) .15s both}
+  h1.blog-title .ins{color:var(--primary)}
+  .blog-hero-right{animation:fadeUp 1s var(--ease) .3s both}
+  .blog-hero-right p{font-size:18px;line-height:1.6;color:var(--muted);margin:0 0 32px}
+  .blog-hero-right em{color:var(--ink);font-style:normal;font-weight:500}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+  /* CATEGORÍAS */
+  .cat-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:56px;padding-top:16px;border-top:1px solid var(--border)}
+  .cat-btn{padding:8px 18px;border-radius:var(--radius-pill);font-size:13.5px;font-weight:500;border:1px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;transition:all .25s var(--ease)}
+  .cat-btn:hover,.cat-btn.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .cat-btn.active{background:var(--primary);border-color:var(--primary)}
+
+  /* ARTÍCULO DESTACADO */
+  .featured-post{display:grid;grid-template-columns:1.2fr 1fr;gap:0;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:16px;transition:transform .5s var(--ease),border-color .3s;cursor:pointer}
+  .featured-post:hover{transform:translateY(-6px);border-color:var(--primary)}
+  .featured-img{background:var(--ink);min-height:380px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .featured-img-inner{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:48px}
+  .featured-cat{position:absolute;top:24px;left:24px;padding:6px 14px;border-radius:var(--radius-pill);background:var(--primary);color:#fff;font-size:12px;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+  .featured-content{padding:48px;display:flex;flex-direction:column;justify-content:space-between}
+  .featured-meta{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--muted-2);margin-bottom:20px}
+  .featured-meta .dot{width:4px;height:4px;border-radius:50%;background:var(--muted-2)}
+  .featured-content h2{margin:0 0 16px;font-size:clamp(26px,3vw,38px);line-height:1.1;letter-spacing:-.025em;font-weight:500}
+  .featured-content h2 .ins{color:var(--primary)}
+  .featured-content p{margin:0 0 32px;font-size:16px;line-height:1.6;color:var(--muted);flex:1}
+  .featured-foot{display:flex;align-items:center;justify-content:space-between}
+  .author{display:flex;align-items:center;gap:10px}
+  .author-avatar{width:36px;height:36px;border-radius:50%;background:var(--bg-lilac);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:16px;color:var(--primary)}
+  .author-name{font-size:14px;font-weight:500}
+  .read-btn{width:40px;height:40px;border-radius:50%;background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px;transition:background .25s,transform .4s var(--ease-bounce)}
+  .featured-post:hover .read-btn{background:var(--primary);transform:rotate(-45deg)}
+
+  /* GRID DE ARTÍCULOS */
+  .posts-section{padding:80px 0 100px}
+  .posts-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:40px}
+  .sect-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--primary);text-transform:uppercase;letter-spacing:.08em}
+  .sect-eyebrow::before{content:"";width:24px;height:1px;background:var(--primary)}
+  .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .post-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;transition:transform .5s var(--ease),border-color .3s;display:flex;flex-direction:column}
+  .post-card:hover{transform:translateY(-8px);border-color:var(--primary)}
+  .post-card-img{height:220px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .post-card-img.seo{background:var(--ink)}
+  .post-card-img.ia{background:var(--bg-lilac)}
+  .post-card-img.ads{background:var(--bg-lime)}
+  .post-card-img.web{background:#F0EBF8}
+  .post-cat{position:absolute;top:16px;left:16px;padding:5px 12px;border-radius:var(--radius-pill);font-size:11.5px;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+  .post-cat.seo{background:rgba(255,255,255,.15);color:#fff}
+  .post-cat.ia{background:rgba(114,64,222,.12);color:var(--primary)}
+  .post-cat.ads{background:rgba(28,28,28,.08);color:var(--ink)}
+  .post-cat.web{background:rgba(114,64,222,.12);color:var(--primary)}
+  .post-content{padding:28px;flex:1;display:flex;flex-direction:column}
+  .post-meta{font-size:12.5px;color:var(--muted-2);margin-bottom:12px;display:flex;gap:8px;align-items:center}
+  .post-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--muted-2)}
+  .post-content h3{margin:0 0 12px;font-size:20px;font-weight:500;letter-spacing:-.015em;line-height:1.2;flex:1}
+  .post-content h3 .ins{color:var(--primary)}
+  .post-content p{margin:0 0 24px;font-size:14px;line-height:1.55;color:var(--muted)}
+  .post-foot{display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid var(--border);margin-top:auto}
+  .post-author{font-size:13px;font-weight:500;color:var(--ink)}
+  .post-arr{font-size:18px;color:var(--primary);transition:transform .35s var(--ease)}
+  .post-card:hover .post-arr{transform:translateX(4px) translateY(-4px)}
+
+  /* NEWSLETTER */
+  section.newsletter{margin:0 auto 100px;background:var(--ink);border-radius:var(--radius-lg);padding:80px 64px;position:relative;overflow:hidden}
+  .newsletter::before{content:"";position:absolute;right:-100px;top:50%;transform:translateY(-50%);width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,var(--primary) 0%,transparent 70%);opacity:.5}
+  .newsletter-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;position:relative;z-index:1}
+  .newsletter h2{margin:0;font-size:clamp(32px,4vw,56px);line-height:1.05;letter-spacing:-.03em;font-weight:500;color:#fff}
+  .newsletter h2 .ins{color:#C0C1FF}
+  .newsletter-right p{color:rgba(255,255,255,.7);font-size:16px;line-height:1.55;margin:0 0 24px}
+  .nl-form{display:flex;gap:8px}
+  .nl-input{flex:1;padding:14px 20px;border-radius:var(--radius-pill);border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);color:#fff;font-size:15px;font-family:var(--sans);outline:none;transition:border-color .25s}
+  .nl-input::placeholder{color:rgba(255,255,255,.4)}
+  .nl-input:focus{border-color:rgba(255,255,255,.4)}
+  .nl-btn{padding:14px 24px;border-radius:var(--radius-pill);background:var(--primary);color:#fff;font-size:14.5px;font-weight:500;border:none;cursor:pointer;transition:background .25s,transform .25s;white-space:nowrap;font-family:var(--sans)}
+  .nl-btn:hover{background:var(--primary-hi);transform:scale(1.03)}
+  .nl-note{font-size:12.5px;color:rgba(255,255,255,.4);margin-top:10px}
+
+  /* CTA STRIP */
+  section.cta-strip{margin:0 auto 100px;background:var(--bg-soft);border-radius:var(--radius-lg);padding:64px;border:1px solid var(--border)}
+  .cta-strip-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+  .cta-strip h2{margin:0;font-size:clamp(32px,4vw,54px);line-height:1.05;letter-spacing:-.03em;font-weight:500}
+  .cta-strip h2 .ins{color:var(--primary)}
+  .cta-strip p{margin:0 0 24px;font-size:16px;line-height:1.55;color:var(--muted)}
+
+  /* FOOTER */
+  footer.foot{background:var(--ink);color:#fff;padding:80px 0 32px;border-top-left-radius:var(--radius-lg);border-top-right-radius:var(--radius-lg)}
+  .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .foot-brand{display:flex;flex-direction:column;gap:20px;max-width:380px}
+  .foot-brand .brand{color:#fff;font-size:24px}
+  .foot-brand .brand-dot{background:#fff}
+  .foot-brand .brand-dot::after{background:var(--primary)}
+  .foot-brand p{margin:0;color:rgba(255,255,255,.6);font-size:15px;line-height:1.55}
+  .foot h5{margin:0 0 18px;font-size:13px;font-weight:500;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.08em}
+  .foot ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+  .foot ul a{color:rgba(255,255,255,.85);font-size:15px;transition:color .25s,transform .25s;display:inline-block}
+  .foot ul a:hover{color:var(--primary-200);transform:translateX(4px)}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;font-size:13px;color:rgba(255,255,255,.5)}
+  .foot-socials{display:flex;gap:8px}
+  .foot-socials a{width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease);color:#fff}
+  .foot-socials a:hover{background:var(--primary);transform:translateY(-3px)}
+  .foot-wordmark{font-family:var(--serif);font-style:italic;font-size:clamp(80px,12vw,160px);color:rgba(255,255,255,.04);text-align:center;line-height:1;margin:32px 0;user-select:none}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+
+  /* SVG DECORATIVOS */
+  .deco-seo{opacity:.9}
+  .deco-ia{opacity:.85}
+  .deco-ads{opacity:.9}
+
+  /* ═══════════ HAMBURGUESA ═══════════ */
+  .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;border-radius:8px;transition:background .25s;z-index:200;background:none;border:none}
+  .hamburger:hover{background:rgba(28,28,28,.06)}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:transform .35s var(--ease),opacity .25s,width .3s}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0;width:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-nav{position:fixed;inset:0;background:rgba(255,253,250,.98);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);z-index:150;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;opacity:0;pointer-events:none;transition:opacity .35s var(--ease),transform .35s var(--ease);transform:translateY(-12px)}
+  .mobile-nav.open{opacity:1;pointer-events:all;transform:none}
+  .mobile-nav a{font-size:clamp(28px,7vw,42px);font-weight:500;letter-spacing:-.025em;color:var(--ink);padding:8px 24px;border-radius:var(--radius-pill);transition:color .2s,background .2s;text-align:center}
+  .mobile-nav a:hover,.mobile-nav a.active{color:var(--primary)}
+  .mobile-nav .mobile-cta{margin-top:24px;padding:16px 32px;font-size:18px;border-radius:var(--radius-pill);background:var(--ink);color:#fff;font-weight:500;transition:background .25s,transform .25s}
+  .mobile-nav .mobile-cta:hover{background:var(--primary);transform:scale(1.03)}
+  .mobile-nav-footer{margin-top:32px;font-size:14px;color:var(--muted);text-align:center}
+
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    .hamburger{display:flex}
+    nav.primary{display:none}
+    .nav-actions .btn{display:none}
+    .blog-hero-grid{grid-template-columns:1fr;gap:32px}
+    .featured-post{grid-template-columns:1fr}
+    .featured-img{min-height:240px}
+    .featured-content{padding:28px}
+    .posts-grid{grid-template-columns:1fr}
+    .newsletter{padding:48px 24px}
+    .newsletter-grid{grid-template-columns:1fr;gap:24px}
+    .nl-form{flex-direction:column}
+    .cta-strip{padding:40px 24px}
+    .cta-strip-grid{grid-template-columns:1fr;gap:24px}
+    .foot-top{grid-template-columns:1fr;gap:32px}
+    .cursor-blob{display:none}
+  }
+  @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;transition-duration:.01ms !important}}
+</style>
+</head>
+<body>
+
+<div class="cursor-blob" id="cursorBlob"></div>
+
+<!-- ═══════════ NAV ═══════════ -->
+<header class="nav" id="nav">
+  <div class="container">
+    <a class="brand" href="index.html" aria-label="Inmark Ecuador — Inicio">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span><b>inmark</b><i>.</i></span>
+    </a>
+    <nav class="primary" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <div class="nav-dropdown">
+        <a href="servicios.html" class="nav-dropdown-toggle">Servicios <span class="nav-arr">▾</span></a>
+        <div class="nav-dropdown-menu">
+          <a href="servicios-seo-ecuador.html">SEO & Posicionamiento</a>
+          <a href="servicios-automatizacion-ia-ecuador.html">Automatización con IA</a>
+          <a href="servicios-google-ads-ecuador.html">Google Ads & Performance</a>
+          <a href="servicios-desarrollo-web-ecuador.html">Desarrollo Web</a>
+        </div>
+      </div>
+      <a href="work.html">Proyectos</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="nosotros.html">Quiénes somos</a>
+      <a href="conecta.html">Contacto</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="conecta.html" class="btn btn-primary" data-cursor="hover">Auditoría gratuita <span class="arr">→</span></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- MENÚ MÓVIL -->
+<nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
+  <a href="index.html">Inicio</a>
+  <a href="servicios.html">Servicios</a>
+  <a href="blog.html" class="active">Blog</a>
+  <a href="work.html">Proyectos</a>
+  <a href="nosotros.html">Quiénes somos</a>
+  <a href="conecta.html">Contacto</a>
+  <a href="conecta.html" class="mobile-cta">Auditoría gratuita →</a>
+  <div class="mobile-nav-footer">hola@inmark.ec · +593 95 863 6022</div>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="blog-hero">
+  <div class="hero-blob one" aria-hidden="true"></div>
+  <div class="hero-blob two" aria-hidden="true"></div>
+  <div class="container">
+    <div class="blog-hero-grid">
+      <div>
+        <div class="eyebrow">
+          <span class="pulse"></span>
+          <span style="font-weight:500">Blog · Inmark Ecuador</span>
+          <span class="sep"></span>
+          <span style="color:var(--muted);font-size:12.5px">SEO · IA · Google Ads</span>
+        </div>
+        <h1 class="blog-title">Aprende a <span class="ins">hacer crecer</span> tu empresa en digital.</h1>
+      </div>
+      <div class="blog-hero-right">
+        <p>Artículos prácticos sobre <em>SEO para empresas en Ecuador</em>, automatización con inteligencia artificial y Google Ads. Sin teoría innecesaria — solo lo que realmente funciona.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a href="#articulos" class="btn btn-primary" data-cursor="hover">Ver artículos <span class="arr">→</span></a>
+          <a href="conecta.html" class="btn btn-ghost" data-cursor="hover">Hablar con Inmark <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ARTÍCULO DESTACADO ═══════════ -->
+<section style="padding:0 0 80px" id="articulos">
+  <div class="container">
+
+    <div class="cat-bar reveal">
+      <button class="cat-btn active" onclick="filterPosts('all')">Todos</button>
+      <button class="cat-btn" onclick="filterPosts('seo')">SEO Ecuador</button>
+      <button class="cat-btn" onclick="filterPosts('ia')">Automatización IA</button>
+      <button class="cat-btn" onclick="filterPosts('ads')">Google Ads</button>
+    </div>
+
+    <!-- ARTÍCULO DESTACADO -->
+    <a href="#" class="featured-post reveal" aria-label="Artículo destacado: Cómo posicionar tu empresa en Google Ecuador">
+      <div class="featured-img">
+        <div class="featured-cat">SEO Ecuador</div>
+        <div class="featured-img-inner">
+          <svg width="280" height="200" viewBox="0 0 280 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="deco-seo" aria-hidden="true">
+            <circle cx="140" cy="100" r="80" stroke="rgba(114,64,222,.3)" stroke-width="1.5"/>
+            <circle cx="140" cy="100" r="55" stroke="rgba(114,64,222,.5)" stroke-width="1"/>
+            <circle cx="140" cy="100" r="30" fill="rgba(114,64,222,.2)"/>
+            <text x="140" y="107" font-family="Instrument Serif" font-style="italic" font-size="20" fill="rgba(114,64,222,.8)" text-anchor="middle">#1</text>
+            <line x1="50" y1="40" x2="230" y2="40" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+            <line x1="50" y1="160" x2="230" y2="160" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+            <rect x="40" y="60" width="60" height="8" rx="4" fill="rgba(255,255,255,.06)"/>
+            <rect x="180" y="130" width="60" height="8" rx="4" fill="rgba(255,255,255,.06)"/>
+          </svg>
+        </div>
+      </div>
+      <div class="featured-content">
+        <div>
+          <div class="featured-meta">
+            <span>Karen Pozo</span>
+            <span class="dot"></span>
+            <span>SEO Ecuador</span>
+            <span class="dot"></span>
+            <span>8 min lectura</span>
+          </div>
+          <h2>Cómo posicionar tu empresa en <span class="ins">Google Ecuador</span> en 2026: la guía completa.</h2>
+          <p>El SEO en Ecuador tiene particularidades que muchas agencias ignoran. Te explicamos paso a paso cómo aparecer primero cuando tu cliente te está buscando — sin pagar por cada clic.</p>
+        </div>
+        <div class="featured-foot">
+          <div class="author">
+            <div class="author-avatar">K</div>
+            <span class="author-name">Karen Pozo · Inmark Ecuador</span>
+          </div>
+          <div class="read-btn" aria-hidden="true">→</div>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ═══════════ GRID DE ARTÍCULOS ═══════════ -->
+<section class="posts-section">
+  <div class="container">
+    <div class="posts-head">
+      <div class="sect-eyebrow">Todos los artículos</div>
+      <span style="font-size:13px;color:var(--muted)">Próximamente más contenido</span>
+    </div>
+
+    <div class="posts-grid" id="postsGrid">
+
+      <!-- ARTÍCULO 1 — SEO -->
+      <a href="#" class="post-card reveal" data-cat="seo">
+        <div class="post-card-img seo">
+          <div class="post-cat seo">SEO Ecuador</div>
+          <svg width="160" height="120" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="20" y="20" width="120" height="80" rx="8" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+            <rect x="30" y="35" width="60" height="6" rx="3" fill="rgba(255,255,255,.15)"/>
+            <rect x="30" y="48" width="90" height="4" rx="2" fill="rgba(255,255,255,.08)"/>
+            <rect x="30" y="58" width="75" height="4" rx="2" fill="rgba(255,255,255,.08)"/>
+            <circle cx="120" cy="85" r="16" fill="rgba(114,64,222,.3)"/>
+            <text x="120" y="90" font-family="Instrument Serif" font-style="italic" font-size="13" fill="rgba(114,64,222,.9)" text-anchor="middle">↑</text>
+          </svg>
+        </div>
+        <div class="post-content">
+          <div class="post-meta"><span>Karen Pozo</span><span class="dot"></span><span>6 min</span></div>
+          <h3>SEO local en Ecuador: cómo aparecer en <span class="ins">Google Maps</span> y las búsquedas de tu ciudad.</h3>
+          <p>Guayaquil, Quito, Cuenca — cada ciudad tiene su estrategia. Te explicamos cómo dominar el SEO local en Ecuador.</p>
+          <div class="post-foot">
+            <span class="post-author">SEO · Local</span>
+            <span class="post-arr">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ARTÍCULO 2 — IA -->
+      <a href="#" class="post-card reveal" data-cat="ia">
+        <div class="post-card-img ia">
+          <div class="post-cat ia">Automatización IA</div>
+          <svg width="160" height="120" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="30" y="30" width="44" height="60" rx="6" fill="rgba(114,64,222,.15)" stroke="rgba(114,64,222,.3)" stroke-width="1"/>
+            <rect x="86" y="30" width="44" height="60" rx="6" fill="rgba(114,64,222,.1)" stroke="rgba(114,64,222,.2)" stroke-width="1"/>
+            <line x1="74" y1="60" x2="86" y2="60" stroke="rgba(114,64,222,.4)" stroke-width="1.5" stroke-dasharray="3 2"/>
+            <circle cx="52" cy="55" r="8" fill="rgba(114,64,222,.3)"/>
+            <circle cx="108" cy="55" r="8" fill="rgba(114,64,222,.2)"/>
+            <text x="52" y="59" font-family="Instrument Serif" font-style="italic" font-size="10" fill="var(--primary)" text-anchor="middle">AI</text>
+            <rect x="38" y="72" width="28" height="4" rx="2" fill="rgba(114,64,222,.15)"/>
+            <rect x="94" y="72" width="28" height="4" rx="2" fill="rgba(114,64,222,.1)"/>
+          </svg>
+        </div>
+        <div class="post-content">
+          <div class="post-meta"><span>Karen Pozo</span><span class="dot"></span><span>7 min</span></div>
+          <h3>Agentes virtuales con IA: cómo automatizar tu <span class="ins">WhatsApp empresarial</span> en Ecuador.</h3>
+          <p>Tu equipo no puede responder 24/7. Un agente virtual con IA sí puede. Te mostramos cómo funciona con un caso real en Ecuador.</p>
+          <div class="post-foot">
+            <span class="post-author">IA · WhatsApp</span>
+            <span class="post-arr">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ARTÍCULO 3 — GOOGLE ADS -->
+      <a href="#" class="post-card reveal" data-cat="ads">
+        <div class="post-card-img ads">
+          <div class="post-cat ads">Google Ads</div>
+          <svg width="160" height="120" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="20" y="70" width="20" height="30" rx="3" fill="rgba(28,28,28,.15)"/>
+            <rect x="48" y="50" width="20" height="50" rx="3" fill="rgba(28,28,28,.2)"/>
+            <rect x="76" y="35" width="20" height="65" rx="3" fill="rgba(28,28,28,.3)"/>
+            <rect x="104" y="20" width="20" height="80" rx="3" fill="rgba(28,28,28,.4)"/>
+            <polyline points="30,68 58,48 86,33 114,18" stroke="rgba(114,64,222,.6)" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <circle cx="114" cy="18" r="4" fill="var(--primary)" opacity=".7"/>
+          </svg>
+        </div>
+        <div class="post-content">
+          <div class="post-meta"><span>Karen Pozo</span><span class="dot"></span><span>5 min</span></div>
+          <h3>Google Ads en Ecuador: cómo no desperdiciar tu <span class="ins">presupuesto</span> en los primeros 3 meses.</h3>
+          <p>El 80% de las campañas en Ecuador fallan por los mismos errores. Aquí están y cómo evitarlos desde el primer día.</p>
+          <div class="post-foot">
+            <span class="post-author">Google Ads</span>
+            <span class="post-arr">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ARTÍCULO 4 — SEO -->
+      <a href="#" class="post-card reveal" data-cat="seo">
+        <div class="post-card-img seo">
+          <div class="post-cat seo">SEO Ecuador</div>
+          <svg width="160" height="120" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="70" cy="60" r="35" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/>
+            <circle cx="70" cy="60" r="20" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+            <line x1="96" y1="82" x2="120" y2="100" stroke="rgba(255,255,255,.3)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="70" cy="60" r="8" fill="rgba(114,64,222,.4)"/>
+          </svg>
+        </div>
+        <div class="post-content">
+          <div class="post-meta"><span>Karen Pozo</span><span class="dot"></span><span>9 min</span></div>
+          <h3>Auditoría SEO: los 10 errores más comunes en webs <span class="ins">ecuatorianas</span>.</h3>
+          <p>Después de analizar decenas de webs en Ecuador, estos son los errores que más dañan el posicionamiento. ¿Cuántos tiene la tuya?</p>
+          <div class="post-foot">
+            <span class="post-author">SEO · Auditoría</span>
+            <span class="post-arr">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ARTÍCULO 5 — IA -->
+      <a href="#" class="post-card reveal" data-cat="ia">
+        <div class="post-card-img ia">
+          <div class="post-cat ia">Automatización IA</div>
+          <svg width="160" height="120" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="25" y="40" width="110" height="50" rx="8" stroke="rgba(114,64,222,.25)" stroke-width="1"/>
+            <rect x="35" y="52" width="40" height="6" rx="3" fill="rgba(114,64,222,.2)"/>
+            <rect x="35" y="64" width="60" height="4" rx="2" fill="rgba(114,64,222,.12)"/>
+            <rect x="35" y="74" width="50" height="4" rx="2" fill="rgba(114,64,222,.12)"/>
+            <circle cx="118" cy="58" r="12" fill="rgba(114,64,222,.2)" stroke="rgba(114,64,222,.3)" stroke-width="1"/>
+            <text x="118" y="63" font-family="Instrument Serif" font-style="italic" font-size="12" fill="var(--primary)" text-anchor="middle">n8</text>
+            <circle cx="80" cy="25" r="6" fill="rgba(114,64,222,.15)" stroke="rgba(114,64,222,.3)" stroke-width="1"/>
+            <line x1="80" y1="31" x2="80" y2="40" stroke="rgba(114,64,222,.3)" stroke-width="1" stroke-dasharray="2 2"/>
+          </svg>
+        </div>
+        <div class="post-content">
+          <div class="post-meta"><span>Karen Pozo</span><span class="dot"></span><span>6 min</span></div>
+          <h3>n8n para empresas en Ecuador: automatiza procesos <span class="ins">sin programar</span>.</h3>
+          <p>n8n es la herramienta de automatización más potente para empresas que no quieren depender de programadores. Te explicamos cómo empezar.</p>
+          <div class="post-foot">
+            <span class="post-author">IA · n8n</span>
+            <span class="post-arr">→</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ARTÍCULO 6 — GOOGLE ADS -->
+      <a href="#" class="post-card reveal" data-cat="ads">
+        <div class="post-card-img ads">
+          <div class="post-cat ads">Google Ads</div>
+          <svg width="160" height="120" viewBox="0 0 160 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="20" y="30" width="120" height="70" rx="6" stroke="rgba(28,28,28,.15)" stroke-width="1"/>
+            <rect x="30" y="42" width="80" height="6" rx="3" fill="rgba(28,28,28,.12)"/>
+            <rect x="30" y="54" width="55" height="4" rx="2" fill="rgba(28,28,28,.08)"/>
+            <rect x="30" y="64" width="65" height="4" rx="2" fill="rgba(28,28,28,.08)"/>
+            <rect x="30" y="77" width="40" height="12" rx="4" fill="rgba(28,28,28,.15)"/>
+            <text x="50" y="87" font-size="8" fill="rgba(28,28,28,.5)" text-anchor="middle" font-family="Switzer">CTA</text>
+          </svg>
+        </div>
+        <div class="post-content">
+          <div class="post-meta"><span>Karen Pozo</span><span class="dot"></span><span>4 min</span></div>
+          <h3>SEO vs Google Ads en Ecuador: <span class="ins">¿cuál elegir</span> para tu empresa?</h3>
+          <p>No son excluyentes — pero sí tienen momentos distintos. Te ayudamos a decidir cuál es la mejor inversión según tu situación actual.</p>
+          <div class="post-foot">
+            <span class="post-author">SEO · Google Ads</span>
+            <span class="post-arr">→</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ NEWSLETTER ═══════════ -->
+<div class="container">
+  <section class="newsletter reveal">
+    <div class="newsletter-grid">
+      <div>
+        <h2>Aprende cada semana. <span class="ins">Gratis.</span></h2>
+      </div>
+      <div class="newsletter-right">
+        <p>Un artículo práctico cada semana sobre SEO, automatización con IA y Google Ads para empresas en Ecuador. Sin spam.</p>
+        <div class="nl-form">
+          <input type="email" class="nl-input" placeholder="tu@empresa.com" aria-label="Tu email" />
+          <button class="nl-btn">Suscribirme →</button>
+        </div>
+        <p class="nl-note">Sin spam. Cancela cuando quieras.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════ CTA ═══════════ -->
+<div class="container">
+  <section class="cta-strip reveal">
+    <div class="cta-strip-grid">
+      <h2>¿Listo para aplicar todo esto <span class="ins">en tu empresa?</span></h2>
+      <div>
+        <p>Leer está bien — implementar es mejor. Agenda una auditoría gratuita y te decimos exactamente qué hacer primero en tu caso específico.</p>
+        <a href="conecta.html" class="btn btn-primary" data-cursor="hover">Solicita tu auditoría gratuita <span class="arr">→</span></a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="foot">
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="index.html" aria-label="Inicio">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span><b>inmark</b><i>.</i></span>
+        </a>
+        <p>Consultora de crecimiento digital en Ecuador. Diagnosticamos cuellos de botella y construimos sistemas — SEO, IA, Ads y webs que convierten.</p>
+        <a href="mailto:hola@inmark.ec" class="btn btn-ghost" style="border-color:rgba(255,255,255,.2);color:#fff;align-self:flex-start" data-cursor="hover">hola@inmark.ec <span class="arr">→</span></a>
+      </div>
+      <div>
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="servicios.html">SEO & Arquitectura digital</a></li>
+          <li><a href="servicios.html">Automatización con IA</a></li>
+          <li><a href="servicios.html">Google Ads & Performance</a></li>
+          <li><a href="servicios.html">Desarrollo web</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Inmark</h5>
+        <ul>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="work.html">Proyectos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="conecta.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <ul>
+          <li style="color:rgba(255,255,255,.6)">Guayaquil, Ecuador</li>
+          <li><a href="tel:+593958636022">+593 95 863 6022</a></li>
+          <li><a href="mailto:hola@inmark.ec">hola@inmark.ec</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-wordmark" aria-hidden="true">inmark<i>.</i></div>
+    <div class="foot-bottom">
+      <span>© 2026 Inmark · Ecuador</span>
+      <div class="foot-socials">
+        <a href="https://www.linkedin.com/company/inmarkecuador" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+        <a href="https://www.instagram.com/inmarkecuador/" aria-label="Instagram" target="_blank" rel="noopener">ig</a>
+      </div>
+      <span>Guayaquil · Ecuador</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Hamburguesa
+  (function(){
+    const btn=document.getElementById('hamburger');
+    const nav=document.getElementById('mobileNav');
+    const links=nav.querySelectorAll('a');
+    if(!btn||!nav)return;
+    function toggle(open){btn.classList.toggle('open',open);nav.classList.toggle('open',open);btn.setAttribute('aria-expanded',open);document.body.style.overflow=open?'hidden':'';}
+    btn.addEventListener('click',()=>toggle(!nav.classList.contains('open')));
+    links.forEach(l=>l.addEventListener('click',()=>toggle(false)));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')toggle(false)});
+  })();
+
+  // Cursor blob
+  (function(){
+    const blob=document.getElementById('cursorBlob');
+    if(!blob||matchMedia('(pointer:coarse)').matches)return;
+    let x=0,y=0,tx=0,ty=0;
+    document.addEventListener('mousemove',e=>{tx=e.clientX;ty=e.clientY;blob.classList.add('active')});
+    function loop(){x+=(tx-x)*.18;y+=(ty-y)*.18;blob.style.transform=`translate(${x}px,${y}px) translate(-50%,-50%)`;requestAnimationFrame(loop)}
+    loop();
+    document.querySelectorAll('[data-cursor="hover"]').forEach(el=>{
+      el.addEventListener('mouseenter',()=>blob.classList.add('hover'));
+      el.addEventListener('mouseleave',()=>blob.classList.remove('hover'));
+    });
+  })();
+
+  // Nav scrolled
+  (function(){
+    const nav=document.getElementById('nav');
+    addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>24));
+  })();
+
+  // Scroll reveal
+  (function(){
+    const io=new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+    },{threshold:.1,rootMargin:'0px 0px -40px'});
+    document.querySelectorAll('.reveal').forEach((n,i)=>{
+      n.style.transitionDelay=`${(i%4)*60}ms`;
+      io.observe(n);
+    });
+  })();
+
+  // Filtro categorías
+  function filterPosts(cat){
+    document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+    event.target.classList.add('active');
+    document.querySelectorAll('.post-card').forEach(card=>{
+      if(cat==='all'||card.dataset.cat===cat){
+        card.style.display='flex';
+      } else {
+        card.style.display='none';
+      }
+    });
+  }
+</script>
+</body>
+</html>
