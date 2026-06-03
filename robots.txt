@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://inmark.ec/sitemap.xml
+
+Disallow: /CLAUDE.md
+Disallow: /HAMBURGER_INSTRUCTIONS.md
+Disallow: /README.md
