@@ -661,10 +661,22 @@
     .hero-grid{grid-template-columns:1fr;gap:32px}
     .hero-right{order:2}
     h1.hero-title{font-size:54px}
-    .hero-strip{grid-template-columns:repeat(2,1fr)}
-    .hero-strip > div{border-bottom:1px solid var(--border)}
+    .hero-strip{
+        grid-template-columns:1fr 1fr;
+        overflow:hidden;
+        width:100%;
+    }
+    .hero-strip > div{
+        border-bottom:1px solid var(--border);
+        padding:18px 16px;
+        min-width:0;
+        overflow:hidden;
+    }
     .hero-strip > div:nth-child(2){border-right:none}
-    .hero-strip > div:nth-child(3),.hero-strip > div:nth-child(4){border-bottom:none}
+    .hero-strip > div:nth-child(3),
+    .hero-strip > div:nth-child(4){border-bottom:none}
+    .hero-strip .n{font-size:22px}
+    .hero-strip .l{font-size:12px}
     .marquee > span{font-size:22px;gap:32px}
     .logos-row{grid-template-columns:repeat(3,1fr)}
     .section-head{grid-template-columns:1fr;gap:24px;margin-bottom:32px}
