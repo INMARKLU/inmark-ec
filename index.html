@@ -783,6 +783,50 @@
   .svc-2:hover p,.svc-3:hover p,.svc-4:hover p{color:rgba(255,255,255,.8)}
   .svc-2:hover .svc-foot,.svc-3:hover .svc-foot,.svc-4:hover .svc-foot{border-top-color:rgba(255,255,255,.2);color:rgba(255,255,255,.8)}
   .svc-2:hover .go,.svc-3:hover .go,.svc-4:hover .go{background:#ECF3B3;color:#1C1C1C}
+
+  /* ═══════════ PRELOADER ═══════════ */
+  #preloader{
+    position:fixed;inset:0;
+    background:#080810;
+    display:flex;flex-direction:column;
+    align-items:center;justify-content:center;
+    z-index:9999;
+    transition:opacity .8s cubic-bezier(.2,.7,.2,1);
+  }
+  #preloader.done{
+    opacity:0;
+    pointer-events:none;
+  }
+  .pre-logo{
+    font-family:var(--sans);
+    font-size:32px;font-weight:500;
+    color:#fff;letter-spacing:-.03em;
+    margin-bottom:48px;
+    opacity:0;transform:translateY(10px);
+    animation:preUp .5s ease .2s forwards;
+  }
+  .pre-logo span{color:#7240DE}
+  @keyframes preUp{to{opacity:1;transform:translateY(0)}}
+  .pre-bar-wrap{
+    width:180px;height:1px;
+    background:rgba(255,255,255,.1);
+    border-radius:999px;overflow:hidden;
+    opacity:0;
+    animation:preUp .5s ease .4s forwards;
+  }
+  .pre-bar{
+    height:100%;width:0%;
+    background:linear-gradient(90deg,#7240DE,#ECF3B3);
+    border-radius:999px;
+    transition:width .04s linear;
+  }
+  .pre-count{
+    font-size:11px;color:rgba(255,255,255,.35);
+    margin-top:14px;letter-spacing:.1em;
+    font-family:var(--sans);
+    opacity:0;
+    animation:preUp .5s ease .6s forwards;
+  }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP6S89C18P"></script>
@@ -794,6 +838,14 @@
 </script>
 </head>
 <body>
+
+<div id="preloader">
+  <div class="pre-logo">in<span>mark</span></div>
+  <div class="pre-bar-wrap">
+    <div class="pre-bar" id="preBar"></div>
+  </div>
+  <div class="pre-count" id="preCount">0%</div>
+</div>
 
 <!-- Cursor follower (desktop only) -->
 <div class="cursor-blob" id="cursorBlob"></div>
@@ -1340,6 +1392,30 @@
       io.observe(n);
     });
   })();
+</script>
+
+<script>
+(function(){
+  const pre=document.getElementById('preloader');
+  const bar=document.getElementById('preBar');
+  const count=document.getElementById('preCount');
+  let p=0;
+  const iv=setInterval(function(){
+    const step=Math.random()*3+1.5;
+    p=Math.min(100,p+step);
+    bar.style.width=p+'%';
+    count.textContent=Math.floor(p)+'%';
+    if(p>=100){
+      clearInterval(iv);
+      setTimeout(function(){
+        pre.classList.add('done');
+        setTimeout(function(){
+          pre.style.display='none';
+        },900);
+      },300);
+    }
+  },40);
+})();
 </script>
 </body>
 </html>
