@@ -743,6 +743,46 @@
   .hero-strip > div:nth-child(2):hover .holo-bg{animation:holo2 2.5s ease infinite!important}
   .hero-strip > div:nth-child(3):hover .holo-bg{animation:holo3 2s ease infinite!important}
   .hero-strip > div:nth-child(4):hover .holo-bg{animation:holo4 1.8s ease infinite!important}
+
+  @keyframes glowMove{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+  .svc .glow-bg{
+    position:absolute;inset:0;opacity:0;
+    background:linear-gradient(135deg,#7240DE,#5D3FD3,#ECF3B3,#7240DE);
+    background-size:300% 300%;
+    transition:opacity .5s ease;
+    animation:none;
+    pointer-events:none;
+    z-index:0;
+  }
+  .svc:hover .glow-bg{opacity:1;animation:glowMove 3s ease infinite}
+
+  .svc .glow-sphere{
+    position:absolute;
+    width:320px;height:320px;border-radius:50%;
+    background:radial-gradient(circle,rgba(236,243,179,.45) 0%,rgba(114,64,222,.55) 50%,transparent 70%);
+    bottom:-100px;right:-100px;
+    opacity:0;transition:opacity .5s ease;
+    pointer-events:none;
+    z-index:0;
+  }
+  .svc:hover .glow-sphere{opacity:1}
+
+  .svc .svc-num,
+  .svc .svc-icon,
+  .svc h3,
+  .svc p,
+  .svc .svc-foot{position:relative;z-index:1}
+
+  .svc-1 .glow-bg{display:none}
+  .svc-1 .glow-sphere{display:none}
+  .svc-2 .glow-bg,.svc-3 .glow-bg,.svc-4 .glow-bg{opacity:0}
+
+  .svc-2:hover h3,.svc-3:hover h3,.svc-4:hover h3{color:#fff}
+  .svc-2:hover h3 .ins,.svc-3:hover h3 .ins,.svc-4:hover h3 .ins{color:#ECF3B3}
+  .svc-2:hover p,.svc-3:hover p,.svc-4:hover p{color:rgba(255,255,255,.8)}
+  .svc-2:hover .svc-foot,.svc-3:hover .svc-foot,.svc-4:hover .svc-foot{border-top-color:rgba(255,255,255,.2);color:rgba(255,255,255,.8)}
+  .svc-2:hover .go,.svc-3:hover .go,.svc-4:hover .go{background:#ECF3B3;color:#1C1C1C}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP6S89C18P"></script>
@@ -915,6 +955,8 @@
       </a>
 
       <a class="svc svc-2 reveal" href="servicios.html" data-cursor="hover" data-tilt aria-label="Automatización empresarial con IA en Ecuador">
+        <div class="glow-bg" aria-hidden="true"></div>
+        <div class="glow-sphere" aria-hidden="true"></div>
         <div class="svc-num">— 02</div>
         <div class="svc-icon" style="background:rgba(28,28,28,.08);color:var(--ink)" aria-hidden="true">◈</div>
         <h3>Automatización <span class="ins">con IA</span></h3>
@@ -923,6 +965,8 @@
       </a>
 
       <a class="svc svc-3 reveal" href="servicios.html" data-cursor="hover" data-tilt aria-label="Google Ads y performance en Ecuador">
+        <div class="glow-bg" aria-hidden="true"></div>
+        <div class="glow-sphere" aria-hidden="true"></div>
         <div class="svc-num">— 03</div>
         <div class="svc-icon" aria-hidden="true">◒</div>
         <h3>Google <span class="ins">Ads</span></h3>
@@ -931,6 +975,8 @@
       </a>
 
       <a class="svc svc-4 reveal" href="servicios.html" data-cursor="hover" data-tilt aria-label="Desarrollo web orientado a conversión en Ecuador">
+        <div class="glow-bg" aria-hidden="true"></div>
+        <div class="glow-sphere" aria-hidden="true"></div>
         <div class="svc-num">— 04</div>
         <div class="svc-icon" aria-hidden="true">◱</div>
         <h3>Desarrollo <span class="ins">web</span></h3>
