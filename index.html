@@ -785,6 +785,10 @@
   .svc-2:hover .go,.svc-3:hover .go,.svc-4:hover .go{background:#ECF3B3;color:#1C1C1C}
 
   /* ═══════════ PRELOADER ═══════════ */
+  @keyframes preUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes preFill{to{width:100%}}
+  @keyframes prePulse{0%,100%{opacity:.04}50%{opacity:.08}}
+
   #preloader{
     position:fixed;inset:0;
     background:#FFFDFA;
@@ -792,49 +796,83 @@
     align-items:center;justify-content:center;
     z-index:9999;
     transition:opacity .9s cubic-bezier(.2,.7,.2,1);
+    overflow:hidden;
   }
-  #preloader.done{
-    opacity:0;
+  #preloader.done{opacity:0;pointer-events:none}
+
+  .pre-watermark{
+    position:absolute;
+    width:340px;height:340px;
+    border-radius:50%;
+    background:#1C1C1C;
+    opacity:.04;
+    animation:prePulse 4s ease-in-out infinite;
+    display:flex;align-items:center;justify-content:center;
     pointer-events:none;
   }
-  .pre-logo{
-    font-family:'Instrument Serif',Georgia,serif;
-    font-size:42px;
+  .pre-watermark::after{
+    content:"";
+    width:106px;height:106px;
+    border-radius:50%;
+    background:#7240DE;
+    opacity:.6;
+  }
+
+  .pre-brand{
+    display:flex;align-items:center;gap:10px;
+    font-family:var(--sans);
+    font-size:28px;font-weight:600;
+    letter-spacing:-.02em;color:var(--ink);
+    position:relative;z-index:1;
+    margin-bottom:48px;
+    opacity:0;transform:translateY(12px);
+    animation:preUp .6s ease .3s forwards;
+  }
+  .pre-brand-dot{
+    width:36px;height:36px;border-radius:50%;
+    background:var(--ink);
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .pre-brand-dot::after{
+    content:"";
+    width:11px;height:11px;
+    border-radius:50%;
+    background:var(--primary);
+  }
+  .pre-brand i{
+    font-style:italic;
+    font-family:var(--serif);
     font-weight:400;
-    font-style:italic;
-    color:#1C1C1C;
-    letter-spacing:-.02em;
-    margin-bottom:52px;
-    opacity:0;
-    transform:translateY(12px);
-    animation:preUp .6s ease .2s forwards;
+    color:var(--primary);
+    font-size:30px;
+    margin-left:-2px;
   }
-  .pre-logo span{
-    color:#7240DE;
-    font-style:italic;
-  }
-  @keyframes preUp{to{opacity:1;transform:translateY(0)}}
+
   .pre-bar-wrap{
-    width:160px;height:1px;
-    background:rgba(28,28,28,.1);
+    width:72px;height:1px;
+    background:rgba(28,28,28,.08);
     border-radius:999px;overflow:hidden;
+    position:relative;z-index:1;
+    margin-bottom:14px;
     opacity:0;
-    animation:preUp .6s ease .5s forwards;
+    animation:preUp .5s ease .6s forwards;
   }
   .pre-bar{
     height:100%;width:0%;
-    background:linear-gradient(90deg,#7240DE,#ECF3B3);
+    background:linear-gradient(90deg,var(--primary),#ECF3B3);
     border-radius:999px;
     transition:width .04s linear;
   }
   .pre-count{
-    font-family:'Switzer',-apple-system,sans-serif;
-    font-size:11px;
-    color:rgba(28,28,28,.35);
-    margin-top:16px;
-    letter-spacing:.12em;
+    font-family:var(--sans);
+    font-size:10px;
+    color:rgba(28,28,28,.3);
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    position:relative;z-index:1;
     opacity:0;
-    animation:preUp .6s ease .7s forwards;
+    animation:preUp .5s ease .8s forwards;
   }
 
   /* ═══════════ BLOB HERO ═══════════ */
@@ -900,9 +938,13 @@
 </head>
 <body>
 
-<div id="preloader">
-  <div class="pre-logo">in<span>mark</span></div>
-  <div class="pre-bar-wrap">
+<div id="preloader" role="status" aria-label="Cargando inmark.ec">
+  <div class="pre-watermark" aria-hidden="true"></div>
+  <div class="pre-brand" aria-hidden="true">
+    <div class="pre-brand-dot"></div>
+    <span><b>inmark</b><i>.</i></span>
+  </div>
+  <div class="pre-bar-wrap" aria-hidden="true">
     <div class="pre-bar" id="preBar"></div>
   </div>
   <div class="pre-count" id="preCount">0%</div>
@@ -1473,11 +1515,12 @@
     count.textContent=Math.floor(p)+'%';
     if(p>=100){
       clearInterval(iv);
+      count.textContent='100%';
       setTimeout(function(){
         pre.classList.add('done');
         setTimeout(function(){
           pre.style.display='none';
-        },900);
+        },950);
       },300);
     }
   },40);
