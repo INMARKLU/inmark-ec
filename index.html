@@ -695,6 +695,33 @@
   @media (prefers-reduced-motion:reduce){
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
   }
+
+  @keyframes holo1{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+  @keyframes holo2{0%{background-position:100% 0%}50%{background-position:0% 100%}100%{background-position:100% 0%}}
+  @keyframes holo3{0%{background-position:50% 0%}50%{background-position:50% 100%}100%{background-position:50% 0%}}
+  @keyframes holo4{0%{background-position:0% 0%}50%{background-position:100% 100%}100%{background-position:0% 0%}}
+
+  .hero-strip > div{position:relative;overflow:hidden}
+  .holo-bg{
+    position:absolute;inset:0;opacity:0;
+    transition:opacity .5s ease;
+    background-size:300% 300%;
+    pointer-events:none;
+  }
+  .hero-strip > div:hover .holo-bg{opacity:1}
+  .shine-layer{
+    position:absolute;inset:0;
+    background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.2) 50%,transparent 60%);
+    opacity:0;transition:opacity .3s;pointer-events:none;
+  }
+  .hero-strip > div:hover .shine-layer{opacity:1}
+  .hero-strip > div:hover .n{color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.3)}
+  .hero-strip > div:hover .n .ins{color:#fff}
+  .hero-strip > div:hover .l{color:rgba(255,255,255,.85)}
+  .holo-1{background:linear-gradient(135deg,#667eea,#764ba2,#f093fb,#f5576c,#4facfe,#00f2fe,#667eea);animation:holo1 4s ease infinite}
+  .holo-2{background:linear-gradient(135deg,#a18cd1,#fbc2eb,#84fab0,#8fd3f4,#a1c4fd,#c2e9fb,#a18cd1);animation:holo2 5s ease infinite}
+  .holo-3{background:linear-gradient(135deg,#f093fb,#f5576c,#4facfe,#667eea,#764ba2,#a18cd1,#f093fb);animation:holo3 4.5s ease infinite}
+  .holo-4{background:linear-gradient(135deg,#00f2fe,#4facfe,#a18cd1,#f093fb,#84fab0,#667eea,#00f2fe);animation:holo4 3.5s ease infinite}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP6S89C18P"></script>
@@ -793,20 +820,28 @@
 
     <div class="hero-strip">
       <div>
-        <div class="n">IA <span class="ins">+ SEO</span></div>
-        <div class="l">La nueva forma de crecer negocios</div>
+        <div class="holo-bg holo-1" aria-hidden="true"></div>
+        <div class="shine-layer" aria-hidden="true"></div>
+        <div class="n" style="position:relative;z-index:1">IA <span class="ins">+ SEO</span></div>
+        <div class="l" style="position:relative;z-index:1;transition:color .3s">La nueva forma de crecer negocios</div>
       </div>
       <div>
-        <div class="n">Automatización <span class="ins">real</span></div>
-        <div class="l">Workflows y agentes que trabajan 24/7</div>
+        <div class="holo-bg holo-2" aria-hidden="true"></div>
+        <div class="shine-layer" aria-hidden="true"></div>
+        <div class="n" style="position:relative;z-index:1">Automatización <span class="ins">real</span></div>
+        <div class="l" style="position:relative;z-index:1;transition:color .3s">Workflows y agentes que trabajan 24/7</div>
       </div>
       <div>
-        <div class="n">Webs <span class="ins">optimizadas</span></div>
-        <div class="l">Velocidad, estructura y posicionamiento</div>
+        <div class="holo-bg holo-3" aria-hidden="true"></div>
+        <div class="shine-layer" aria-hidden="true"></div>
+        <div class="n" style="position:relative;z-index:1">Webs <span class="ins">optimizadas</span></div>
+        <div class="l" style="position:relative;z-index:1;transition:color .3s">Velocidad, estructura y posicionamiento</div>
       </div>
       <div>
-        <div class="n">Todo <span class="ins">en uno</span></div>
-        <div class="l">IA, web y SEO conectados</div>
+        <div class="holo-bg holo-4" aria-hidden="true"></div>
+        <div class="shine-layer" aria-hidden="true"></div>
+        <div class="n" style="position:relative;z-index:1">Todo <span class="ins">en uno</span></div>
+        <div class="l" style="position:relative;z-index:1;transition:color .3s">IA, web y SEO conectados</div>
       </div>
     </div>
   </div>
