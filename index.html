@@ -826,95 +826,38 @@
   .svc-2:hover .go,.svc-3:hover .go,.svc-4:hover .go{background:#ECF3B3;color:#1C1C1C}
 
   /* ═══════════ PRELOADER ═══════════ */
-  @keyframes preUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-  @keyframes preFill{to{width:100%}}
-  @keyframes prePulse{0%,100%{opacity:.04}50%{opacity:.08}}
-
+  @keyframes preWordIn{
+    from{opacity:0;transform:translateY(6px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+  @keyframes preWordOut{
+    from{opacity:1;transform:translateY(0)}
+    to{opacity:0;transform:translateY(-6px)}
+  }
   #preloader{
     position:fixed;inset:0;
     background:#FFFDFA;
-    display:flex;flex-direction:column;
-    align-items:center;justify-content:center;
+    display:flex;align-items:center;justify-content:center;
     z-index:9999;
-    transition:opacity .9s cubic-bezier(.2,.7,.2,1);
-    overflow:hidden;
+    transition:opacity .8s cubic-bezier(.2,.7,.2,1);
   }
   #preloader.done{opacity:0;pointer-events:none}
-
-  .pre-watermark{
+  .pre-word{
     position:absolute;
-    width:340px;height:340px;
-    border-radius:50%;
-    background:#1C1C1C;
-    opacity:.04;
-    animation:prePulse 4s ease-in-out infinite;
-    display:flex;align-items:center;justify-content:center;
+    font-family:var(--sans);
+    font-size:13px;
+    font-weight:400;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--ink);
+    opacity:0;
+    transform:translateY(6px);
+    transition:opacity .4s ease, transform .4s ease;
+    white-space:nowrap;
     pointer-events:none;
   }
-  .pre-watermark::after{
-    content:"";
-    width:106px;height:106px;
-    border-radius:50%;
-    background:#7240DE;
-    opacity:.6;
-  }
-
-  .pre-brand{
-    display:flex;align-items:center;gap:10px;
-    font-family:var(--sans);
-    font-size:28px;font-weight:600;
-    letter-spacing:-.02em;color:var(--ink);
-    position:relative;z-index:1;
-    margin-bottom:48px;
-    opacity:0;transform:translateY(12px);
-    animation:preUp .6s ease .3s forwards;
-  }
-  .pre-brand-dot{
-    width:36px;height:36px;border-radius:50%;
-    background:var(--ink);
-    display:flex;align-items:center;justify-content:center;
-    flex-shrink:0;
-  }
-  .pre-brand-dot::after{
-    content:"";
-    width:11px;height:11px;
-    border-radius:50%;
-    background:var(--primary);
-  }
-  .pre-brand i{
-    font-style:italic;
-    font-family:var(--serif);
-    font-weight:400;
-    color:var(--primary);
-    font-size:30px;
-    margin-left:-2px;
-  }
-
-  .pre-bar-wrap{
-    width:72px;height:1px;
-    background:rgba(28,28,28,.08);
-    border-radius:999px;overflow:hidden;
-    position:relative;z-index:1;
-    margin-bottom:14px;
-    opacity:0;
-    animation:preUp .5s ease .6s forwards;
-  }
-  .pre-bar{
-    height:100%;width:0%;
-    background:linear-gradient(90deg,var(--primary),#ECF3B3);
-    border-radius:999px;
-    transition:width .04s linear;
-  }
-  .pre-count{
-    font-family:var(--sans);
-    font-size:10px;
-    color:rgba(28,28,28,.3);
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    position:relative;z-index:1;
-    opacity:0;
-    animation:preUp .5s ease .8s forwards;
-  }
+  .pre-word.active{opacity:1;transform:translateY(0)}
+  .pre-word.exit{opacity:0;transform:translateY(-6px)}
 
   /* ═══════════ BLOB HERO ═══════════ */
   @keyframes blobMove{
@@ -979,16 +922,10 @@
 </head>
 <body>
 
-<div id="preloader" role="status" aria-label="Cargando inmark.ec">
-  <div class="pre-watermark" aria-hidden="true"></div>
-  <div class="pre-brand" aria-hidden="true">
-    <div class="pre-brand-dot"></div>
-    <span><b>inmark</b><i>.</i></span>
-  </div>
-  <div class="pre-bar-wrap" aria-hidden="true">
-    <div class="pre-bar" id="preBar"></div>
-  </div>
-  <div class="pre-count" id="preCount">0%</div>
+<div id="preloader" role="status" aria-label="Cargando">
+  <span class="pre-word" id="pw0">Analiza.</span>
+  <span class="pre-word" id="pw1">Automatiza.</span>
+  <span class="pre-word" id="pw2">Posiciona.</span>
 </div>
 
 <!-- Cursor follower (desktop only) -->
@@ -1546,25 +1483,22 @@
 <script>
 (function(){
   const pre=document.getElementById('preloader');
-  const bar=document.getElementById('preBar');
-  const count=document.getElementById('preCount');
-  let p=0;
-  const iv=setInterval(function(){
-    const step=Math.random()*3+1.5;
-    p=Math.min(100,p+step);
-    bar.style.width=p+'%';
-    count.textContent=Math.floor(p)+'%';
-    if(p>=100){
-      clearInterval(iv);
-      count.textContent='100%';
-      setTimeout(function(){
-        pre.classList.add('done');
-        setTimeout(function(){
-          pre.style.display='none';
-        },950);
-      },300);
+  function show(i,prev){
+    if(prev!==undefined){
+      const p=document.getElementById('pw'+prev);
+      p.classList.remove('active');
+      p.classList.add('exit');
+      setTimeout(function(){p.classList.remove('exit')},400);
     }
-  },40);
+    document.getElementById('pw'+i).classList.add('active');
+  }
+  show(0);
+  setTimeout(function(){show(1,0)},900);
+  setTimeout(function(){show(2,1)},1800);
+  setTimeout(function(){
+    pre.classList.add('done');
+    setTimeout(function(){pre.style.display='none'},900);
+  },2800);
 })();
 </script>
 </body>
