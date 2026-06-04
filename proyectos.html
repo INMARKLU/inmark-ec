@@ -420,7 +420,7 @@
 
   /* ═══════════ STACK CARDS ═══════════ */
   .stack-list{
-    padding:40px 0;
+    padding:40px 0 200px;
     display:flex;
     flex-direction:column;
     gap:0;
@@ -430,16 +430,25 @@
     background:#FFFDFA;
     border:1px solid var(--border);
     border-radius:var(--radius-lg);
-    padding:32px 36px 28px;
-    margin-bottom:12px;
+    padding:48px 40px 40px;
+    min-height:220px;
+    margin-bottom:0;
     cursor:pointer;
     transition:border-color .3s, box-shadow .3s;
+    will-change:transform;
   }
-  .scard:nth-child(1){top:90px;z-index:1}
-  .scard:nth-child(2){top:102px;z-index:2}
-  .scard:nth-child(3){top:114px;z-index:3}
-  .scard:nth-child(4){top:126px;z-index:4}
-  .scard:nth-child(5){top:138px;z-index:5}
+  .scard:nth-child(1){top:88px;z-index:1}
+  .scard:nth-child(2){top:100px;z-index:2}
+  .scard:nth-child(3){top:112px;z-index:3}
+  .scard:nth-child(4){top:124px;z-index:4}
+  .scard:nth-child(5){top:136px;z-index:5}
+
+  .scard::after{
+    content:"";
+    display:block;
+    height:120px;
+  }
+
   .scard:hover{
     border-color:var(--ink);
     box-shadow:0 8px 40px rgba(28,28,28,.08);
@@ -498,15 +507,15 @@
     transform:rotate(-45deg) scale(1.08);
   }
   @media(max-width:900px){
-    .scard{padding:24px 20px 20px}
+    .scard{padding:28px 20px 24px;min-height:180px}
     .sc-title{font-size:20px}
     .sc-result strong{font-size:20px}
     .sc-arr{width:36px;height:36px;font-size:15px}
-    .scard:nth-child(1){top:70px}
-    .scard:nth-child(2){top:80px}
-    .scard:nth-child(3){top:90px}
-    .scard:nth-child(4){top:100px}
-    .scard:nth-child(5){top:110px}
+    .scard:nth-child(1){top:68px}
+    .scard:nth-child(2){top:78px}
+    .scard:nth-child(3){top:88px}
+    .scard:nth-child(4){top:98px}
+    .scard:nth-child(5){top:108px}
   }
 </style>
 <!-- Google tag (gtag.js) -->
