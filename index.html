@@ -827,6 +827,58 @@
     opacity:0;
     animation:preUp .5s ease .6s forwards;
   }
+
+  /* ═══════════ BLOB HERO ═══════════ */
+  @keyframes blobMove{
+    0%,100%{border-radius:60% 40% 30% 70%/60% 30% 70% 40%;transform:rotate(0deg) scale(1)}
+    25%{border-radius:30% 60% 70% 40%/50% 60% 30% 60%;transform:rotate(90deg) scale(1.05)}
+    50%{border-radius:50% 60% 30% 60%/30% 60% 70% 40%;transform:rotate(180deg) scale(0.95)}
+    75%{border-radius:60% 40% 60% 30%/70% 30% 50% 60%;transform:rotate(270deg) scale(1.03)}
+  }
+  @keyframes blobMove2{
+    0%,100%{border-radius:40% 60% 70% 30%/40% 50% 60% 50%;transform:rotate(0deg) scale(1)}
+    33%{border-radius:70% 30% 50% 60%/30% 70% 40% 60%;transform:rotate(120deg) scale(1.08)}
+    66%{border-radius:30% 70% 40% 60%/60% 40% 70% 30%;transform:rotate(240deg) scale(0.92)}
+  }
+  @keyframes colorShift{
+    0%,100%{background:radial-gradient(circle at 40% 40%,#9B6EF0,#7240DE,#4a1fa8)}
+    50%{background:radial-gradient(circle at 60% 60%,#7240DE,#ECF3B3,#7240DE)}
+  }
+  @keyframes colorShift2{
+    0%,100%{background:radial-gradient(circle at 60% 40%,rgba(236,243,179,.7),rgba(114,64,222,.5),transparent)}
+    50%{background:radial-gradient(circle at 40% 60%,rgba(114,64,222,.6),rgba(236,243,179,.4),transparent)}
+  }
+  .hero-blob-wrap{
+    position:absolute;
+    width:500px;height:500px;
+    right:-80px;top:-60px;
+    pointer-events:none;
+    z-index:0;
+  }
+  .blob-main{
+    position:absolute;inset:0;
+    border-radius:60% 40% 30% 70%/60% 30% 70% 40%;
+    animation:blobMove 8s ease-in-out infinite, colorShift 8s ease-in-out infinite;
+    opacity:.12;
+  }
+  .blob-glow{
+    position:absolute;
+    width:400px;height:400px;
+    top:50px;left:50px;
+    border-radius:40% 60% 70% 30%/40% 50% 60% 50%;
+    animation:blobMove2 10s ease-in-out infinite, colorShift2 10s ease-in-out infinite;
+    filter:blur(50px);
+    opacity:.7;
+  }
+  .blob-accent{
+    position:absolute;
+    width:250px;height:250px;
+    top:120px;left:120px;
+    border-radius:50% 50% 30% 70%/50% 70% 30% 50%;
+    background:radial-gradient(circle,rgba(236,243,179,.35),transparent);
+    animation:blobMove 6s ease-in-out infinite reverse;
+    filter:blur(25px);
+  }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP6S89C18P"></script>
@@ -895,6 +947,11 @@
 
 <!-- ═══════════ HERO ═══════════ -->
 <section class="hero">
+  <div class="hero-blob-wrap" aria-hidden="true">
+    <div class="blob-main"></div>
+    <div class="blob-glow"></div>
+    <div class="blob-accent"></div>
+  </div>
   <div class="hero-bg-blob one" aria-hidden="true"></div>
   <div class="hero-bg-blob two" aria-hidden="true"></div>
   <div class="container">
