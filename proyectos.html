@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8" />
@@ -277,148 +277,8 @@
   }
   .filter-pill.active .count{background:rgba(255,255,255,.2);color:#fff}
 
-  /* ═══════════ PROJECTS — EDITORIAL LAYOUT ═══════════ */
-  section.work-grid{padding:80px 0 120px}
-
-  /* === ROW: 2 columns === */
-  .work-row{
-    display:grid;gap:24px;margin-bottom:24px;
-  }
-  .work-row.cols-2{grid-template-columns:1fr 1fr}
-  .work-row.cols-3-1{grid-template-columns:1.72fr 1fr}
-  .work-row.cols-1-3{grid-template-columns:1fr 1.72fr}
-  .work-row.cols-1{grid-template-columns:1fr}
-  .work-row.cols-3{grid-template-columns:1fr 1fr 1fr}
-
-  /* === SINGLE PROJECT CARD === */
-  .wcard{
-    position:relative;overflow:hidden;border-radius:var(--radius-lg);
-    cursor:pointer;display:block;
-    transition:transform .55s var(--ease);
-  }
-  .wcard:hover{transform:translateY(-6px)}
-
-  /* image container */
-  .wcard-img{
-    position:relative;overflow:hidden;
-    background:var(--bg-soft);
-  }
-  .wcard.tall .wcard-img{aspect-ratio:3/4}
-  .wcard.wide .wcard-img{aspect-ratio:16/9}
-  .wcard.square .wcard-img{aspect-ratio:1}
-  .wcard.cinema .wcard-img{aspect-ratio:21/9}
-
-  .wcard-img svg,.wcard-img img{
-    width:100%;height:100%;object-fit:cover;
-    transition:transform .8s var(--ease);
-  }
-  .wcard:hover .wcard-img svg,
-  .wcard:hover .wcard-img img{transform:scale(1.05)}
-
-  /* gradient overlay */
-  .wcard-img::after{
-    content:"";position:absolute;inset:0;
-    background:linear-gradient(to bottom, transparent 40%, rgba(28,28,28,.55) 100%);
-    opacity:0;transition:opacity .4s;
-  }
-  .wcard:hover .wcard-img::after{opacity:1}
-
-  /* overlay arrow */
-  .wcard-arrow{
-    position:absolute;bottom:20px;right:20px;z-index:2;
-    width:52px;height:52px;border-radius:50%;
-    background:#fff;display:flex;align-items:center;justify-content:center;
-    transform:translate(70px,70px) rotate(-45deg);opacity:0;
-    transition:all .5s var(--ease);font-size:22px;color:var(--ink);
-  }
-  .wcard:hover .wcard-arrow{transform:translate(0,0) rotate(0);opacity:1;background:var(--primary);color:#fff}
-
-  /* badge */
-  .wcard-badge{
-    position:absolute;top:18px;left:18px;z-index:2;
-    background:rgba(255,253,250,.92);backdrop-filter:blur(8px);
-    padding:5px 12px;border-radius:var(--radius-pill);
-    font-size:12px;font-weight:500;color:var(--ink);
-    transition:transform .4s var(--ease);
-  }
-  .wcard:hover .wcard-badge{transform:translateY(-2px)}
-
-  /* meta below image */
-  .wcard-meta{
-    padding:20px 4px 8px;
-    display:flex;align-items:flex-start;justify-content:space-between;gap:16px;
-  }
-  .wcard-info{display:flex;flex-direction:column;gap:6px}
-  .wcard h3{
-    margin:0;font-size:22px;font-weight:500;letter-spacing:-.015em;line-height:1.2;
-  }
-  .wcard h3 .ins{color:var(--primary);font-weight:400}
-  .wcard-tags{display:flex;gap:6px;flex-wrap:wrap}
-  .wcard-tag{
-    font-size:11.5px;font-weight:500;color:var(--muted);
-    border:1px solid var(--border);border-radius:var(--radius-pill);
-    padding:3px 10px;
-  }
-  .wcard-year{font-size:13px;color:var(--muted-2);white-space:nowrap;padding-top:5px}
-
-  /* card dark variant */
-  .wcard.dark .wcard-img{background:var(--ink)}
-  .wcard.lime .wcard-img{background:var(--bg-lime)}
-  .wcard.lilac .wcard-img{background:var(--bg-lilac)}
-
-  /* ═══════════ FEATURED ROW (full-width, horizontal) ═══════════ */
-  .wcard-featured{
-    display:grid;grid-template-columns:1.1fr .9fr;gap:0;
-    border:1px solid var(--border);border-radius:var(--radius-lg);
-    overflow:hidden;margin-bottom:24px;
-    cursor:pointer;transition:transform .55s var(--ease), border-color .3s;
-    position:relative;
-  }
-  .wcard-featured:hover{transform:translateY(-4px);border-color:var(--ink)}
-  .wcard-featured .wcard-img{aspect-ratio:auto;min-height:440px;height:100%}
-  .wcard-featured .wcard-img svg{height:100%;width:100%;object-fit:cover;transition:transform .8s var(--ease)}
-  .wcard-featured:hover .wcard-img svg{transform:scale(1.04)}
-
-  .wcard-featured-info{
-    padding:52px 48px;display:flex;flex-direction:column;justify-content:space-between;
-    background:#fff;border-left:1px solid var(--border);
-    transition:background .3s;
-  }
-  .wcard-featured:hover .wcard-featured-info{background:var(--bg-soft)}
-  .wcard-featured-top{}
-  .wcard-featured-num{
-    font-family:var(--serif);font-style:italic;font-size:80px;
-    color:var(--border);line-height:1;letter-spacing:-.03em;margin-bottom:24px;
-    transition:color .3s;
-  }
-  .wcard-featured:hover .wcard-featured-num{color:var(--primary-100)}
-  .wcard-featured h3{
-    margin:0 0 16px;font-size:clamp(28px,3vw,44px);font-weight:500;
-    letter-spacing:-.025em;line-height:1.1;
-  }
-  .wcard-featured h3 .ins{color:var(--primary);font-weight:400}
-  .wcard-featured p{
-    margin:0 0 28px;font-size:16px;line-height:1.6;color:var(--muted);max-width:38ch;
-  }
-  .wcard-featured-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
-  .wcard-featured-tag{
-    font-size:12px;font-weight:500;color:var(--ink);
-    border:1px solid var(--border);border-radius:var(--radius-pill);
-    padding:4px 12px;transition:border-color .25s, color .25s;
-  }
-  .wcard-featured:hover .wcard-featured-tag{border-color:rgba(114,64,222,.3);color:var(--primary)}
-  .wcard-featured-foot{
-    display:flex;align-items:center;justify-content:space-between;
-    padding-top:28px;border-top:1px solid var(--border);
-  }
-  .wcard-featured-client{font-size:14px;color:var(--muted)}
-  .wcard-featured-client strong{color:var(--ink);font-weight:500;display:block;font-size:16px}
-  .wcard-featured-btn{
-    width:52px;height:52px;border-radius:50%;background:var(--ink);color:#fff;
-    display:flex;align-items:center;justify-content:center;font-size:22px;
-    transition:background .25s, transform .45s var(--ease);flex-shrink:0;
-  }
-  .wcard-featured:hover .wcard-featured-btn{background:var(--primary);transform:rotate(-45deg) scale(1.1)}
+  /* ═══════════ PROJECTS — STACK CARDS ═══════════ */
+  section.work-grid{padding:40px 0 120px}
 
   /* ═══════════ LOAD MORE / COUNT ═══════════ */
   .work-bottom{
@@ -557,6 +417,97 @@
   @media (prefers-reduced-motion:reduce){
     *{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
   }
+
+  /* ═══════════ STACK CARDS ═══════════ */
+  .stack-list{
+    padding:40px 0;
+    display:flex;
+    flex-direction:column;
+    gap:0;
+  }
+  .scard{
+    position:sticky;
+    background:#FFFDFA;
+    border:1px solid var(--border);
+    border-radius:var(--radius-lg);
+    padding:32px 36px 28px;
+    margin-bottom:12px;
+    cursor:pointer;
+    transition:border-color .3s, box-shadow .3s;
+  }
+  .scard:nth-child(1){top:90px;z-index:1}
+  .scard:nth-child(2){top:102px;z-index:2}
+  .scard:nth-child(3){top:114px;z-index:3}
+  .scard:nth-child(4){top:126px;z-index:4}
+  .scard:nth-child(5){top:138px;z-index:5}
+  .scard:hover{
+    border-color:var(--ink);
+    box-shadow:0 8px 40px rgba(28,28,28,.08);
+  }
+  .sc-top{
+    display:flex;justify-content:space-between;
+    align-items:center;margin-bottom:20px;
+  }
+  .sc-num{
+    font-family:var(--serif);font-style:italic;
+    font-size:15px;color:var(--primary-100);
+    transition:color .3s;
+  }
+  .scard:hover .sc-num{color:var(--primary)}
+  .sc-year{font-size:12px;color:var(--muted-2)}
+  .sc-title{
+    font-size:clamp(22px,3vw,34px);
+    font-weight:500;letter-spacing:-.025em;
+    line-height:1.15;margin-bottom:24px;
+  }
+  .sc-title .ins{color:var(--primary);font-size:1.05em}
+  .sc-foot{
+    display:flex;justify-content:space-between;
+    align-items:center;gap:16px;
+    padding-top:20px;border-top:1px solid var(--border);
+  }
+  .sc-tags{display:flex;gap:6px;flex-wrap:wrap}
+  .sc-tag{
+    font-size:11.5px;font-weight:500;color:var(--muted);
+    border:1px solid var(--border);border-radius:var(--radius-pill);
+    padding:4px 12px;
+    transition:border-color .25s, color .25s;
+  }
+  .scard:hover .sc-tag{border-color:rgba(114,64,222,.2);color:var(--primary)}
+  .sc-right{
+    display:flex;align-items:center;
+    gap:16px;flex-shrink:0;
+  }
+  .sc-result{text-align:right}
+  .sc-result strong{
+    font-size:26px;font-weight:500;
+    letter-spacing:-.02em;
+    color:var(--ink);display:block;
+  }
+  .sc-result strong .ins{color:var(--primary);font-size:1.1em}
+  .sc-result span{font-size:11px;color:var(--muted-2)}
+  .sc-arr{
+    width:44px;height:44px;border-radius:50%;
+    background:var(--ink);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:18px;flex-shrink:0;
+    transition:background .25s, transform .4s var(--ease);
+  }
+  .scard:hover .sc-arr{
+    background:var(--primary);
+    transform:rotate(-45deg) scale(1.08);
+  }
+  @media(max-width:900px){
+    .scard{padding:24px 20px 20px}
+    .sc-title{font-size:20px}
+    .sc-result strong{font-size:20px}
+    .sc-arr{width:36px;height:36px;font-size:15px}
+    .scard:nth-child(1){top:70px}
+    .scard:nth-child(2){top:80px}
+    .scard:nth-child(3){top:90px}
+    .scard:nth-child(4){top:100px}
+    .scard:nth-child(5){top:110px}
+  }
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP6S89C18P"></script>
@@ -678,205 +629,121 @@
 <!-- ═══════════ PROJECTS GRID ═══════════ -->
 <section class="work-grid">
   <div class="container">
+    <div class="stack-list">
 
-    <!-- PROYECTO DESTACADO 1: terraeventos.ec -->
-    <a class="wcard-featured reveal" href="contacto.html" data-cursor="hover" data-categories="web ia" aria-label="Caso de estudio: terraeventos.ec">
-      <div class="wcard-img">
-        <svg viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
-          <rect width="800" height="500" fill="#1C1C1C"/>
-          <rect x="0" y="0" width="800" height="500" fill="url(#gt1)"/>
-          <defs>
-            <linearGradient id="gt1" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#1C1C1C"/>
-              <stop offset="100%" stop-color="#2a1a4e"/>
-            </linearGradient>
-          </defs>
-          <circle cx="680" cy="100" r="200" fill="#7240DE" opacity="0.2"/>
-          <circle cx="100" cy="420" r="140" fill="#ECF3B3" opacity="0.08"/>
-          <text x="60" y="100" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.4)" letter-spacing="3">TERRAEVENTOS.EC · GUAYAQUIL · ECUADOR</text>
-          <text x="60" y="200" font-family="Instrument Serif" font-style="italic" font-size="80" fill="#FFFDFA">Terra</text>
-          <text x="60" y="280" font-family="Switzer" font-weight="500" font-size="76" fill="#FFFDFA" letter-spacing="-2">Eventos</text>
-          <line x1="60" y1="310" x2="300" y2="310" stroke="#7240DE" stroke-width="2"/>
-          <text x="60" y="346" font-family="Switzer" font-size="13" fill="rgba(255,255,255,0.5)" letter-spacing="1">WEB · AUTOMATIZACIÓN IA · WHATSAPP</text>
-          <text x="60" y="430" font-family="Switzer" font-weight="500" font-size="52" fill="#ECF3B3" letter-spacing="-2">+210%</text>
-          <text x="60" y="458" font-family="Switzer" font-size="12" fill="rgba(255,255,255,0.5)" letter-spacing="1">TRÁFICO ORGÁNICO · 5 MESES</text>
-        </svg>
-      </div>
-      <div class="wcard-featured-info">
-        <div class="wcard-featured-top">
-          <div class="wcard-featured-num">01</div>
-          <h3>Web &amp; IA <span class="ins">terraeventos.ec</span></h3>
-          <p>Rediseño web orientado a conversión + automatización de WhatsApp con IA para cotizaciones de eventos. El tráfico orgánico creció un 210% en 5 meses.</p>
-          <div class="wcard-featured-tags">
-            <span class="wcard-featured-tag">Desarrollo web</span>
-            <span class="wcard-featured-tag">Automatización IA</span>
-            <span class="wcard-featured-tag">WhatsApp</span>
-            <span class="wcard-featured-tag">SEO</span>
-          </div>
+      <div class="scard reveal" data-categories="web ia">
+        <div class="sc-top">
+          <span class="sc-num">01</span>
+          <span class="sc-year">2025</span>
         </div>
-        <div class="wcard-featured-foot">
-          <div class="wcard-featured-client">
-            <span>Cliente</span>
-            <strong>terraeventos.ec · Guayaquil, Ecuador</strong>
+        <div class="sc-title">Web & IA <span class="ins">terraeventos.ec</span></div>
+        <div class="sc-foot">
+          <div class="sc-tags">
+            <span class="sc-tag">Desarrollo web</span>
+            <span class="sc-tag">Automatización IA</span>
+            <span class="sc-tag">WhatsApp</span>
           </div>
-          <div class="wcard-featured-btn" aria-hidden="true">↗</div>
+          <div class="sc-right">
+            <div class="sc-result">
+              <strong>+<span class="ins">210%</span></strong>
+              <span>tráfico orgánico</span>
+            </div>
+            <div class="sc-arr" aria-hidden="true">↗</div>
+          </div>
         </div>
       </div>
-    </a>
 
-    <!-- FILA 2: dos columnas -->
-    <div class="work-row cols-2">
-
-      <a class="wcard wide lime reveal" href="contacto.html" data-cursor="hover" data-categories="web ia" aria-label="Caso de estudio: tucalculadora.ec">
-        <div class="wcard-img">
-          <svg viewBox="0 0 700 400" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
-            <rect width="700" height="400" fill="#ECF3B3"/>
-            <rect x="60" y="40" width="580" height="60" rx="8" fill="#1C1C1C"/>
-            <text x="90" y="82" font-family="Switzer" font-weight="500" font-size="30" fill="#FFFDFA" letter-spacing="-1">tucalculadora.ec</text>
-            <rect x="60" y="120" width="270" height="100" rx="8" fill="#7240DE"/>
-            <text x="195" y="168" font-family="Instrument Serif" font-style="italic" font-size="24" fill="#FFFDFA" text-anchor="middle">Automatización</text>
-            <text x="195" y="195" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle" letter-spacing="1">CON IA · 24/7</text>
-            <rect x="350" y="120" width="290" height="100" rx="8" fill="#1C1C1C"/>
-            <text x="495" y="178" font-family="Switzer" font-weight="500" font-size="48" fill="#ECF3B3" text-anchor="middle" letter-spacing="-2">×3</text>
-            <text x="495" y="204" font-family="Switzer" font-size="10" fill="rgba(255,255,255,0.5)" text-anchor="middle" letter-spacing="1">LEADS CALIFICADOS</text>
-            <text x="60" y="285" font-family="Switzer" font-size="12" fill="#666" letter-spacing="1">TECNOLOGÍA</text>
-            <text x="60" y="330" font-family="Switzer" font-weight="500" font-size="38" fill="#1C1C1C" letter-spacing="-1.5">Web + IA</text>
-            <text x="60" y="370" font-family="Instrument Serif" font-style="italic" font-size="36" fill="#7240DE">conectados.</text>
-          </svg>
-          <span class="wcard-badge">Fintech · Ecuador</span>
-          <span class="wcard-arrow" aria-hidden="true">↗</span>
+      <div class="scard reveal" data-categories="web ia">
+        <div class="sc-top">
+          <span class="sc-num">02</span>
+          <span class="sc-year">2025</span>
         </div>
-        <div class="wcard-meta">
-          <div class="wcard-info">
-            <h3>SEO &amp; web <span class="ins">tucalculadora.ec</span></h3>
-            <div class="wcard-tags">
-              <span class="wcard-tag">Desarrollo web</span>
-              <span class="wcard-tag">Automatización IA</span>
-            </div>
+        <div class="sc-title">SEO & web <span class="ins">tucalculadora.ec</span></div>
+        <div class="sc-foot">
+          <div class="sc-tags">
+            <span class="sc-tag">Desarrollo web</span>
+            <span class="sc-tag">Automatización IA</span>
           </div>
-          <span class="wcard-year">2025</span>
-        </div>
-      </a>
-
-      <a class="wcard wide dark reveal" href="contacto.html" data-cursor="hover" data-categories="seo ads" aria-label="Caso de estudio: assuranceseverad.lu">
-        <div class="wcard-img">
-          <svg viewBox="0 0 700 400" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
-            <rect width="700" height="400" fill="#0f0f1a"/>
-            <rect x="50" y="50" width="600" height="300" fill="none" stroke="rgba(114,64,222,0.4)" stroke-width="1.5" rx="12"/>
-            <text x="80" y="110" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.35)" letter-spacing="2">ASSURANCESEVERAD.LU · LUXEMBURGO</text>
-            <text x="80" y="200" font-family="Switzer" font-weight="500" font-size="80" fill="#FFFDFA" letter-spacing="-3">+340%</text>
-            <text x="80" y="234" font-family="Switzer" font-size="11" fill="#9B9B9C" letter-spacing="2">LEADS ORGÁNICOS · 6 MESES</text>
-            <line x1="80" y1="280" x2="620" y2="280" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-            <text x="80" y="320" font-family="Switzer" font-size="12" fill="rgba(255,255,255,0.4)" letter-spacing="1">SEO · ARQUITECTURA WEB · GOOGLE ADS</text>
-          </svg>
-          <span class="wcard-badge">Seguros · Luxemburgo</span>
-          <span class="wcard-arrow" aria-hidden="true">↗</span>
-        </div>
-        <div class="wcard-meta">
-          <div class="wcard-info">
-            <h3>SEO &amp; web <span class="ins">assuranceseverad.lu</span></h3>
-            <div class="wcard-tags">
-              <span class="wcard-tag">SEO</span>
-              <span class="wcard-tag">Google Ads</span>
+          <div class="sc-right">
+            <div class="sc-result">
+              <strong>×<span class="ins">3</span></strong>
+              <span>leads calificados</span>
             </div>
+            <div class="sc-arr" aria-hidden="true">↗</div>
           </div>
-          <span class="wcard-year">2024</span>
         </div>
-      </a>
+      </div>
+
+      <div class="scard reveal" data-categories="seo ads">
+        <div class="sc-top">
+          <span class="sc-num">03</span>
+          <span class="sc-year">2024</span>
+        </div>
+        <div class="sc-title">SEO & web <span class="ins">assuranceseverad.lu</span></div>
+        <div class="sc-foot">
+          <div class="sc-tags">
+            <span class="sc-tag">SEO</span>
+            <span class="sc-tag">Google Ads</span>
+          </div>
+          <div class="sc-right">
+            <div class="sc-result">
+              <strong>+<span class="ins">340%</span></strong>
+              <span>leads orgánicos</span>
+            </div>
+            <div class="sc-arr" aria-hidden="true">↗</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scard reveal" data-categories="seo">
+        <div class="sc-top">
+          <span class="sc-num">04</span>
+          <span class="sc-year">2025</span>
+        </div>
+        <div class="sc-title">SEO <span class="ins">cacaoarriba.com</span></div>
+        <div class="sc-foot">
+          <div class="sc-tags">
+            <span class="sc-tag">SEO</span>
+            <span class="sc-tag">Posicionamiento</span>
+          </div>
+          <div class="sc-right">
+            <div class="sc-result">
+              <strong>Top <span class="ins">3</span></strong>
+              <span>posición Google</span>
+            </div>
+            <div class="sc-arr" aria-hidden="true">↗</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scard reveal" data-categories="seo web">
+        <div class="sc-top">
+          <span class="sc-num">05</span>
+          <span class="sc-year">2024</span>
+        </div>
+        <div class="sc-title">SEO <span class="ins">lapepitedor.lu</span></div>
+        <div class="sc-foot">
+          <div class="sc-tags">
+            <span class="sc-tag">SEO</span>
+            <span class="sc-tag">Desarrollo web</span>
+          </div>
+          <div class="sc-right">
+            <div class="sc-result">
+              <strong>Top <span class="ins">5</span></strong>
+              <span>en 3 meses</span>
+            </div>
+            <div class="sc-arr" aria-hidden="true">↗</div>
+          </div>
+        </div>
+      </div>
 
     </div>
 
-    <!-- FILA 3: tres columnas -->
-    <div class="work-row cols-3">
-
-      <a class="wcard square reveal" href="contacto.html" data-cursor="hover" data-categories="seo" aria-label="Caso de estudio: cacaoarriba.com">
-        <div class="wcard-img">
-          <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
-            <rect width="500" height="500" fill="#2d1a0e"/>
-            <circle cx="250" cy="250" r="200" fill="#5c2d0a" opacity="0.5"/>
-            <circle cx="250" cy="250" r="110" fill="#8b4513" opacity="0.35"/>
-            <text x="250" y="210" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.4)" letter-spacing="3" text-anchor="middle">CACAOARRIBA.COM · ECUADOR</text>
-            <text x="250" y="278" font-family="Instrument Serif" font-style="italic" font-size="58" fill="#ECF3B3" text-anchor="middle">Cacao</text>
-            <text x="250" y="328" font-family="Switzer" font-weight="500" font-size="34" fill="#FFFDFA" letter-spacing="-1" text-anchor="middle">Arriba</text>
-            <line x1="150" y1="355" x2="350" y2="355" stroke="rgba(236,243,179,0.25)" stroke-width="1"/>
-            <text x="250" y="385" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.4)" letter-spacing="2" text-anchor="middle">SEO · POSICIONAMIENTO ORGÁNICO</text>
-          </svg>
-          <span class="wcard-badge">Alimentación · Ecuador</span>
-          <span class="wcard-arrow" aria-hidden="true">↗</span>
-        </div>
-        <div class="wcard-meta">
-          <div class="wcard-info">
-            <h3>SEO <span class="ins">cacaoarriba.com</span></h3>
-            <div class="wcard-tags">
-              <span class="wcard-tag">SEO</span>
-              <span class="wcard-tag">Posicionamiento</span>
-            </div>
-          </div>
-          <span class="wcard-year">2025</span>
-        </div>
-      </a>
-
-      <a class="wcard square lilac reveal" href="contacto.html" data-cursor="hover" data-categories="seo web" aria-label="Caso de estudio: lapepitedor.lu">
-        <div class="wcard-img">
-          <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
-            <rect width="500" height="500" fill="#F6F3FF"/>
-            <rect x="40" y="40" width="420" height="80" rx="8" fill="#7240DE"/>
-            <text x="250" y="92" font-family="Instrument Serif" font-style="italic" font-size="36" fill="#FFFDFA" text-anchor="middle">La Pepite d'Or</text>
-            <rect x="40" y="150" width="420" height="200" rx="8" fill="#fff" stroke="#E5E5E5" stroke-width="1"/>
-            <text x="250" y="230" font-family="Switzer" font-size="11" fill="#9B9B9C" text-anchor="middle" letter-spacing="2">POSICIONES GOOGLE</text>
-            <polyline points="80,310 160,280 240,250 320,220 400,195 430,188" fill="none" stroke="#7240DE" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="430" cy="188" r="6" fill="#7240DE"/>
-            <text x="250" y="410" font-family="Switzer" font-size="11" fill="#7240DE" text-anchor="middle" letter-spacing="2">SEO · LUXEMBURGO</text>
-            <text x="250" y="438" font-family="Instrument Serif" font-style="italic" font-size="28" fill="#1C1C1C" text-anchor="middle">Top 5 en 3 meses</text>
-          </svg>
-          <span class="wcard-badge">Gastronomía · Luxemburgo</span>
-          <span class="wcard-arrow" aria-hidden="true">↗</span>
-        </div>
-        <div class="wcard-meta">
-          <div class="wcard-info">
-            <h3>SEO <span class="ins">lapepitedor.lu</span></h3>
-            <div class="wcard-tags">
-              <span class="wcard-tag">SEO</span>
-              <span class="wcard-tag">Desarrollo web</span>
-            </div>
-          </div>
-          <span class="wcard-year">2024</span>
-        </div>
-      </a>
-
-      <a class="wcard square dark reveal" href="contacto.html" data-cursor="hover" data-categories="ia" aria-label="Automatización WhatsApp terraeventos.ec">
-        <div class="wcard-img">
-          <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
-            <rect width="500" height="500" fill="#1C1C1C"/>
-            <circle cx="250" cy="200" r="120" fill="none" stroke="#7240DE" stroke-width="1.5" opacity="0.5"/>
-            <circle cx="250" cy="200" r="70" fill="#7240DE" opacity="0.8"/>
-            <text x="250" y="210" font-family="Switzer" font-weight="500" font-size="22" fill="#FFFDFA" text-anchor="middle">WhatsApp</text>
-            <text x="250" y="235" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.6)" text-anchor="middle">IA 24/7</text>
-            <text x="250" y="370" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.35)" text-anchor="middle" letter-spacing="2">COTIZACIONES AUTOMÁTICAS</text>
-            <text x="250" y="410" font-family="Switzer" font-weight="500" font-size="38" fill="#ECF3B3" text-anchor="middle" letter-spacing="-1.5">×4 leads</text>
-            <text x="250" y="440" font-family="Switzer" font-size="11" fill="rgba(255,255,255,0.4)" text-anchor="middle">calificados por mes</text>
-          </svg>
-          <span class="wcard-badge">Eventos · Ecuador</span>
-          <span class="wcard-arrow" aria-hidden="true">↗</span>
-        </div>
-        <div class="wcard-meta">
-          <div class="wcard-info">
-            <h3>Agente IA <span class="ins">terraeventos.ec</span></h3>
-            <div class="wcard-tags">
-              <span class="wcard-tag">Automatización IA</span>
-              <span class="wcard-tag">WhatsApp</span>
-            </div>
-          </div>
-          <span class="wcard-year">2025</span>
-        </div>
-      </a>
-
-    </div>
-
-    <!-- TRABAJO INFERIOR -->
     <div class="work-bottom reveal">
       <p class="work-showing">Mostrando <strong>5 proyectos</strong> — Ecuador y Europa</p>
-      <a href="contacto.html" class="btn btn-ghost" data-cursor="hover">¿Empezamos el tuyo? <span class="arr">→</span></a>
+      <a href="contacto.html" class="btn btn-ghost" data-cursor="hover">
+        ¿Empezamos el tuyo? <span class="arr">→</span>
+      </a>
     </div>
 
   </div>
@@ -1004,34 +871,19 @@
 
   // 4) Filter system
   (function(){
-    const pills = document.querySelectorAll('.filter-pill');
-    const cards = document.querySelectorAll('[data-categories], .wcard-featured[data-categories]');
-
+    const pills=document.querySelectorAll('.filter-pill');
+    const cards=document.querySelectorAll('.scard');
     pills.forEach(pill=>{
-      pill.addEventListener('click',()=>{
+      pill.addEventListener('click',function(){
         pills.forEach(p=>p.classList.remove('active'));
         pill.classList.add('active');
-        const filter = pill.dataset.filter;
-
-        document.querySelectorAll('.work-row, .wcard-featured').forEach(row=>{
-          // For featured cards directly
-          if(row.dataset.categories){
-            const cats = row.dataset.categories.split(' ');
-            const show = filter==='all' || cats.includes(filter);
-            row.style.display = show ? '' : 'none';
-            return;
-          }
-          // For rows containing cards
-          const rowCards = row.querySelectorAll('[data-categories]');
-          if(rowCards.length===0) return;
-          let anyVisible=false;
-          rowCards.forEach(card=>{
-            const cats=card.dataset.categories.split(' ');
-            const show=filter==='all'||cats.includes(filter);
-            card.style.display=show?'':'none';
-            if(show) anyVisible=true;
-          });
-          row.style.display=anyVisible?'':'none';
+        const filter=pill.dataset.filter;
+        let visible=0;
+        cards.forEach(function(card){
+          const cats=card.dataset.categories.split(' ');
+          const show=filter==='all'||cats.includes(filter);
+          card.style.display=show?'':'none';
+          if(show) visible++;
         });
       });
     });
