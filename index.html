@@ -812,6 +812,77 @@
   .pre-word.active{opacity:1;transform:translateY(0)}
   .pre-word.exit{opacity:0;transform:translateY(-6px)}
 
+  /* ═══════════ PROJECT CARDS HOVER ═══════════ */
+  .proj .img{overflow:hidden}
+  .proj .img img{
+    transition:transform .8s cubic-bezier(.2,.7,.2,1),
+    filter .5s ease!important;
+  }
+  .proj:hover .img img{
+    transform:scale(1.06)!important;
+    filter:saturate(0.8) brightness(0.85)!important;
+  }
+
+  /* Stat overlay sube al hover */
+  .proj .stat-overlay{
+    transform:translateY(8px);
+    opacity:.9;
+    transition:transform .5s cubic-bezier(.2,.7,.2,1),
+    opacity .4s ease;
+  }
+  .proj:hover .stat-overlay{
+    transform:translateY(0)!important;
+    opacity:1!important;
+  }
+
+  /* Número stat escala */
+  .proj .stat-num,
+  .proj [style*="font-size:52px"]{
+    display:inline-block;
+    transition:transform .5s cubic-bezier(.34,1.56,.64,1);
+  }
+  .proj:hover .stat-num,
+  .proj:hover [style*="font-size:52px"]{
+    transform:scale(1.05);
+  }
+
+  /* Badge sube al hover */
+  .proj .badge{
+    transform:translateX(-50%) translateY(4px)!important;
+    opacity:.8;
+    transition:transform .4s ease, opacity .4s ease;
+  }
+  .proj:hover .badge{
+    transform:translateX(-50%) translateY(0)!important;
+    opacity:1!important;
+  }
+
+  /* Flecha aparece al hover */
+  .proj .view-arrow{
+    opacity:0;
+    transform:rotate(0deg) scale(0.8);
+    transition:opacity .3s ease,
+    transform .4s cubic-bezier(.34,1.56,.64,1),
+    background .3s ease;
+  }
+  .proj:hover .view-arrow{
+    opacity:1;
+    transform:rotate(-45deg) scale(1);
+    background:rgba(255,255,255,.2);
+  }
+
+  /* Shine — destello de luz */
+  .proj .shine{
+    position:absolute;inset:0;z-index:3;
+    background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.07) 50%,transparent 65%);
+    transform:translateX(-100%);
+    pointer-events:none;
+    border-radius:inherit;
+  }
+  .proj:hover .shine{
+    transform:translateX(100%);
+    transition:transform .7s ease;
+  }
 
 </style>
 <!-- Google tag (gtag.js) -->
@@ -1071,12 +1142,13 @@
       <!-- terraeventos.ec — grande izquierda -->
       <a class="proj p-1 reveal" href="proyectos.html" data-cursor="hover" aria-label="Caso de estudio: terraeventos.ec">
         <div class="img">
+          <div class="shine" aria-hidden="true"></div>
           <img src="img/clienteinmark-terra.webp" alt="Proyecto terraeventos.ec — SEO y desarrollo web en Ecuador" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1);filter:saturate(0.5) brightness(0.7)" />
           <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(114,64,222,0.55) 0%,rgba(28,28,28,0.45) 100%);z-index:1"></div>
           <span class="badge" style="z-index:2;position:absolute;top:auto;bottom:100px;left:50%;transform:translateX(-50%)">Eventos · Ecuador</span>
           <!-- stat overlay permanente -->
           <div style="position:absolute;bottom:0;left:0;right:0;padding:24px 28px;background:linear-gradient(to top,rgba(28,28,28,.92) 0%,transparent 100%);z-index:2">
-            <div style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:52px;color:#ECF3B3;line-height:1;margin-bottom:6px">+210%</div>
+            <div class="stat-num" style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:52px;color:#ECF3B3;line-height:1;margin-bottom:6px">+210%</div>
             <div style="font-size:13px;color:rgba(255,255,255,.7);font-weight:400">Tráfico orgánico conseguido en 5 meses con SEO técnico y rediseño web.</div>
           </div>
           <span class="view-arrow" aria-hidden="true" style="z-index:2;position:relative">↗</span>
@@ -1090,6 +1162,7 @@
       <!-- tucalculadora.ec — mediana derecha -->
       <a class="proj p-2 reveal" href="proyectos.html" data-cursor="hover" aria-label="Caso de estudio: tucalculadora.ec">
         <div class="img">
+          <div class="shine" aria-hidden="true"></div>
           <img src="img/clienteinmark-tucalculadora.webp" alt="Proyecto tucalculadora.ec — Desarrollo web y automatización con IA en Ecuador" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1);filter:saturate(0.4) brightness(0.65)" />
           <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(236,243,179,0.55) 0%,rgba(28,28,28,0.5) 100%);z-index:1"></div>
           <span class="badge" style="z-index:2;position:absolute;top:auto;bottom:100px;left:50%;transform:translateX(-50%)">Fintech · Ecuador</span>
