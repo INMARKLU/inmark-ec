@@ -71,4 +71,40 @@
     <priority>0.6</priority>
   </url>
 
+
+  <url>
+    <loc>https://inmark.ec/blog/que-es-el-seo-ecuador</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://inmark.ec/blog/seo-aeo-geo-ecuador</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://inmark.ec/blog/cuanto-cuesta-seo-ecuador_2</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://inmark.ec/blog/seo-local-google-maps-ecuador</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://inmark.ec/blog/como-posicionar-empresa-google-ecuador</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
