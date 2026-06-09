@@ -73,6 +73,48 @@
 }
 </script>
 
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo tarda en posicionarse una empresa en Google Ecuador?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende de la competencia del sector y el estado técnico del sitio. En mercados poco competitivos como Ecuador, los primeros resultados se ven entre 2 y 4 meses con una estrategia bien ejecutada."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito pagar Google Ads para aparecer en Google?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. El SEO orgánico es independiente de Google Ads. Con SEO apareces en los resultados naturales sin pagar por cada clic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El SEO sirve para empresas pequeñas en Ecuador?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, especialmente para negocios locales en Guayaquil, Quito o Cuenca. El SEO local tiene menos competencia y resultados más rápidos que el SEO nacional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre SEO y SEM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El SEO es posicionamiento orgánico — gratuito por clic, pero requiere tiempo. El SEM o Google Ads es publicidad de pago — resultados inmediatos pero paras de pagar y desapareces."
+      }
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=switzer@200,300,400,500,600,700&display=swap" rel="stylesheet">
@@ -311,6 +353,18 @@
     .cursor-blob{display:none}
   }
   @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms !important;transition-duration:.01ms !important}}
+
+  /* FAQ */
+  .faq-section{margin:48px 0}
+  .faq-section h2{margin-bottom:24px}
+  .faq-item{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:10px;overflow:hidden}
+  .faq-q{width:100%;background:none;border:none;cursor:pointer;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;font-family:var(--sans);font-size:16px;font-weight:500;color:var(--ink);text-align:left;transition:background .2s}
+  .faq-q:hover{background:var(--bg-soft)}
+  .faq-icon{width:24px;height:24px;border-radius:50%;background:var(--primary-100);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;transition:transform .3s var(--ease)}
+  .faq-item.open .faq-icon{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s var(--ease),padding .3s;padding:0 22px}
+  .faq-item.open .faq-a{max-height:300px;padding:0 22px 18px}
+  .faq-a p{font-size:15.5px;color:#444;margin:0}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP6S89C18P"></script>
@@ -566,30 +620,78 @@
 </div>
 </article>
 
+<!-- ═══════════ FAQ ═══════════ -->
+<div class="container">
+  <section class="faq-section reveal">
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        ¿Cuánto tiempo tarda en posicionarse una empresa en Google Ecuador?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <p>Depende de la competencia del sector y el estado técnico del sitio. En mercados poco competitivos como Ecuador, los primeros resultados se ven entre 2 y 4 meses con una estrategia bien ejecutada.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        ¿Necesito pagar Google Ads para aparecer en Google?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <p>No. El SEO orgánico es independiente de Google Ads. Con SEO apareces en los resultados naturales sin pagar por cada clic.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        ¿El SEO sirve para empresas pequeñas en Ecuador?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <p>Sí, especialmente para negocios locales en Guayaquil, Quito o Cuenca. El SEO local tiene menos competencia y resultados más rápidos que el SEO nacional.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false">
+        ¿Qué diferencia hay entre SEO y SEM?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">
+        <p>El SEO es posicionamiento orgánico — gratuito por clic, pero requiere tiempo. El SEM o Google Ads es publicidad de pago — resultados inmediatos pero paras de pagar y desapareces.</p>
+      </div>
+    </div>
+
+  </section>
+</div>
+
 <!-- ═══════════ ARTÍCULOS RELACIONADOS ═══════════ -->
 <section class="related">
   <div class="container">
     <div class="related-head">
-      <div class="sect-eyebrow">Seguir leyendo</div>
+      <div class="sect-eyebrow">Sigue leyendo</div>
       <a href="blog.html" style="font-size:13px;color:var(--muted);display:flex;align-items:center;gap:6px">Ver todos los artículos →</a>
     </div>
     <div class="related-grid">
-      <a href="#" class="related-card reveal">
+      <a href="blog/que-es-el-seo-ecuador.html" class="related-card reveal">
         <div class="related-cat">SEO Ecuador</div>
-        <h4>SEO local en Ecuador: cómo aparecer en Google Maps y las búsquedas de tu ciudad.</h4>
-        <p>Guayaquil, Quito, Cuenca — cada ciudad tiene su estrategia.</p>
+        <h4>¿Qué es el SEO y por qué tu empresa lo necesita en 2026?</h4>
+        <p>El SEO es la forma más rentable de conseguir clientes sin pagar por cada clic.</p>
         <span class="related-arr">→</span>
       </a>
-      <a href="#" class="related-card reveal">
-        <div class="related-cat">Automatización IA</div>
-        <h4>Agentes virtuales con IA: cómo automatizar tu WhatsApp empresarial en Ecuador.</h4>
-        <p>Tu equipo no puede responder 24/7. Un agente virtual con IA sí puede.</p>
+      <a href="blog/cuanto-cuesta-seo-ecuador_2.html" class="related-card reveal">
+        <div class="related-cat">SEO · Precios</div>
+        <h4>¿Cuánto cuesta el SEO en Ecuador? Precios reales en 2026</h4>
+        <p>Rangos de precio reales, qué incluye cada nivel y señales de alerta al contratar.</p>
         <span class="related-arr">→</span>
       </a>
-      <a href="#" class="related-card reveal">
-        <div class="related-cat">Google Ads</div>
-        <h4>SEO vs Google Ads en Ecuador: ¿cuál elegir para tu empresa?</h4>
-        <p>No son excluyentes — pero sí tienen momentos distintos.</p>
+      <a href="blog/seo-aeo-geo-ecuador.html" class="related-card reveal">
+        <div class="related-cat">IA & SEO</div>
+        <h4>SEO, AEO y GEO: cómo aparecer en Google y en la IA en 2026</h4>
+        <p>Ya no basta con Google. Te explicamos cómo posicionarte también en ChatGPT y Gemini.</p>
         <span class="related-arr">→</span>
       </a>
     </div>
@@ -727,6 +829,17 @@
       setTimeout(()=>btn.textContent='Copiar enlace',2000);
     });
   }
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+      btn.setAttribute('aria-expanded', !isOpen);
+    });
+  });
 </script>
 </body>
 </html>
