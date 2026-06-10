@@ -248,30 +248,103 @@
     .article-cta{padding:36px 24px}
   }
 </style>
+<link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 
 <header class="nav" id="nav">
-  <div class="nav-inner">
-    <a class="brand" href="/"><span class="brand-dot"></span><span><b>inmark</b><i>.</i></span></a>
-    <nav class="primary">
+  <div class="container nav-inner">
+    <a class="brand" href="/" aria-label="Inmark Ecuador — Inicio">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span><b>inmark</b><i>.</i></span>
+    </a>
+    <div class="nav-sep" aria-hidden="true"></div>
+    <nav class="primary" aria-label="Navegación principal">
       <a href="/">Inicio</a>
-      <div class="nav-dropdown">
-        <a href="/servicios" class="nav-dropdown-toggle">Servicios <span class="nav-arr">▾</span></a>
-        <div class="nav-dropdown-menu">
-          <a href="/servicios-seo-ecuador">SEO & Posicionamiento</a>
-          <a href="/servicios-automatizacion-ia-ecuador">Automatización con IA</a>
-          <a href="/servicios-google-ads-ecuador">Google Ads & Performance</a>
-          <a href="/servicios-desarrollo-web-ecuador">Desarrollo Web</a>
+      <div class="nav-dropdown" id="navServices">
+        <button class="nav-dropdown-toggle" id="servicesToggle" aria-expanded="false" aria-haspopup="true" aria-controls="megaMenu">
+          Servicios
+          <svg class="nav-arr" width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="mega-menu" id="megaMenu" role="region" aria-label="Servicios">
+          <div class="mega-grid">
+            <div class="mega-col">
+              <a href="/servicios-seo-ecuador" class="mega-item">
+                <span class="mega-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="7.5" cy="7.5" r="5" stroke="currentColor" stroke-width="1.4"/><line x1="11.5" y1="11.5" x2="15" y2="15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+                <span class="mega-text">
+                  <span class="mega-title">SEO & Arquitectura digital</span>
+                  <span class="mega-desc">Crecimiento orgánico para empresas en Ecuador</span>
+                </span>
+              </a>
+              <a href="/servicios-automatizacion-ia-ecuador" class="mega-item">
+                <span class="mega-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><polyline points="10,1.5 6.5,9.5 9,9.5 8,16.5 11.5,8.5 9,8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="mega-text">
+                  <span class="mega-title">Automatización empresarial con IA</span>
+                  <span class="mega-desc">Agentes virtuales y workflows inteligentes</span>
+                </span>
+              </a>
+            </div>
+            <div class="mega-divider" aria-hidden="true"></div>
+            <div class="mega-col">
+              <a href="/servicios-google-ads-ecuador" class="mega-item">
+                <span class="mega-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.4"/><circle cx="9" cy="9" r="2.5" stroke="currentColor" stroke-width="1.4"/></svg></span>
+                <span class="mega-text">
+                  <span class="mega-title">Google Ads & Performance</span>
+                  <span class="mega-desc">Campañas orientadas a resultados medibles</span>
+                </span>
+              </a>
+              <a href="/servicios-desarrollo-web-ecuador" class="mega-item">
+                <span class="mega-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="1.5" y="2.5" width="15" height="10" rx="1.5" stroke="currentColor" stroke-width="1.4"/><line x1="6" y1="16" x2="12" y2="16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="9" y1="12.5" x2="9" y2="16" stroke="currentColor" stroke-width="1.4"/></svg></span>
+                <span class="mega-text">
+                  <span class="mega-title">Desarrollo web orientado a conversión</span>
+                  <span class="mega-desc">Webs que venden, no solo se ven bien</span>
+                </span>
+              </a>
+            </div>
+            <div class="mega-divider" aria-hidden="true"></div>
+            <div class="mega-col mega-cta-col">
+              <p class="mega-eyebrow">¿No sabes por dónde empezar?</p>
+              <p class="mega-heading"><em>Diagnóstico gratuito de tu presencia digital</em></p>
+              <p class="mega-body">Revisamos tu web, tu SEO y tus canales. En 30 minutos sabes exactamente dónde estás perdiendo.</p>
+              <a href="/contacto" class="mega-btn">Pedir auditoría gratuita →</a>
+              <a href="/servicios" class="mega-secondary">Ver todos los servicios →</a>
+            </div>
+          </div>
         </div>
       </div>
       <a href="/proyectos">Proyectos</a>
-      <a href="/nosotros">Quiénes somos</a>
-      <a href="/contacto">Contacto</a>
+      <a href="/nosotros">Nosotros</a>
     </nav>
-    <a href="/contacto" class="btn">Auditoría gratuita <span class="arr">→</span></a>
+    <div class="nav-actions">
+      <a href="/contacto" class="btn-ghost" data-cursor="hover">Contacto</a>
+      <a href="/contacto" class="btn btn-primary" data-cursor="hover">Auditoría gratuita <span class="arr">→</span></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
+
+<nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil" aria-hidden="true">
+  <div class="mobile-nav-header">
+    <a class="brand" href="/" aria-label="Inmark Ecuador — Inicio">
+      <span class="brand-dot" aria-hidden="true"></span>
+      <span><b>inmark</b><i>.</i></span>
+    </a>
+    <button class="mobile-close" id="mobileClose" aria-label="Cerrar menú">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><line x1="3" y1="3" x2="15" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><line x1="15" y1="3" x2="3" y2="15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="mobile-links">
+    <a href="/">Inicio <span class="chev" aria-hidden="true">›</span></a>
+    <a href="/servicios">Servicios <span class="chev" aria-hidden="true">›</span></a>
+    <a href="/proyectos">Proyectos <span class="chev" aria-hidden="true">›</span></a>
+    <a href="/nosotros">Nosotros <span class="chev" aria-hidden="true">›</span></a>
+    <a href="/contacto">Contacto <span class="chev" aria-hidden="true">›</span></a>
+  </div>
+  <a href="/contacto" class="mobile-cta">Auditoría gratuita →</a>
+  <div class="mobile-nav-footer">hola@inmark.ec · +593 95 863 6022</div>
+</nav>
 
 <section class="article-hero">
   <div class="container">
@@ -438,5 +511,6 @@
     });
   });
 </script>
+<script src="/js/main.js" defer></script>
 </body>
 </html>
