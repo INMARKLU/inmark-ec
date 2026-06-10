@@ -107,4 +107,18 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://inmark.ec/blog/automatizacion-agentes-digitales-ecuador</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://inmark.ec/blog/diseno-web-velocidad-seo-ecuador</loc>
+    <lastmod>2026-06-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
