@@ -18,14 +18,19 @@ header.nav.scrolled {
   box-shadow: 0 1px 32px rgba(28,28,28,.07);
 }
 
+header.nav {
+  width: 100%;
+}
+
 /* Nav-inner sobreescribe el antiguo header.nav .container
    (misma especificidad 0,2,1 → externo gana por cascada) */
 header.nav .nav-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 14px 32px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 14px;
-  padding-bottom: 14px;
   gap: 0;
 }
 
