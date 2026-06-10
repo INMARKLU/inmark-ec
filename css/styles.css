@@ -30,7 +30,6 @@ header.nav .nav-inner {
   padding: 14px 32px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 0;
 }
 
@@ -68,7 +67,7 @@ header.nav .nav-inner {
 }
 
 /* ── Links desktop ── */
-nav.primary { display: flex; align-items: center; gap: 2px; }
+nav.primary { flex: 1; display: flex; align-items: center; justify-content: center; gap: 2px; }
 
 nav.primary > a {
   position: relative; padding: 9px 15px;
@@ -203,7 +202,7 @@ nav.primary > a:hover { color: #fff; }
 /* ── Acciones nav derecha ── */
 .nav-actions {
   display: flex; align-items: center; gap: 8px;
-  margin-left: auto; padding-left: 16px; flex-shrink: 0;
+  flex-shrink: 0;
 }
 .btn-ghost {
   display: inline-flex; align-items: center; gap: 8px;
