@@ -92,31 +92,49 @@ Siempre que un cliente llega con web mal hecha, se rehace con:
 
 ```
 mi-web-inmark-2026/
-├── CLAUDE.md              ← este archivo
-├── index.html             → Home
-├── servicios.html         → Servicios
-├── nosotros.html          → Quiénes somos
-├── work.html              → Proyectos
-├── conecta.html           → Contacto
+├── CLAUDE.md                                  ← este archivo
+├── HAMBURGER_INSTRUCTIONS.md                  ← instrucciones del menú móvil
+├── index.html                                 → Home
+├── servicios.html                             → Servicios (listado)
+├── servicios-seo-ecuador.html                 → Servicio: SEO & Arquitectura digital
+├── servicios-automatizacion-ia-ecuador.html   → Servicio: Automatización con IA
+├── servicios-google-ads-ecuador.html          → Servicio: Google Ads & Performance
+├── servicios-desarrollo-web-ecuador.html      → Servicio: Desarrollo web
+├── proyectos.html                             → Proyectos / casos de éxito
+├── nosotros.html                              → Quiénes somos
+├── contacto.html                              → Contacto
+├── blog.html                                  → Blog (listado de artículos)
 ├── css/
 │   └── styles.css
 ├── js/
 │   └── main.js
-└── img/
+├── img/
+├── blog/                                      → Artículos individuales del blog
+│   ├── automatizacion-agentes-digitales-ecuador.html
+│   ├── como-posicionar-empresa-google-ecuador.html
+│   ├── cuanto-cuesta-seo-ecuador.html
+│   ├── diseno-web-velocidad-seo-ecuador.html
+│   ├── que-es-el-seo-ecuador.html
+│   ├── seo-aeo-geo-ecuador.html
+│   └── seo-local-google-maps-ecuador.html
+├── robots.txt
+├── sitemap.xml
+├── site.webmanifest
+└── vercel.json
 ```
 
 ---
 
 ## 🚨 REGLAS CRÍTICAS — leer antes de cualquier cambio
 
-### NUNCA modificar:
+### NUNCA modificar sin autorización explícita:
 - El diseño visual (colores, tipografías, layouts, animaciones)
 - Archivos CSS y JS salvo que se pida explícitamente
 - Imágenes ni rutas de archivos
 - La estructura HTML (divs, clases, IDs)
 - Los efectos de scroll, cursor y animaciones
 
-### SOLO modificar:
+### SOLO modificar (tareas de contenido y SEO):
 - Textos visibles: H1, H2, H3, párrafos, botones
 - Meta tags: title, description, canonical, hreflang
 - Schema.org (JSON-LD)
@@ -170,7 +188,7 @@ mi-web-inmark-2026/
 - **Meta description:** Inmark no es una agencia tradicional. Somos una consultora de crecimiento digital en Ecuador especializada en SEO, automatización con IA y performance.
 - **Canonical:** https://inmark.ec/nosotros.html
 
-### work.html — Proyectos
+### proyectos.html — Proyectos
 - **Keyword principal (H1):** marketing digital guayaquil (590/mes · KD 29)
 - **Keywords secundarias (H2s):**
   - agencia de marketing digital guayaquil (590/mes)
@@ -178,9 +196,9 @@ mi-web-inmark-2026/
   - casos de exito seo ecuador
 - **Meta title:** Proyectos · Casos de éxito en Ecuador y Guayaquil | Inmark
 - **Meta description:** Casos reales de SEO, automatización con IA y desarrollo web en Ecuador. Sistemas digitales que generan resultados medibles para empresas ecuatorianas.
-- **Canonical:** https://inmark.ec/work.html
+- **Canonical:** https://inmark.ec/proyectos.html
 
-### conecta.html — Contacto
+### contacto.html — Contacto
 - **Keyword principal (H1):** agencia de marketing digital quito (90/mes)
 - **Keywords secundarias (H2s):**
   - agencia marketing digital quito
@@ -188,7 +206,12 @@ mi-web-inmark-2026/
   - auditoria digital gratuita ecuador
 - **Meta title:** Contacto · Auditoría Digital Gratuita en Ecuador | Inmark
 - **Meta description:** ¿Tu empresa está perdiendo dinero en digital? Agenda tu auditoría gratuita. Trabajamos con empresas en Guayaquil, Quito y Cuenca.
-- **Canonical:** https://inmark.ec/conecta.html
+- **Canonical:** https://inmark.ec/contacto.html
+
+### blog.html — Blog
+- **Meta title:** Blog · Marketing Digital, SEO e IA para empresas en Ecuador | Inmark
+- **Meta description:** Artículos sobre SEO, automatización con IA, Google Ads y crecimiento digital para empresas ecuatorianas.
+- **Canonical:** https://inmark.ec/blog.html
 
 ---
 
@@ -318,13 +341,31 @@ mi-web-inmark-2026/
 
 ---
 
-## 🔗 Links internos — estructura
+## 🔗 Links internos — estructura de navegación
 
-- Home → Servicios, Proyectos, Contacto
-- Servicios → Contacto ("¿Listo para empezar? Agenda tu auditoría →")
-- Proyectos → Servicios, Contacto
-- Nosotros → Servicios, Contacto
-- Contacto → Servicios, Proyectos
+| Página | Links internos que debe tener |
+|---|---|
+| index.html | → servicios.html, proyectos.html, contacto.html, blog.html |
+| servicios.html | → contacto.html ("¿Listo para empezar? Agenda tu auditoría →") |
+| proyectos.html | → servicios.html, contacto.html |
+| nosotros.html | → servicios.html, contacto.html |
+| contacto.html | → servicios.html, proyectos.html |
+| blog.html | → servicios.html, contacto.html |
+
+### Navbar — links en todas las páginas:
+- Inicio → index.html
+- Servicios → servicios.html (con mega-menú en desktop)
+- Proyectos → proyectos.html
+- Nosotros → nosotros.html
+- Contacto → contacto.html (botón ghost en desktop)
+- Blog → blog.html (solo en menú móvil)
+- CTA principal → contacto.html ("Auditoría gratuita →")
+
+### Mega-menú de Servicios — links a páginas individuales:
+- SEO & Arquitectura digital → servicios-seo-ecuador.html
+- Automatización con IA → servicios-automatizacion-ia-ecuador.html
+- Google Ads & Performance → servicios-google-ads-ecuador.html
+- Desarrollo web → servicios-desarrollo-web-ecuador.html
 
 ---
 
@@ -358,4 +399,5 @@ mi-web-inmark-2026/
 | Producción audiovisual | — eliminar (no es servicio de Inmark EC) |
 | Marketing de contenidos | — eliminar (no es servicio de Inmark EC) |
 | Contenidos SEO (tarjeta 05) | — eliminar |
-
+| work.html | proyectos.html |
+| conecta.html | contacto.html |
