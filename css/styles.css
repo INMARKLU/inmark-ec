@@ -4,17 +4,28 @@
    para que sobreescriba los estilos inline via cascada.
 ═══════════════════════════════════════════════════ */
 
+/* ── Color global ── */
+:root {
+  --bg: #F5F0EB;
+}
+html, body {
+  background: var(--bg);
+}
+section.hero {
+  background: var(--bg);
+}
+
 /* ── Shell ── */
 header.nav {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(255,253,250,.78);
+  background: rgba(245,240,235,.78);
   backdrop-filter: saturate(140%) blur(14px);
   -webkit-backdrop-filter: saturate(140%) blur(14px);
   border-bottom: 1px solid rgba(28,28,28,.06);
   transition: background .3s var(--ease), box-shadow .3s var(--ease);
 }
 header.nav.scrolled {
-  background: rgba(255,253,250,.97);
+  background: rgba(245,240,235,.97);
   box-shadow: 0 1px 32px rgba(28,28,28,.07);
 }
 
