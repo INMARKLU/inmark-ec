@@ -125,6 +125,13 @@ nav.primary > a:hover { color: #fff; }
   opacity: 0; pointer-events: none; z-index: 300;
   transition: opacity .2s var(--ease), transform .2s var(--ease);
 }
+/* Puente invisible que cubre el gap entre el botón y el menú */
+.mega-menu::before {
+  content: "";
+  position: absolute;
+  top: -14px; left: 0; right: 0;
+  height: 14px;
+}
 .nav-dropdown:hover .mega-menu,
 .nav-dropdown:focus-within .mega-menu,
 .nav-dropdown[data-open] .mega-menu {
