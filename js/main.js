@@ -85,4 +85,18 @@
     });
   }
 
+  /* ── 4. Hero project card slideshow ── */
+  var projSlides = document.querySelectorAll('.hero-proj-slide');
+  var projDots   = document.querySelectorAll('.hero-proj-dot');
+  if (projSlides.length) {
+    var projIdx = 0;
+    setInterval(function () {
+      projSlides[projIdx].classList.remove('active');
+      projDots[projIdx] && projDots[projIdx].classList.remove('active');
+      projIdx = (projIdx + 1) % projSlides.length;
+      projSlides[projIdx].classList.add('active');
+      projDots[projIdx] && projDots[projIdx].classList.add('active');
+    }, 3500);
+  }
+
 })();
