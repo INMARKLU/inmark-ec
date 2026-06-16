@@ -117,8 +117,7 @@
   /* ═══════════ CURSOR FOLLOWER (Effect 1) ═══════════ */
   .cursor-blob{
     position:fixed;width:24px;height:24px;border-radius:50%;
-    background:var(--primary);pointer-events:none;z-index:9999;
-    mix-blend-mode:difference;
+    background:var(--bg-lime);pointer-events:none;z-index:9999;
     transition:transform .15s ease-out, width .3s var(--ease), height .3s var(--ease), opacity .3s;
     transform:translate(-50%,-50%);opacity:0;
   }
@@ -287,14 +286,14 @@
   }
   .rotor span{
     display:block;line-height:1em;
-    animation:rotor 9s cubic-bezier(.8,0,.2,1) infinite;
+    animation:rotor 11.2s cubic-bezier(.8,0,.2,1) infinite;
   }
   @keyframes rotor{
-    0%, 22%   {transform:translateY(0)}
-    25%, 47%  {transform:translateY(-1em)}
-    50%, 72%  {transform:translateY(-2em)}
-    75%, 97%  {transform:translateY(-3em)}
-    100%      {transform:translateY(-4em)}
+    0%, 17.9%    {transform:translateY(0)}
+    20.5%, 38.4% {transform:translateY(-1em)}
+    41.1%, 59.0% {transform:translateY(-2em)}
+    61.6%, 79.5% {transform:translateY(-3em)}
+    82.1%, 100%  {transform:translateY(-4em)}
   }
 
   .hero-right{display:flex;flex-direction:column;gap:28px;padding-bottom:8px;animation:fadeUp 1s var(--ease) .6s both}
