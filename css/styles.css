@@ -6,7 +6,7 @@
 
 /* ── Color global ── */
 :root {
-  --bg: #F5F0EB;
+  --bg: #FFFDFA;
 }
 html, body {
   background: var(--bg);

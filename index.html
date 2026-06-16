@@ -92,7 +92,7 @@
 
 <style>
   :root{
-    --bg:#F5F0EB; --bg-soft:#F8F7FA; --bg-lilac:#F6F3FF; --bg-lime:#ECF3B3;
+    --bg:#FFFDFA; --bg-soft:#F8F7FA; --bg-lilac:#F6F3FF; --bg-lime:#ECF3B3;
     --ink:#1C1C1C; --ink-soft:#232323; --muted:#666666; --muted-2:#9B9B9C;
     --border:#E5E5E5; --primary:#7240DE; --primary-hi:#834AFF; --primary-lo:#5D3FD3;
     --primary-100:#D4D4F5; --primary-200:#C0C1FF;
@@ -231,44 +231,7 @@
   }
   .hero .container{position:relative;z-index:1}
 
-  /* ── Floating project card ── */
-  .hero-proj-card{
-    width:280px;height:180px;
-    border-radius:var(--radius);
-    border:1px solid var(--border);
-    box-shadow:0 8px 32px rgba(114,64,222,.12);
-    position:relative;overflow:hidden;
-    background:var(--bg);flex-shrink:0;
-    animation:fadeUp 1s var(--ease) .4s both;
-  }
-  .hero-proj-label{
-    position:absolute;top:12px;left:14px;z-index:2;
-    font-size:11px;letter-spacing:.08em;text-transform:uppercase;
-    color:var(--muted-2);font-weight:500;
-  }
-  .hero-proj-slides{position:absolute;inset:0}
-  .hero-proj-slide{
-    position:absolute;inset:0;
-    opacity:0;transition:opacity .5s ease;
-    overflow:hidden;
-  }
-  .hero-proj-slide img{
-    width:100%;height:100%;object-fit:cover;
-    border-radius:var(--radius);display:block;
-  }
-  .hero-proj-slide.active{opacity:1}
-
-  /* Dot indicators */
-  .hero-proj-dots{
-    display:flex;gap:6px;justify-content:center;margin-top:10px;
-  }
-  .hero-proj-dot{
-    width:4px;height:4px;border-radius:50%;background:var(--border);
-    transition:background .3s;
-  }
-  .hero-proj-dot.active{background:var(--primary)}
-
-  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:end}
 
   .eyebrow{
     display:inline-flex;align-items:center;gap:10px;
@@ -1048,22 +1011,7 @@
         </h1>
       </div>
       <div class="hero-right">
-        <div class="hero-proj-card" aria-label="Estilos que podemos crear">
-          <span class="hero-proj-label">estilos que podemos crear</span>
-          <div class="hero-proj-slides">
-            <div class="hero-proj-slide active"><img src="img/clienteinmark-terra.webp" alt="Proyecto Terra Eventos — web y automatización" /></div>
-            <div class="hero-proj-slide"><img src="img/inmarkmc.png" alt="Diseño web Inmark — estilo 1" /></div>
-            <div class="hero-proj-slide"><img src="img/inmarkmc1.png" alt="Diseño web Inmark — estilo 2" /></div>
-            <div class="hero-proj-slide"><img src="img/inmarkmc2.png" alt="Diseño web Inmark — estilo 3" /></div>
-          </div>
-        </div>
-        <div class="hero-proj-dots" aria-hidden="true">
-          <span class="hero-proj-dot active"></span>
-          <span class="hero-proj-dot"></span>
-          <span class="hero-proj-dot"></span>
-          <span class="hero-proj-dot"></span>
-        </div>
-        <p class="hero-lede">
+<p class="hero-lede">
           Diagnosticamos los <em>cuellos de botella digitales</em> de tu empresa y construimos los sistemas para solucionarlos. <span class="ins">SEO, automatización con IA, Google Ads y webs que convierten — en una sola estrategia.</span>
         </p>
         <div class="hero-actions">
