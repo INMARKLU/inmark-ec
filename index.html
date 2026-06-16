@@ -763,38 +763,57 @@
   .svc-2:hover .go,.svc-3:hover .go,.svc-4:hover .go{background:#ECF3B3;color:#1C1C1C}
 
   /* ═══════════ PRELOADER ═══════════ */
-  @keyframes preWordIn{
-    from{opacity:0;transform:translateY(6px)}
-    to{opacity:1;transform:translateY(0)}
+  #preloader {
+    position: fixed; inset: 0;
+    background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 9999;
+    transition: opacity .8s cubic-bezier(.2,.7,.2,1);
   }
-  @keyframes preWordOut{
-    from{opacity:1;transform:translateY(0)}
-    to{opacity:0;transform:translateY(-6px)}
+  #preloader.done { opacity: 0; pointer-events: none; }
+
+  .pre-dot-circle {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--primary);
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-right: 9px; flex: 0 0 28px;
+    opacity: 0; transform: scale(0);
+    transition: opacity .3s, transform .45s cubic-bezier(.34,1.56,.64,1);
   }
-  #preloader{
-    position:fixed;inset:0;
-    background:rgba(245,240,235,.98);
-    display:flex;align-items:center;justify-content:center;
-    z-index:9999;
-    transition:opacity .8s cubic-bezier(.2,.7,.2,1);
+  .pre-dot-circle::after {
+    content: ""; width: 9px; height: 9px;
+    border-radius: 50%; background: #fff; display: block;
   }
-  #preloader.done{opacity:0;pointer-events:none}
-  .pre-word{
-    position:absolute;
-    font-family:var(--sans);
-    font-size:13px;
-    font-weight:400;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--ink);
-    opacity:0;
-    transform:translateY(6px);
-    transition:opacity .4s ease, transform .4s ease;
-    white-space:nowrap;
-    pointer-events:none;
+  .pre-dot-circle.show { opacity: 1; transform: scale(1); }
+
+  .pre-brand {
+    display: flex; align-items: baseline;
+    font-size: 30px; font-weight: 700;
+    letter-spacing: -.03em; color: var(--ink);
   }
-  .pre-word.active{opacity:1;transform:translateY(0)}
-  .pre-word.exit{opacity:0;transform:translateY(-6px)}
+  .pre-letter {
+    display: inline-block;
+    opacity: 0; transform: translateY(8px);
+    transition: opacity .15s, transform .2s var(--ease);
+  }
+  .pre-letter.show { opacity: 1; transform: translateY(0); }
+
+  .pre-dot-char {
+    font-style: italic; font-family: var(--serif);
+    font-weight: 400; color: var(--primary); font-size: 32px;
+    opacity: 0; transition: opacity .3s var(--ease);
+  }
+  .pre-dot-char.show { opacity: 1; }
+
+  .pre-tagline {
+    position: absolute; bottom: 80px;
+    left: 0; right: 0; text-align: center;
+    font-size: 11px; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--muted);
+    opacity: 0; transform: translateY(6px);
+    transition: opacity .5s var(--ease), transform .5s var(--ease);
+  }
+  .pre-tagline.show { opacity: 1; transform: translateY(0); }
 
   /* ═══════════ PROJECT CARDS HOVER ═══════════ */
   .proj .img{overflow:hidden}
@@ -881,10 +900,15 @@
 </head>
 <body>
 
-<div id="preloader" role="status" aria-label="Cargando">
-  <span class="pre-word" id="pw0">Analiza.</span>
-  <span class="pre-word" id="pw1">Automatiza.</span>
-  <span class="pre-word" id="pw2">Posiciona.</span>
+<div id="preloader" role="status" aria-label="Cargando Inmark">
+  <div class="pre-brand">
+    <span class="pre-dot-circle" id="preDot"></span>
+    <span id="preLetters"></span>
+    <span class="pre-dot-char" id="preDotChar">.</span>
+  </div>
+  <div class="pre-tagline" id="preTagline">
+    Crecimiento digital para Ecuador
+  </div>
 </div>
 
 <!-- Cursor follower (desktop only) -->
@@ -1460,23 +1484,33 @@
 
 <script>
 (function(){
-  const pre=document.getElementById('preloader');
-  function show(i,prev){
-    if(prev!==undefined){
-      const p=document.getElementById('pw'+prev);
-      p.classList.remove('active');
-      p.classList.add('exit');
-      setTimeout(function(){p.classList.remove('exit')},400);
-    }
-    document.getElementById('pw'+i).classList.add('active');
+  const pre = document.getElementById('preloader');
+  const dot = document.getElementById('preDot');
+  const cont = document.getElementById('preLetters');
+  const dotChar = document.getElementById('preDotChar');
+  const tagline = document.getElementById('preTagline');
+  const word = 'inmark';
+
+  setTimeout(function(){ dot.classList.add('show'); }, 120);
+
+  var delay = 520;
+  for (var i = 0; i < word.length; i++) {
+    (function(idx, d){
+      var span = document.createElement('span');
+      span.className = 'pre-letter';
+      span.textContent = word[idx];
+      cont.appendChild(span);
+      setTimeout(function(){ span.classList.add('show'); }, d);
+    })(i, delay);
+    delay += 95;
   }
-  show(0);
-  setTimeout(function(){show(1,0)},900);
-  setTimeout(function(){show(2,1)},1800);
+
+  setTimeout(function(){ dotChar.classList.add('show'); }, delay + 80);
+  setTimeout(function(){ tagline.classList.add('show'); }, delay + 280);
   setTimeout(function(){
     pre.classList.add('done');
-    setTimeout(function(){pre.style.display='none'},900);
-  },2800);
+    setTimeout(function(){ pre.style.display = 'none'; }, 900);
+  }, delay + 1100);
 })();
 </script>
 <script src="/js/main.js" defer></script>
