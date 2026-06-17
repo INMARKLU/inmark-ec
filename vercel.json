@@ -1,4 +1,41 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/blog/como-posicionar-empresa-google-ecuador.html",
+      "destination": "/blog/como-posicionar-empresa-google-ecuador",
+      "permanent": true
+    },
+    {
+      "source": "/blog/seo-local-google-maps-ecuador.html",
+      "destination": "/blog/seo-local-google-maps-ecuador",
+      "permanent": true
+    },
+    {
+      "source": "/blog/cuanto-cuesta-seo-ecuador.html",
+      "destination": "/blog/cuanto-cuesta-seo-ecuador",
+      "permanent": true
+    },
+    {
+      "source": "/blog/seo-aeo-geo-ecuador.html",
+      "destination": "/blog/seo-aeo-geo-ecuador",
+      "permanent": true
+    },
+    {
+      "source": "/blog/que-es-el-seo-ecuador.html",
+      "destination": "/blog/que-es-el-seo-ecuador",
+      "permanent": true
+    },
+    {
+      "source": "/blog/automatizacion-agentes-digitales-ecuador.html",
+      "destination": "/blog/automatizacion-agentes-digitales-ecuador",
+      "permanent": true
+    },
+    {
+      "source": "/blog/diseno-web-velocidad-seo-ecuador.html",
+      "destination": "/blog/diseno-web-velocidad-seo-ecuador",
+      "permanent": true
+    }
+  ]
 }
