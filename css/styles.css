@@ -336,3 +336,189 @@ nav.primary > a:hover { color: #fff; }
 @media (max-width: 560px) {
   .proj-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Proyectos: hero mínimo ── */
+.projects-hero {
+  padding: 48px 0 32px;
+  border-bottom: 0.5px solid var(--border);
+}
+.projects-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.projects-eyebrow-line {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--muted-2);
+  flex-shrink: 0;
+}
+.projects-eyebrow-text {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted-2);
+  font-weight: 500;
+}
+.projects-title {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -.03em;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--ink);
+}
+.projects-em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--primary);
+}
+
+/* ── Proyectos: lista vertical ── */
+.projects-list {
+  padding: 0 0 48px;
+}
+.project-item {
+  border-bottom: 0.5px solid var(--border);
+}
+.project-visual {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+}
+.project-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.55) 0%, transparent 60%);
+}
+.project-visual-bottom {
+  position: absolute;
+  bottom: 24px;
+  left: 32px;
+  right: 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  z-index: 1;
+}
+.project-visual-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 28px;
+  color: #fff;
+  line-height: 1.2;
+  flex-shrink: 0;
+}
+.project-visual-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.project-tag {
+  background: rgba(255,255,255,.18);
+  color: #fff;
+  font-size: 11px;
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+.project-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: var(--bg);
+}
+.project-num {
+  font-size: 11px;
+  color: var(--muted-2);
+  letter-spacing: .04em;
+  min-width: 80px;
+}
+.project-result {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--primary);
+  font-size: 13px;
+  text-align: center;
+  flex: 1;
+}
+.project-arr-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-lilac);
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+  transition: background .2s, transform .2s;
+}
+.project-item:hover .project-arr-circle {
+  background: var(--primary-100);
+  transform: scale(1.08);
+}
+
+/* ── Proyectos: CTA final ── */
+.projects-cta {
+  margin-top: 16px;
+  background: var(--bg-lilac);
+  border-radius: var(--radius);
+  padding: 48px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.projects-cta-eyebrow {
+  font-size: 11px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+.projects-cta-title {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 24px;
+  color: var(--ink);
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.projects-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  background: var(--primary);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s, transform .2s;
+  flex-shrink: 0;
+}
+.projects-cta-btn:hover {
+  background: var(--primary-hi);
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .projects-hero { padding: 32px 0 24px; }
+  .project-visual { height: 240px; }
+  .project-visual-bottom { left: 20px; right: 20px; bottom: 16px; }
+  .project-meta { padding: 14px 20px; }
+  .projects-cta { flex-direction: column; align-items: flex-start; }
+  .projects-cta-btn { width: 100%; justify-content: center; }
+}
