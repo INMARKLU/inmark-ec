@@ -963,7 +963,7 @@ nav.primary > a:hover { color: #fff; }
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: footerSweep 4.5s ease-in-out infinite;
+  animation: footerSweep 12s ease-in-out infinite;
   pointer-events: none;
 }
 @keyframes footerSweep {
@@ -973,3 +973,4 @@ nav.primary > a:hover { color: #fff; }
   65%  { opacity: 0; }
   100% { background-position: -50% 0%; opacity: 0; }
 }
+.no-footer-fx .foot-wordmark::after { display: none; }
