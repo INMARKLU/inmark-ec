@@ -931,3 +931,45 @@ nav.primary > a:hover { color: #fff; }
   transition: background .2s;
 }
 .wa-send:hover { background: var(--primary-hi); }
+
+/* ── Footer wordmark sweep ── */
+.foot-wordmark {
+  position: relative;
+  overflow: hidden;
+}
+.foot-wordmark::after {
+  content: "inmark.";
+  position: absolute; inset: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(120px, 22vw, 320px);
+  line-height: .85;
+  letter-spacing: -.04em;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 15%,
+    rgba(192,193,255,.6) 30%,
+    rgba(255,255,255,.8) 45%,
+    #ECF3B3 50%,
+    rgba(255,255,255,.8) 55%,
+    rgba(192,193,255,.6) 70%,
+    transparent 85%,
+    transparent 100%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: footerSweep 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes footerSweep {
+  0%   { background-position: 200% 0%; opacity: 0; }
+  8%   { opacity: 1; }
+  52%  { background-position: -50% 0%; opacity: 1; }
+  65%  { opacity: 0; }
+  100% { background-position: -50% 0%; opacity: 0; }
+}
