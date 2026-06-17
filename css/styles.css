@@ -790,9 +790,9 @@ nav.primary > a:hover { color: #fff; }
 /* ── 6. CTA final ── */
 .nos-cta {
   margin-top: 16px;
-  padding: 48px 32px;
-  background: var(--ink);
-  border-radius: var(--radius);
+  padding: 48px 40px;
+  background: var(--primary);
+  border-radius: var(--radius-lg);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -811,8 +811,8 @@ nav.primary > a:hover { color: #fff; }
   align-items: center;
   padding: 12px 24px;
   border-radius: var(--radius-pill);
-  background: #ECF3B3;
-  color: var(--ink);
+  background: #fff;
+  color: var(--primary);
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
