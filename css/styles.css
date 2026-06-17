@@ -839,3 +839,95 @@ nav.primary > a:hover { color: #fff; }
   .nos-cta { flex-direction: column; align-items: flex-start; }
   .nos-cta-btn { width: 100%; justify-content: center; }
 }
+
+/* ═══════════════════════════════════════════
+   WIDGET WHATSAPP FLOTANTE
+═══════════════════════════════════════════ */
+.wa-widget {
+  position: fixed; bottom: 24px; right: 24px;
+  z-index: 999; display: flex;
+  flex-direction: column; align-items: flex-end;
+  gap: 12px;
+}
+.wa-btn {
+  width: 54px; height: 54px; border-radius: 50%;
+  background: var(--ink); color: #fff; border: none;
+  display: flex; align-items: center;
+  justify-content: center; font-size: 24px;
+  cursor: pointer; position: relative;
+  box-shadow: 0 4px 20px rgba(28,28,28,.25);
+  transition: transform .25s var(--ease), background .25s;
+}
+.wa-btn:hover {
+  transform: scale(1.08);
+  background: var(--primary);
+}
+.wa-btn-dot {
+  position: absolute; top: 2px; right: 2px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: #ECF3B3; border: 2px solid var(--ink);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: .8; }
+}
+.wa-popup {
+  width: 280px; background: #fff;
+  border-radius: 16px; overflow: hidden;
+  box-shadow: 0 8px 32px rgba(28,28,28,.12);
+  border: 0.5px solid var(--border);
+  opacity: 0; pointer-events: none;
+  transform: translateY(10px) scale(.97);
+  transition: opacity .3s var(--ease), transform .3s var(--ease);
+}
+.wa-popup.open {
+  opacity: 1; pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+.wa-header {
+  background: var(--ink); padding: 14px 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.wa-avatar {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--primary); display: flex;
+  align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: #fff;
+  flex: 0 0 34px;
+}
+.wa-name { font-size: 13px; font-weight: 600; color: #fff; }
+.wa-status {
+  font-size: 11px; color: rgba(255,255,255,.5);
+  display: flex; align-items: center; gap: 4px;
+  margin-top: 2px;
+}
+.wa-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #ECF3B3; display: inline-block;
+}
+.wa-close {
+  margin-left: auto; background: none; border: none;
+  color: rgba(255,255,255,.5); cursor: pointer;
+  font-size: 16px; padding: 4px;
+  transition: color .2s;
+}
+.wa-close:hover { color: #fff; }
+.wa-body { padding: 16px; }
+.wa-msg {
+  background: var(--bg-lilac);
+  border-radius: 12px 12px 12px 4px;
+  padding: 12px 14px; font-size: 13px;
+  color: var(--ink); line-height: 1.55;
+}
+.wa-send {
+  display: flex; align-items: center;
+  justify-content: center; gap: 6px;
+  margin: 0 16px 16px;
+  background: var(--primary); color: #fff;
+  padding: 11px 16px; border-radius: var(--radius-pill);
+  font-size: 13px; font-weight: 600;
+  text-decoration: none;
+  transition: background .2s;
+}
+.wa-send:hover { background: var(--primary-hi); }

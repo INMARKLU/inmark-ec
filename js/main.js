@@ -86,3 +86,27 @@
   }
 
 })();
+
+/* ── 4. Widget WhatsApp ── */
+(function(){
+  const btn   = document.getElementById('waBtn');
+  const popup = document.getElementById('waPopup');
+  const close = document.getElementById('waClose');
+  if(!btn) return;
+
+  function openPopup(){
+    popup.classList.add('open');
+    btn.setAttribute('aria-expanded','true');
+  }
+  function closePopup(){
+    popup.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+  }
+
+  btn.addEventListener('click', function(){
+    popup.classList.contains('open') ? closePopup() : openPopup();
+  });
+  close.addEventListener('click', closePopup);
+
+  setTimeout(openPopup, 8000);
+})();
