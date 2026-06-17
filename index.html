@@ -493,57 +493,56 @@
   .step h3{margin:0 0 12px;font-size:21px;font-weight:500;letter-spacing:-.015em}
   .step p{margin:0;font-size:14.5px;line-height:1.55;color:var(--muted)}
 
-  /* ═══════════ PROJECTS with image-reveal hover ═══════════ */
+  /* ═══════════ PROJECTS — 4-card grid ═══════════ */
   section.projects{padding:100px 0}
-  .proj-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:24px}
-  .proj{
-    border-radius:var(--radius-lg);overflow:hidden;
-    position:relative;cursor:pointer;
-    transition:transform .55s var(--ease);
+  .proj-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
+  .pcard{
+    border-radius:var(--radius);border:1px solid var(--border);
+    box-shadow:0 2px 16px rgba(0,0,0,.04);overflow:hidden;background:#fff;
+    transition:transform .4s var(--ease),box-shadow .4s var(--ease);
+    display:flex;flex-direction:column;
   }
-  .proj:hover{transform:translateY(-6px)}
-  .proj .img{
-    aspect-ratio:5/4;background:var(--bg-soft);
-    display:flex;align-items:center;justify-content:center;
-    position:relative;overflow:hidden;
-    border-radius:var(--radius-lg);
+  .pcard:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.08)}
+  .pcard-thumb{height:160px;flex-shrink:0}
+  .pcard-body{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
+  .pcard-labels{display:flex;gap:6px;flex-wrap:wrap}
+  .pcard-label{
+    font-size:11px;color:var(--muted);
+    border:0.5px solid var(--border);border-radius:var(--radius-pill);
+    padding:3px 9px;
   }
-  .proj .img svg{
-    width:100%;height:100%;
-    transition:transform .8s var(--ease);
+  .pcard-title{font-size:14px;font-weight:600;color:var(--ink);margin:0;line-height:1.35}
+  .pcard-metric{
+    font-family:var(--serif);font-style:italic;
+    color:var(--primary);font-size:15px;line-height:1.3;margin:0;
   }
-  .proj:hover .img svg{transform:scale(1.05)}
-  .proj .img::after{
-    content:"";position:absolute;inset:0;
-    background:linear-gradient(135deg, transparent 60%, rgba(114,64,222,.15));
-    opacity:0;transition:opacity .4s;
+  .pcard-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:2px}
+  .pcard-tag{
+    font-size:11px;color:var(--primary);
+    background:var(--bg-lilac);border-radius:var(--radius-pill);padding:3px 9px;
   }
-  .proj:hover .img::after{opacity:1}
-  .proj .badge{
-    position:absolute;top:18px;left:18px;
-    background:rgba(255,253,250,.92);backdrop-filter:blur(8px);
-    padding:6px 12px;border-radius:var(--radius-pill);
-    font-size:12px;font-weight:500;color:var(--ink);
-    transition:transform .4s var(--ease);
+  .pcard-cta{
+    background:var(--bg-lilac);
+    align-items:center;justify-content:center;
+    text-align:center;gap:12px;padding:32px 20px;
+    min-height:240px;
   }
-  .proj:hover .badge{transform:translateY(-2px)}
-  .proj .view-arrow{
-    position:absolute;bottom:18px;right:18px;
-    width:48px;height:48px;border-radius:50%;
-    background:#fff;display:flex;align-items:center;justify-content:center;
-    transform:translate(60px,60px) rotate(-45deg);opacity:0;
-    transition:all .5s var(--ease);
-    font-size:20px;color:var(--ink);
+  .pcard-cta-eyebrow{
+    font-size:10px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--muted-2);margin:0;
   }
-  .proj:hover .view-arrow{transform:translate(0,0) rotate(0);opacity:1;background:var(--primary);color:#fff}
-  .proj .meta{display:flex;justify-content:space-between;align-items:baseline;padding:18px 4px 0}
-  .proj h3{margin:0;font-size:22px;font-weight:500;letter-spacing:-.015em}
-  .proj h3 .ins{color:var(--primary);font-weight:400}
-  .proj .cat{font-size:13px;color:var(--muted)}
-  .p-1{grid-column:span 7}
-  .p-2{grid-column:span 5}
-  .p-3{grid-column:span 5}
-  .p-4{grid-column:span 7}
+  .pcard-cta-title{
+    font-family:var(--serif);font-style:italic;font-weight:400;
+    font-size:20px;color:var(--ink);line-height:1.25;margin:0;
+  }
+  .pcard-cta-btn{
+    display:inline-flex;align-items:center;gap:6px;
+    padding:9px 20px;border-radius:var(--radius-pill);
+    border:1.5px solid var(--primary);background:transparent;
+    color:var(--primary);font-size:13px;font-weight:500;
+    text-decoration:none;transition:background .2s,color .2s;
+  }
+  .pcard-cta-btn:hover{background:var(--primary);color:#fff}
 
   /* ═══════════ STICKY CTA with parallax glow ═══════════ */
   section.cta-strip{
@@ -708,8 +707,7 @@
     .services-grid{grid-template-columns:1fr}
     .svc-1,.svc-2,.svc-3,.svc-4{grid-column:span 1}
     .steps{grid-template-columns:1fr;gap:32px}
-    .proj-grid{grid-template-columns:1fr}
-    .p-1,.p-2,.p-3,.p-4{grid-column:span 1}
+    .proj-grid{grid-template-columns:repeat(2,1fr)}
     section.cta-strip{padding:48px 24px}
     .cta-strip-grid{grid-template-columns:1fr;gap:24px}
     .testi-grid{grid-template-columns:1fr}
@@ -1198,45 +1196,66 @@
 
     <div class="proj-grid">
 
-      <!-- terraeventos.ec — grande izquierda -->
-      <a class="proj p-1 reveal" href="proyectos.html" data-cursor="hover" aria-label="Caso de estudio: terraeventos.ec">
-        <div class="img">
-          <div class="shine" aria-hidden="true"></div>
-          <img src="img/clienteinmark-terra.webp" alt="Proyecto terraeventos.ec — SEO y desarrollo web en Ecuador" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1);filter:saturate(0.5) brightness(0.7)" />
-          <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(114,64,222,0.55) 0%,rgba(28,28,28,0.45) 100%);z-index:1"></div>
-          <span class="badge" style="z-index:2;position:absolute;top:auto;bottom:100px;left:50%;transform:translateX(-50%)">Eventos · Ecuador</span>
-          <!-- stat overlay permanente -->
-          <div style="position:absolute;bottom:0;left:0;right:0;padding:24px 28px;background:linear-gradient(to top,rgba(28,28,28,.92) 0%,transparent 100%);z-index:2">
-            <div class="stat-num" style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:52px;color:#ECF3B3;line-height:1;margin-bottom:6px">+210%</div>
-            <div style="font-size:13px;color:rgba(255,255,255,.7);font-weight:400">Tráfico orgánico conseguido en 5 meses con SEO técnico y rediseño web.</div>
+      <!-- Card 1: terraeventos.ec -->
+      <a class="pcard reveal" href="proyectos.html" aria-label="Caso de estudio: terraeventos.ec">
+        <div class="pcard-thumb" style="background:#2C3E2D"></div>
+        <div class="pcard-body">
+          <div class="pcard-labels">
+            <span class="pcard-label">Eventos</span>
+            <span class="pcard-label">Ecuador</span>
           </div>
-          <span class="view-arrow" aria-hidden="true" style="z-index:2;position:relative">↗</span>
-        </div>
-        <div class="meta">
-          <h3>Web &amp; IA <span class="ins">terraeventos.ec</span></h3>
-          <span class="cat">Desarrollo web · Automatización</span>
-        </div>
-      </a>
-
-      <!-- tucalculadora.ec — mediana derecha -->
-      <a class="proj p-2 reveal" href="proyectos.html" data-cursor="hover" aria-label="Caso de estudio: tucalculadora.ec">
-        <div class="img">
-          <div class="shine" aria-hidden="true"></div>
-          <img src="img/clienteinmark-tucalculadora.webp" alt="Proyecto tucalculadora.ec — Desarrollo web y automatización con IA en Ecuador" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1);filter:saturate(0.4) brightness(0.65)" />
-          <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(236,243,179,0.55) 0%,rgba(28,28,28,0.5) 100%);z-index:1"></div>
-          <span class="badge" style="z-index:2;position:absolute;top:auto;bottom:100px;left:50%;transform:translateX(-50%)">Fintech · Ecuador</span>
-          <span class="view-arrow" aria-hidden="true" style="z-index:2;position:relative">↗</span>
-        </div>
-        <div class="meta">
-          <h3>SEO &amp; web <span class="ins">tucalculadora.ec</span></h3>
-          <span class="cat">SEO · Desarrollo web</span>
+          <p class="pcard-title">Web &amp; IA · terraeventos.ec</p>
+          <p class="pcard-metric">Cotizaciones automáticas 24/7</p>
+          <div class="pcard-tags">
+            <span class="pcard-tag">Desarrollo web</span>
+            <span class="pcard-tag">Automatización IA</span>
+            <span class="pcard-tag">WhatsApp</span>
+          </div>
         </div>
       </a>
 
-    </div>
+      <!-- Card 2: tucalculadora.ec -->
+      <a class="pcard reveal" href="proyectos.html" aria-label="Caso de estudio: tucalculadora.ec">
+        <div class="pcard-thumb" style="background:linear-gradient(135deg,#3D6B47 65%,#C9A84C 100%)"></div>
+        <div class="pcard-body">
+          <div class="pcard-labels">
+            <span class="pcard-label">Fintech</span>
+            <span class="pcard-label">Ecuador</span>
+          </div>
+          <p class="pcard-title">Web &amp; IA · tucalculadora.ec</p>
+          <p class="pcard-metric">Web + automatización en proceso</p>
+          <div class="pcard-tags">
+            <span class="pcard-tag">Desarrollo web</span>
+            <span class="pcard-tag">Automatización IA</span>
+          </div>
+        </div>
+      </a>
 
-    <div style="text-align:center;margin-top:48px" class="reveal">
-      <a href="proyectos.html" class="btn btn-ghost" data-cursor="hover">Ver todos los proyectos <span class="arr">→</span></a>
+      <!-- Card 3: Assurances Everad -->
+      <a class="pcard reveal" href="proyectos.html" aria-label="Caso de estudio: Assurances Everad">
+        <div class="pcard-thumb" style="background:#C4704A"></div>
+        <div class="pcard-body">
+          <div class="pcard-labels">
+            <span class="pcard-label">Seguros</span>
+            <span class="pcard-label">Europa</span>
+          </div>
+          <p class="pcard-title">Diseño web · Assurances Everad</p>
+          <p class="pcard-metric">Diseño web profesional</p>
+          <div class="pcard-tags">
+            <span class="pcard-tag">Desarrollo web</span>
+            <span class="pcard-tag">SEO</span>
+            <span class="pcard-tag">Google Ads</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 4: CTA -->
+      <div class="pcard pcard-cta reveal">
+        <p class="pcard-cta-eyebrow">¿Listo para crecer?</p>
+        <p class="pcard-cta-title">¿Tu empresa es la siguiente?</p>
+        <a href="contacto.html" class="pcard-cta-btn">Hablemos →</a>
+      </div>
+
     </div>
   </div>
 </section>

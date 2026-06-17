@@ -332,3 +332,7 @@ nav.primary > a:hover { color: #fff; }
   .nav-actions { display: none; }
   .nav-sep { display: none; }
 }
+
+@media (max-width: 560px) {
+  .proj-grid { grid-template-columns: 1fr; }
+}
