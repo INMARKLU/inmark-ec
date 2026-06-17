@@ -522,3 +522,320 @@ nav.primary > a:hover { color: #fff; }
   .projects-cta { flex-direction: column; align-items: flex-start; }
   .projects-cta-btn { width: 100%; justify-content: center; }
 }
+
+/* ═══════════════════════════════════════════
+   NOSOTROS
+═══════════════════════════════════════════ */
+
+/* ── 1. Hero ── */
+.nos-hero {
+  padding: 48px 0 40px;
+  border-bottom: 0.5px solid var(--border);
+}
+.nos-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+.nos-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.nos-eyebrow-line {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--muted-2);
+  flex-shrink: 0;
+}
+.nos-eyebrow-text {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted-2);
+  font-weight: 500;
+}
+.nos-h1 {
+  font-size: clamp(32px, 3.5vw, 42px);
+  font-weight: 700;
+  letter-spacing: -.03em;
+  line-height: 1.1;
+  margin: 0;
+  color: var(--ink);
+}
+.nos-h1 em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--primary);
+}
+.nos-hero-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.nos-hero-p {
+  border-left: 2px solid var(--primary);
+  padding-left: 20px;
+  font-size: 16px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+.nos-hero-p strong { color: var(--ink); font-weight: 600; }
+
+/* ── 2. Manifiesto ── */
+.nos-manifiesto {
+  padding: 48px 0;
+  border-bottom: 0.5px solid var(--border);
+}
+.nos-manifiesto-text {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 680px;
+  margin: 0 0 28px;
+  color: var(--ink);
+}
+.nos-manifiesto-text em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--primary);
+}
+.nos-firma {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nos-firma-foto {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--primary);
+  flex-shrink: 0;
+}
+.nos-firma-nombre {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  display: block;
+}
+.nos-firma-rol {
+  font-size: 12px;
+  color: var(--muted);
+  display: block;
+}
+
+/* ── 3. Números ── */
+.nos-numeros {
+  padding: 48px 0;
+  border-bottom: 0.5px solid var(--border);
+}
+.nos-numeros-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.nos-num-item {
+  padding: 0 32px;
+  border-right: 0.5px solid var(--border);
+}
+.nos-num-item:first-child { padding-left: 0; }
+.nos-num-item:last-child { border-right: none; }
+.nos-num-valor {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 40px;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.nos-num-valor span { color: var(--primary); }
+.nos-num-label {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+  max-width: 200px;
+}
+
+/* ── 4. Valores ── */
+.nos-valores {
+  padding: 48px 0;
+  border-bottom: 0.5px solid var(--border);
+}
+.nos-valores-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted-2);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.nos-valores-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+.nos-valor-card {
+  background: var(--bg-soft);
+  border: 0.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.nos-valor-num {
+  font-size: 11px;
+  color: var(--muted-2);
+  margin-bottom: 10px;
+  display: block;
+  letter-spacing: .04em;
+}
+.nos-valor-titulo {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--ink);
+  font-weight: 400;
+  margin: 0 0 8px;
+}
+.nos-valor-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── 5. Diferencial ── */
+.nos-diferencial {
+  padding: 48px 0;
+  border-bottom: 0.5px solid var(--border);
+}
+.nos-diferencial-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.nos-dif-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.nos-dif-titulo {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+.nos-dif-titulo em {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--primary);
+}
+.nos-dif-p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+.nos-dif-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.nos-dif-item {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: var(--bg-soft);
+  border: 0.5px solid var(--border);
+  align-items: flex-start;
+}
+.nos-dif-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--bg-lilac);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 17px;
+}
+.nos-dif-item-titulo {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 3px;
+}
+.nos-dif-item-sub {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── 6. CTA final ── */
+.nos-cta {
+  margin-top: 16px;
+  padding: 48px 32px;
+  background: var(--ink);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.nos-cta-titulo {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+}
+.nos-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  background: #ECF3B3;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity .2s, transform .2s;
+  flex-shrink: 0;
+}
+.nos-cta-btn:hover { opacity: .88; transform: scale(1.02); }
+
+/* ── Responsive nosotros ── */
+@media (max-width: 768px) {
+  .nos-hero-grid,
+  .nos-diferencial-grid { grid-template-columns: 1fr; }
+  .nos-numeros-grid,
+  .nos-valores-grid { grid-template-columns: 1fr; }
+  .nos-num-item {
+    padding: 20px 0;
+    border-right: none;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .nos-num-item:last-child { border-bottom: none; }
+  .nos-h1 { font-size: 28px; }
+  .nos-manifiesto-text { font-size: 17px; }
+  .nos-cta { flex-direction: column; align-items: flex-start; }
+  .nos-cta-btn { width: 100%; justify-content: center; }
+}
