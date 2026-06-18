@@ -2,6 +2,18 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/servicios.html", "destination": "/servicios", "permanent": true },
+    { "source": "/servicios-seo-ecuador.html", "destination": "/servicios-seo-ecuador", "permanent": true },
+    { "source": "/servicios-automatizacion-ia-ecuador.html", "destination": "/servicios-automatizacion-ia-ecuador", "permanent": true },
+    { "source": "/servicios-google-ads-ecuador.html", "destination": "/servicios-google-ads-ecuador", "permanent": true },
+    { "source": "/servicios-desarrollo-web-ecuador.html", "destination": "/servicios-desarrollo-web-ecuador", "permanent": true },
+    { "source": "/nosotros.html", "destination": "/nosotros", "permanent": true },
+    { "source": "/work.html", "destination": "/work", "permanent": true },
+    { "source": "/conecta.html", "destination": "/conecta", "permanent": true },
+    { "source": "/blog.html", "destination": "/blog", "permanent": true },
+    { "source": "/como-posicionar-empresa-google-ecuador.html", "destination": "/blog/como-posicionar-empresa-google-ecuador", "permanent": true },
+    { "source": "/blog/cuanto-cuesta-seo-ecuador_2.html", "destination": "/blog/cuanto-cuesta-seo-ecuador", "permanent": true },
     {
       "source": "/blog/como-posicionar-empresa-google-ecuador.html",
       "destination": "/blog/como-posicionar-empresa-google-ecuador",
