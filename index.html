@@ -760,6 +760,34 @@
   .svc-2:hover .svc-foot,.svc-3:hover .svc-foot,.svc-4:hover .svc-foot{border-top-color:rgba(255,255,255,.2);color:rgba(255,255,255,.8)}
   .svc-2:hover .go,.svc-3:hover .go,.svc-4:hover .go{background:#ECF3B3;color:#1C1C1C}
 
+  /* ═══════════ HERO BLOBS FONDO ═══════════ */
+  .hero-bg-blob{
+    position:absolute;border-radius:50%;
+    filter:blur(80px);opacity:.4;z-index:0;
+    pointer-events:none;
+  }
+  .hero-bg-blob.one{
+    width:500px;height:500px;
+    background:var(--primary-100);
+    top:-100px;right:-100px;
+    animation:blob1 18s ease-in-out infinite;
+  }
+  .hero-bg-blob.two{
+    width:400px;height:400px;
+    background:var(--bg-lime);
+    bottom:-50px;left:20%;opacity:.5;
+    animation:blob2 22s ease-in-out infinite;
+  }
+  @keyframes blob1{
+    0%,100%{transform:translate(0,0) scale(1)}
+    33%{transform:translate(-40px,30px) scale(1.1)}
+    66%{transform:translate(20px,-20px) scale(.95)}
+  }
+  @keyframes blob2{
+    0%,100%{transform:translate(0,0) scale(1)}
+    50%{transform:translate(60px,-40px) scale(1.15)}
+  }
+
   /* ═══════════ PRELOADER ═══════════ */
   #preloader {
     position: fixed; inset: 0;
@@ -1009,6 +1037,8 @@
 
 <!-- ═══════════ HERO ═══════════ -->
 <section class="hero">
+  <div class="hero-bg-blob one" aria-hidden="true"></div>
+  <div class="hero-bg-blob two" aria-hidden="true"></div>
   <div class="container">
     <div class="hero-grid">
       <div>
