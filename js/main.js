@@ -85,4 +85,17 @@
     });
   }
 
+  /* ── 4. Megacard spotlight ── */
+  document.querySelectorAll('.megacard').forEach(function(card) {
+    card.addEventListener('mousemove', function(e) {
+      var r = card.getBoundingClientRect();
+      var mx = ((e.clientX - r.left) / r.width) * 100;
+      var my = ((e.clientY - r.top) / r.height) * 100;
+      card.style.background = 'radial-gradient(420px circle at ' + mx + '% ' + my + '%, rgba(114,64,222,.07), transparent 60%)';
+    });
+    card.addEventListener('mouseleave', function() {
+      card.style.background = 'transparent';
+    });
+  });
+
 })();
