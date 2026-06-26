@@ -468,9 +468,30 @@
   .svc-1 .svc-foot .go{background:#fff;color:var(--ink)}
   .svc-1::before{background:radial-gradient(600px circle at var(--mx,50%) var(--my,50%), rgba(114,64,222,.35), transparent 40%)}
 
-  .svc-2{grid-column:span 3;background:var(--bg-lime);min-height:320px;border-color:#dde399}
-  .svc-3{grid-column:span 3}
-  .svc-4{grid-column:span 3}
+  .svc-2{grid-column:span 3;background:var(--bg-lime);min-height:320px;border-color:#dde399;transition:background .4s, border-color .4s, color .4s}
+  .svc-2 .svc-foot{transition:border-top-color .4s}
+  .svc-2:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+  .svc-2:hover p{color:rgba(255,255,255,.7)}
+  .svc-2:hover .svc-num{color:rgba(255,255,255,.5)}
+  .svc-2:hover .svc-foot{border-top-color:rgba(255,255,255,.15)}
+  .svc-2:hover .svc-foot .go{background:#fff;color:var(--ink)}
+  .svc-2::before{background:radial-gradient(600px circle at var(--mx,50%) var(--my,50%), rgba(114,64,222,.35), transparent 40%)}
+
+  .svc-3{grid-column:span 3;transition:background .4s, border-color .4s, color .4s}
+  .svc-3:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+  .svc-3:hover p{color:rgba(255,255,255,.7)}
+  .svc-3:hover .svc-num{color:rgba(255,255,255,.5)}
+  .svc-3:hover .svc-foot{border-top-color:rgba(255,255,255,.15)}
+  .svc-3:hover .svc-foot .go{background:#fff;color:var(--ink)}
+  .svc-3::before{background:radial-gradient(600px circle at var(--mx,50%) var(--my,50%), rgba(236,243,179,.25), transparent 40%)}
+
+  .svc-4{grid-column:span 3;transition:background .4s, border-color .4s, color .4s}
+  .svc-4:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+  .svc-4:hover p{color:rgba(255,255,255,.7)}
+  .svc-4:hover .svc-num{color:rgba(255,255,255,.5)}
+  .svc-4:hover .svc-foot{border-top-color:rgba(255,255,255,.15)}
+  .svc-4:hover .svc-foot .go{background:#fff;color:var(--ink)}
+  .svc-4::before{background:radial-gradient(600px circle at var(--mx,50%) var(--my,50%), rgba(114,64,222,.35), transparent 40%)}
 
   /* ═══════════ APPROACH with sticky scroll ═══════════ */
   section.approach{
