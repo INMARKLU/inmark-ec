@@ -6,7 +6,8 @@
     { "source": "/servicios.html", "destination": "/servicios", "permanent": true },
     { "source": "/servicios-seo-ecuador.html", "destination": "/servicios-seo-ecuador", "permanent": true },
     { "source": "/servicios-automatizacion-ia-ecuador.html", "destination": "/servicios-automatizacion-ia-ecuador", "permanent": true },
-    { "source": "/servicios-google-ads-ecuador.html", "destination": "/servicios-google-ads-ecuador", "permanent": true },
+    { "source": "/servicios-google-ads-ecuador.html", "destination": "/servicios", "permanent": true },
+    { "source": "/servicios-google-ads-ecuador", "destination": "/servicios", "permanent": true },
     { "source": "/servicios-desarrollo-web-ecuador.html", "destination": "/servicios-desarrollo-web-ecuador", "permanent": true },
     { "source": "/nosotros.html", "destination": "/nosotros", "permanent": true },
     { "source": "/work.html", "destination": "/proyectos", "permanent": true },
@@ -48,6 +49,7 @@
       "source": "/blog/diseno-web-velocidad-seo-ecuador.html",
       "destination": "/blog/diseno-web-velocidad-seo-ecuador",
       "permanent": true
-    }
+    },
+    { "source": "/servicios-consultoria-estrategica-ecuador.html", "destination": "/servicios-consultoria-estrategica-ecuador", "permanent": true }
   ]
 }
