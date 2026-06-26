@@ -153,6 +153,9 @@ nav.primary > a:hover { color: #fff; }
   display: grid;
   grid-template-columns: 1fr auto 1fr auto minmax(220px,260px);
 }
+.mega-grid.mega-grid-4 {
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+}
 .mega-divider {
   width: 1px; background: var(--border);
   margin: 8px 6px; align-self: stretch;
