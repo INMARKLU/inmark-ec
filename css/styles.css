@@ -220,6 +220,41 @@ nav.primary > a:hover { color: #fff; }
 }
 .mega-secondary:hover { opacity: .65; }
 
+/* ── Nuevo mega-menu cards ── */
+.megawrap{
+  position:absolute;top:100%;left:50%;padding-top:10px;
+  width:min(880px,calc(100vw - 80px));
+  transform:translateX(-50%) translateY(-8px);
+  opacity:0;pointer-events:none;
+  transition:opacity .35s cubic-bezier(.2,.7,.2,1),transform .45s cubic-bezier(.2,.7,.2,1);
+  z-index:300;
+}
+.nav-dropdown[data-open] .megawrap,
+.nav-dropdown:hover .megawrap{transform:translateX(-50%) translateY(0);opacity:1;pointer-events:auto}
+.mega{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:0 24px 70px -28px rgba(28,28,28,.28),0 2px 10px rgba(28,28,28,.04);overflow:hidden}
+.mega-head{display:flex;align-items:center;justify-content:space-between;padding:18px 24px 14px;border-bottom:1px solid var(--border)}
+.mega-eyebrow-tag{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--primary)}
+.mega-eyebrow-tag .pulse-dot{width:8px;height:8px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 4px rgba(114,64,222,.18);animation:pulse 2s ease-in-out infinite}
+.mega-head .sub{font-size:13px;color:var(--muted-2)}
+.mega-grid-cards{display:grid;grid-template-columns:repeat(2,1fr);padding:14px;gap:6px}
+.megacard{position:relative;display:flex;gap:16px;padding:18px;border:1px solid transparent;border-radius:var(--radius);text-decoration:none;color:var(--ink);transition:transform .4s cubic-bezier(.2,.7,.2,1),border-color .3s,background .3s}
+.megacard:hover{transform:translateY(-4px);border-color:var(--ink)}
+.mc-chip{flex:none;width:46px;height:46px;border-radius:var(--radius-sm);background:var(--bg-lilac);display:inline-flex;align-items:center;justify-content:center;font-size:22px;color:var(--primary);transition:transform .45s cubic-bezier(.34,1.56,.64,1),background .3s,color .3s}
+.megacard:hover .mc-chip{background:var(--primary);color:#fff;transform:rotate(-8deg) scale(1.05)}
+.mc-body{display:flex;flex-direction:column;gap:5px;min-width:0}
+.mc-title{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.mc-arr{opacity:0;transform:translateX(-4px);color:var(--primary);font-size:14px;transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .3s}
+.megacard:hover .mc-arr{opacity:1;transform:translateX(0)}
+.mc-desc{font-size:13.5px;line-height:1.45;color:var(--muted)}
+.mega-cta-strip{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:16px 24px;background:var(--bg-lilac);border-top:1px solid var(--border);text-decoration:none;color:var(--ink);transition:gap .3s cubic-bezier(.2,.7,.2,1)}
+.mega-cta-strip:hover{gap:20px}
+.mega-cta-strip .l{font-size:14px}
+.mega-cta-strip .r{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;white-space:nowrap}
+.mega-cta-strip .r .arr-circle{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font-size:12px}
+.caret{display:inline-block;transition:transform .35s cubic-bezier(.2,.7,.2,1);font-size:10px;opacity:.6}
+.nav-dropdown[data-open] .caret,.nav-dropdown:hover .caret{transform:rotate(180deg)}
+.nav-dropdown-menu{display:none!important}
+
 /* ── Acciones nav derecha ── */
 .nav-actions {
   display: flex; align-items: center; gap: 8px;
