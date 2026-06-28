@@ -1076,6 +1076,45 @@
     transition:transform .7s ease;
   }
 
+/* ═══════════ MEGA MENU FIX ═══════════ */
+.mega-menu{
+  position:absolute;top:calc(100% + 12px);left:50%;
+  transform:translateX(-50%) translateY(8px);
+  background:#fff;border:1px solid var(--border);
+  border-radius:16px;padding:8px;
+  box-shadow:0 8px 40px rgba(28,28,28,.12);
+  opacity:0;pointer-events:none;
+  transition:opacity .25s var(--ease),transform .25s var(--ease);
+  z-index:200;min-width:520px;
+}
+.nav-dropdown:hover .mega-menu,
+.mega-menu:hover{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.mega-col{display:flex;flex-direction:column;gap:2px}
+.mega-divider{width:1px;background:var(--border);margin:8px 0;align-self:stretch}
+.mega-item{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:12px 14px;border-radius:10px;
+  text-decoration:none;transition:background .2s;
+}
+.mega-item:hover{background:var(--bg-soft)}
+.mega-icon{
+  width:36px;height:36px;border-radius:8px;
+  background:var(--bg-lilac);display:flex;
+  align-items:center;justify-content:center;
+  color:var(--primary);flex-shrink:0;
+  font-size:18px;
+}
+.mega-title{
+  display:block;font-size:14px;font-weight:600;
+  color:var(--ink) !important;line-height:1.3;margin-bottom:3px;
+}
+.mega-desc{
+  display:block;font-size:12.5px;
+  color:var(--muted);line-height:1.4;
+}
+.mega-item:hover .mega-title{color:var(--primary) !important}
+
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CP6S89C18P"></script>
@@ -1123,36 +1162,41 @@
               <span class="mega-eyebrow-tag"><span class="pulse-dot"></span> Cuatro sistemas</span>
               <span class="sub">Diagnóstico · sistema · cero humo</span>
             </div>
-            <div class="mega-grid-cards">
-              <a class="megacard" href="servicios-seo-ecuador.html">
-                <span class="mc-chip">◎</span>
-                <span class="mc-body">
-                  <span class="mc-title">SEO + IA Optimization <span class="mc-arr">→</span></span>
-                  <span class="mc-desc">Tu web existe. Hacemos que Google —y la IA— por fin la encuentren.</span>
+            <div class="mega-grid">
+            <div class="mega-col">
+              <a href="servicios-seo-ecuador.html" class="mega-item">
+                <span class="mega-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="7.5" cy="7.5" r="5" stroke="currentColor" stroke-width="1.4"/><line x1="11.5" y1="11.5" x2="15" y2="15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><polyline points="5.5,8 7.5,6 9,7.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="mega-text">
+                  <span class="mega-title">SEO + IA Optimization</span>
+                  <span class="mega-desc">Posiciónate en Google, en IA y en motores de respuesta</span>
                 </span>
               </a>
-              <a class="megacard" href="servicios-automatizacion-ia-ecuador.html">
-                <span class="mc-chip">◈</span>
-                <span class="mc-body">
-                  <span class="mc-title">Agentes para WhatsApp <span class="mc-arr">→</span></span>
-                  <span class="mc-desc">Tu WhatsApp responde, califica y vende solo. 24/7, sin que muevas un dedo.</span>
-                </span>
-              </a>
-              <a class="megacard" href="servicios-desarrollo-web-ecuador.html">
-                <span class="mc-chip">◱</span>
-                <span class="mc-body">
-                  <span class="mc-title">Diseño web <span class="mc-arr">→</span></span>
-                  <span class="mc-desc">Webs que no solo se ven bien — convierten visitas en clientes.</span>
-                </span>
-              </a>
-              <a class="megacard" href="servicios-consultoria-estrategica-ecuador.html">
-                <span class="mc-chip">🧭</span>
-                <span class="mc-body">
-                  <span class="mc-title">Consultoría estratégica <span class="mc-arr">→</span></span>
-                  <span class="mc-desc">Diagnosticamos el cuello de botella digital y construimos el sistema que lo resuelve.</span>
+              <a href="servicios-automatizacion-ia-ecuador.html" class="mega-item">
+                <span class="mega-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="3" y="5" width="12" height="9" rx="2" stroke="currentColor" stroke-width="1.4"/><circle cx="6.5" cy="9" r="1" fill="currentColor"/><circle cx="11.5" cy="9" r="1" fill="currentColor"/><line x1="9" y1="2" x2="9" y2="5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="6" y1="2" x2="9" y2="2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="12" y1="2" x2="9" y2="2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="3" y1="12" x2="1.5" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="15" y1="12" x2="16.5" y2="14" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></span>
+                <span class="mega-text">
+                  <span class="mega-title">Agentes virtuales para WhatsApp</span>
+                  <span class="mega-desc">Tu WhatsApp responde solo y atiende clientes las 24/7</span>
                 </span>
               </a>
             </div>
+            <div class="mega-divider" aria-hidden="true"></div>
+            <div class="mega-col">
+              <a href="servicios-desarrollo-web-ecuador.html" class="mega-item">
+                <span class="mega-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="1.5" y="2.5" width="15" height="10" rx="1.5" stroke="currentColor" stroke-width="1.4"/><line x1="6" y1="16" x2="12" y2="16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><line x1="9" y1="12.5" x2="9" y2="16" stroke="currentColor" stroke-width="1.4"/></svg></span>
+                <span class="mega-text">
+                  <span class="mega-title">Diseño web</span>
+                  <span class="mega-desc">Webs profesionales, rápidas y optimizadas para vender</span>
+                </span>
+              </a>
+              <a href="servicios-consultoria-estrategica-ecuador.html" class="mega-item">
+                <span class="mega-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="7" stroke="currentColor" stroke-width="1.4"/><line x1="9" y1="5" x2="9" y2="9.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><circle cx="9" cy="12" r="0.8" fill="currentColor"/></svg></span>
+                <span class="mega-text">
+                  <span class="mega-title">Consultoría Estratégica</span>
+                  <span class="mega-desc">Diagnóstico completo y hoja de ruta digital personalizada</span>
+                </span>
+              </a>
+            </div>
+          </div>
             <a class="mega-cta-strip" href="contacto.html">
               <span class="l">¿No sabes por dónde empezar? <span class="ins">Te lo diagnosticamos.</span></span>
               <span class="r">Auditoría gratuita <span class="arr-circle">→</span></span>
