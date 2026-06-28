@@ -135,7 +135,10 @@
   .btn:active{transform:scale(.97)}
   .btn .arr{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.18);transition:transform .35s var(--ease)}
   .btn:hover .arr{transform:translateX(3px) rotate(-45deg)}
-  .btn-primary{color:#fff}
+  .btn-primary{color:var(--ink)}
+  .btn-primary::before{background:var(--bg-lime)}
+  .btn-primary::after{background:var(--bg-lime)}
+  .btn-primary .arr{background:rgba(28,28,28,.12)}
   .btn-ghost{color:var(--ink);border-color:var(--border)}
   .btn-ghost::before{background:transparent}
   .btn-ghost::after{background:var(--ink)}
