@@ -260,12 +260,12 @@ nav.primary > a:hover { color: #fff; }
   display: flex; align-items: center; gap: 8px;
   flex-shrink: 0;
 }
-.btn-primary{background:var(--bg-lime);color:var(--ink)}
-.btn-primary::before{background:var(--bg-lime)}
-.btn-primary::after{background:var(--primary)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary::before{background:var(--primary)}
+.btn-primary::after{background:var(--primary-hi)}
 .btn-primary:hover{color:#fff}
-.btn-primary .arr{background:rgba(28,28,28,.12)}
-.btn-primary:hover .arr{background:rgba(255,255,255,.18)}
+.btn-primary .arr{background:rgba(255,255,255,.18)}
+.btn-primary:hover .arr{background:rgba(255,255,255,.25)}
 .btn-ghost {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 8px 18px; border-radius: var(--radius-pill);
