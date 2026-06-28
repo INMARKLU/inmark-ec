@@ -907,7 +907,9 @@
     text-decoration:none;color:var(--ink);
     transition:transform .4s var(--ease),border-color .3s,background .3s;
   }
-  .megacard:hover{transform:translateY(-4px);border-color:var(--ink)}
+  .megacard:hover{transform:translateY(-4px);border-color:var(--ink);background:var(--ink)}
+  .megacard:hover .mc-title{color:#fff}
+  .megacard:hover .mc-desc{color:rgba(255,255,255,.65)}
   .mc-chip{
     flex:none;width:46px;height:46px;border-radius:var(--radius-sm);
     background:var(--bg-lilac);display:inline-flex;align-items:center;
