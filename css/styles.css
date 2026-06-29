@@ -1005,3 +1005,8 @@ h1.ih-title .ins{color:var(--primary)}
   .ih-top{grid-template-columns:1fr;gap:24px}
   .ih-strip{grid-template-columns:1fr}
 }
+
+/* ═══════════ MEGAMENÚ NUEVO — FIX DEFINITIVO ═══════════ */
+.megacard:hover .mc-title{color:#fff !important}
+.megacard:hover .mc-desc{color:rgba(255,255,255,.65) !important}
+.megacard:hover .mc-chip{background:rgba(255,255,255,.15) !important;color:#fff !important}
