@@ -976,18 +976,43 @@
     });
   });
 
-  // 6) Form submit (simulado — conectar al backend real)
-  document.getElementById('contactForm').addEventListener('submit',function(e){
+  // 6) Form submit — envío real vía /api/contact (Resend)
+  document.getElementById('contactForm').addEventListener('submit',async function(e){
     e.preventDefault();
     const form=this;
     const btn=form.querySelector('.btn-submit');
+    const originalLabel=btn.innerHTML;
     btn.textContent='Enviando…';
     btn.disabled=true;
-    // Aquí conectar con tu servicio de email (Formspree, EmailJS, etc.)
-    setTimeout(()=>{
+
+    const payload={
+      nombre:form.nombre.value,
+      empresa:form.empresa.value,
+      email:form.email.value,
+      telefono:form.telefono.value,
+      servicio:document.getElementById('servicio').value,
+      presupuesto:document.getElementById('presupuesto').value,
+      mensaje:form.mensaje.value
+    };
+
+    try{
+      const resp=await fetch('/api/contact',{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(payload)
+      });
+      if(!resp.ok){
+        const data=await resp.json().catch(()=>({}));
+        throw new Error(data.error||('HTTP '+resp.status));
+      }
       form.style.display='none';
       document.getElementById('formSuccess').classList.add('show');
-    },1200);
+    }catch(err){
+      console.error('Error al enviar el formulario:',err);
+      btn.disabled=false;
+      btn.innerHTML=originalLabel;
+      alert('No pudimos enviar tu mensaje. Escríbenos directamente a hola@inmark.ec o inténtalo de nuevo en unos minutos.');
+    }
   });
 </script>
 <script src="/js/main.js" defer></script>
